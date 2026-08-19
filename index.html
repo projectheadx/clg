@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1st IEEE International Conference on Sustainable Solutions in Engineering Technologies and Earth Science-ICSSETES-26</title>
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		:root {
+			--primary-red: #8C1C1C;
+			--dark-red: #6D1313;
+			--text-dark: #222222;
+			--badge-bg: #FDE8DB;
+			--badge-color: #D96A27;
+		}
+
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.6;
+			background-color: #ffffff;
+		}
+
+		/* 1. Top Scrolling Marquee Header */
+		.top-marquee-strip {
+			background-color: #ffffff;
+			color: #111;
+			font-size: 0.85rem;
+			font-weight: 600;
+			padding: 6px 0;
+			border-bottom: 1px solid #ddd;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 30s linear infinite;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		/* 2. Navigation Bar (2-Row Layout) */
+		.navbar-custom {
+			background-color: var(--primary-red);
+			padding: 10px 0;
+		}
+
+			.navbar-custom .navbar-brand {
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 1.35rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+		/* Menu below Logo styling */
+		.menu-row {
+			width: 100%;
+			border-top: 1px solid rgba(255, 255, 255, 0.2);
+			padding-top: 8px;
+			margin-top: 8px;
+		}
+
+		.navbar-custom .nav-link {
+			color: #ffffff !important;
+			font-size: 0.75rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 6px 10px !important;
+			letter-spacing: 0.3px;
+		}
+
+			.navbar-custom .nav-link:hover {
+				opacity: 0.85;
+			}
+
+		.btn-submit-paper {
+			background-color: #0088cc;
+			color: #ffffff;
+			font-size: 0.8rem;
+			font-weight: 600;
+			border-radius: 4px;
+			padding: 6px 14px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+			.btn-submit-paper:hover {
+				background-color: #006699;
+				color: #ffffff;
+			}
+
+		/* 3. Hero Section */
+		.hero-section {
+			padding: 35px 0 20px 0;
+		}
+
+		.hero-dates {
+			color: var(--primary-red);
+			font-weight: 700;
+			font-size: 0.95rem;
+			margin-bottom: 12px;
+		}
+
+		.hero-title {
+			color: #000000;
+			font-weight: 800;
+			font-size: 1.9rem;
+			line-height: 1.25;
+			margin-bottom: 20px;
+		}
+
+		.hero-info-group {
+			font-size: 0.9rem;
+			margin-bottom: 20px;
+			line-height: 1.5;
+		}
+
+			.hero-info-group .title-label {
+				font-weight: 700;
+				color: #333333;
+			}
+
+			.hero-info-group .highlight-red {
+				color: var(--primary-red);
+				font-weight: 700;
+			}
+
+			.hero-info-group .highlight-blue {
+				color: #004080;
+				font-weight: 700;
+			}
+
+		.social-icons-hero {
+			display: flex;
+			gap: 12px;
+			margin-top: 25px;
+		}
+
+			.social-icons-hero a {
+				color: var(--primary-red);
+				font-size: 1rem;
+				text-decoration: none;
+			}
+
+		/* Hero Carousel Slider */
+		.hero-slider img {
+			border-radius: 4px;
+			object-fit: cover;
+			max-height: 420px;
+			width: 100%;
+		}
+
+		/* 4. Main Body Content & Sidebar */
+		.main-body-section {
+			padding: 30px 0;
+		}
+
+		.section-heading {
+			color: #111111;
+			font-weight: 800;
+			font-size: 1.35rem;
+			margin-bottom: 15px;
+		}
+
+		.paragraph-text {
+			color: #333333;
+			font-size: 0.88rem;
+			line-height: 1.65;
+			text-align: justify;
+			margin-bottom: 16px;
+		}
+
+		/* Sidebar - Important Dates Box */
+		.important-dates-card {
+			background-color: #ededed;
+			border-radius: 4px;
+			overflow: hidden;
+			border: 1px solid #e0e0e0;
+		}
+
+		.important-dates-header {
+			background-color: #dcdcdc;
+			padding: 12px 16px;
+			font-weight: 700;
+			font-size: 0.95rem;
+			color: #111111;
+		}
+
+		.important-dates-body {
+			padding: 16px;
+		}
+
+		.date-block {
+			margin-bottom: 18px;
+		}
+
+			.date-block:last-child {
+				margin-bottom: 0;
+			}
+
+		.date-title {
+			font-weight: 700;
+			font-size: 0.85rem;
+			color: #111111;
+			margin-bottom: 2px;
+		}
+
+		.date-subtext {
+			font-size: 0.8rem;
+			color: #666666;
+		}
+
+		/* 5. Visitor Counter Section */
+		.visitor-counter-section {
+			padding: 35px 0;
+			text-align: center;
+			background-color: #ffffff;
+		}
+
+		.visitor-number {
+			font-size: 3.8rem;
+			font-weight: 900;
+			color: #000000;
+			line-height: 1;
+			letter-spacing: -1px;
+		}
+
+		.visitor-label {
+			font-size: 0.95rem;
+			color: #555555;
+			font-weight: 600;
+			margin-top: 6px;
+		}
+
+		/* 6. Hon'ble Speakers Section */
+		.speakers-section {
+			padding: 40px 0 50px 0;
+			background-color: #ffffff;
+		}
+
+		.speaker-card {
+			text-align: center;
+		}
+
+		.speaker-img-container {
+			border-radius: 6px;
+			overflow: hidden;
+			background-color: #f0f0f0;
+			aspect-ratio: 4/5;
+			margin-bottom: 12px;
+		}
+
+			.speaker-img-container img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+		.speaker-tag {
+			display: inline-block;
+			background-color: var(--badge-bg);
+			color: var(--badge-color);
+			font-size: 0.72rem;
+			font-weight: 700;
+			padding: 3px 10px;
+			border-radius: 12px;
+			margin-bottom: 6px;
+		}
+
+		.speaker-name {
+			font-weight: 700;
+			font-size: 0.88rem;
+			color: #111111;
+			margin-bottom: 4px;
+		}
+
+		.speaker-affiliation {
+			font-size: 0.73rem;
+			color: #666666;
+			line-height: 1.35;
+		}
+
+		.btn-view-all {
+			background-color: #0088cc;
+			color: #ffffff;
+			font-weight: 600;
+			font-size: 0.85rem;
+			padding: 8px 28px;
+			border-radius: 4px;
+			text-decoration: none;
+			display: inline-block;
+			margin-top: 30px;
+		}
+
+			.btn-view-all:hover {
+				background-color: #006699;
+				color: #ffffff;
+			}
+
+		/* 7. Footer */
+		.footer-primary {
+			background-color: var(--primary-red);
+			color: #ffffff;
+			padding: 25px 0;
+		}
+
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.15rem;
+			margin-bottom: 10px;
+		}
+
+		.footer-desc {
+			font-size: 0.82rem;
+			line-height: 1.4;
+			opacity: 0.95;
+		}
+
+		.footer-bottom {
+			background-color: var(--dark-red);
+			color: #ffffff;
+			font-size: 0.78rem;
+			padding: 10px 0;
+		}
+
+			.footer-bottom a {
+				color: #ffffff;
+				margin-left: 12px;
+				text-decoration: none;
+			}
+	</style>
+</head>
+<body>
+
+	<!-- Top Scrolling Marquee Header Strip -->
+	<div class="top-marquee-strip">
+		<div class="marquee-content">
+			International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26) &nbsp;&nbsp;&bull;&nbsp;&nbsp; International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26)
+		</div>
+	</div>
+
+	<!-- Navigation Bar (Logo top, Menu below) -->
+	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+		<div class="container-fluid px-lg-5 flex-column align-items-start">
+
+			<!-- Top Row: Logo & Mobile Toggle -->
+			<div class="d-flex justify-content-between align-items-center w-100">
+				<a class="navbar-brand" href="#">
+					<i class="fa-solid fa-globe"></i>
+					<span>ICSSETES-26</span>
+				</a>
+				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+				</button>
+			</div>
+
+			<!-- Next Line (Row 2): Menu Links -->
+			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
+				<ul class="navbar-nav me-auto flex-wrap">
+					<li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">GUIDELINES</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">SPEAKERS</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">COMMITTEE</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Advisory Committee</a></li>
+							<li><a class="dropdown-item" href="#">Organizing Committee</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">CALL FOR PAPERS</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REGISTER</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REFUND POLICY</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">PLAGIARISM POLICY</a></li>
+				</ul>
+				<div class="ms-auto mt-2 mt-xl-0">
+					<a href="#" class="btn-submit-paper">Submit Paper</a>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="hero-section">
+		<div class="container">
+			<div class="row align-items-center">
+				<!-- Left Details -->
+				<div class="col-lg-6 mb-4 mb-lg-0">
+					<div class="hero-dates">24, 25 and 26 August 2026</div>
+					<h1 class="hero-title">
+						1st IEEE International Conference on Sustainable Solutions in Engineering Technologies and Earth Science-ICSSETES-26
+					</h1>
+
+					<div class="hero-info-group">
+						<div class="title-label">Organized by:</div>
+						<div class="highlight-red">Electronics and Communication Engineering Department</div>
+						<div class="highlight-red">ITS Engineering College</div>
+						<div class="highlight-red">Knowledge Park III, Greater Noida, Uttar Pradesh, India - 201310</div>
+					</div>
+
+					<div class="hero-info-group mt-3">
+						<div class="title-label">Venue Partner:</div>
+						<div class="highlight-blue">TWINTECH INTERNATIONAL UNIVERSITY COLLEGE OF TECHNOLOGY</div>
+						<div class="highlight-blue">KL Campus, Kuala Lumpur, Malaysia.</div>
+					</div>
+
+					<div class="social-icons-hero">
+						<a href="#"><i class="fa-brands fa-twitter"></i></a>
+						<a href="#"><i class="fa-solid fa-phone"></i></a>
+						<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+						<a href="#"><i class="fa-solid fa-envelope"></i></a>
+					</div>
+				</div>
+
+				<!-- Right Slider (5 Images Carousel) -->
+				<div class="col-lg-6">
+					<div id="heroCarousel" class="carousel slide hero-slider" data-bs-ride="carousel" data-bs-interval="3000">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+							<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+							<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+							<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+							<button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+						</div>
+						<div class="carousel-inner shadow-sm rounded">
+							<div class="carousel-item active">
+								<img src="https://picsum.photos/id/1015/800/550" class="d-block w-100" alt="Conference Event 1">
+							</div>
+							<div class="carousel-item">
+								<img src="https://picsum.photos/id/1018/800/550" class="d-block w-100" alt="Conference Event 2">
+							</div>
+							<div class="carousel-item">
+								<img src="https://picsum.photos/id/1019/800/550" class="d-block w-100" alt="Conference Event 3">
+							</div>
+							<div class="carousel-item">
+								<img src="https://picsum.photos/id/1025/800/550" class="d-block w-100" alt="Conference Event 4">
+							</div>
+							<div class="carousel-item">
+								<img src="https://picsum.photos/id/1039/800/550" class="d-block w-100" alt="Conference Event 5">
+							</div>
+						</div>
+						<button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide-to="next">
+							<span class="carousel-control-next-icon"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Body Content Section -->
+	<section class="main-body-section">
+		<div class="container">
+			<div class="row">
+				<!-- Left Main Paragraphs -->
+				<div class="col-lg-8">
+
+					<!-- Section 1: About ICSSETES -->
+					<div class="mb-4">
+						<h2 class="section-heading">About ICSSETES</h2>
+						<p class="paragraph-text">
+							ICSSETES is a prestigious international IEEE conference that brings together researchers, engineers, and scholars from around the world to showcase their latest research findings and experiences in computing, communication and networking. Featuring keynote speeches, technical sessions, and workshops, the conference covers a wide range of topics such as cloud computing, AI, wireless communication systems, IoT, and optoelectronics.
+						</p>
+					</div>
+
+					<!-- Section 2: About College -->
+					<div class="mb-4">
+						<h2 class="section-heading">About College</h2>
+						<p class="paragraph-text">
+							ITS Engineering College, located in Greater Noida, is a distinguished institution for Engineering and Management, founded in 2006 by Dr. R.P. Chadha. Committed to delivering high-quality, industry-focused education at an affordable cost. With a rich history spanning over three decades, The ITS Education Group has emerged as a key player in higher education in North India, operating nine institutes with more than 20,000 students and a dedicated staff of over 1,250. The group excels in various disciplines, including Information Technology, Engineering, Management, Dental, Pharmacy, and Physiotherapy. Established in 2006 under the visionary leadership of Chairman Dr. R.P. Chadha, ITS Engineering College holds NBA accreditation for its dedication to providing high-quality education. Approved by AICTE and affiliated with AKTU Lucknow, the college offers diverse programs, such as B.Tech in CSE, Computer Science & Engineering (AI), CSE-Artificial Intelligence and Machine Learning, CSE-Data Science, Electronics & Communication Engineering, Electrical Engineering (IoT, Design and Technology), Mechanical and Computer Engineering, Mechanical Engineering as well as MBA programs in Marketing, Finance, Human Resource, Operations, International Business, and Information Technology.
+						</p>
+					</div>
+
+					<!-- Section 3: About Electronics and Communication Engineering -->
+					<div class="mb-4">
+						<h2 class="section-heading">About Electronics and Communication Engineering</h2>
+
+						<p class="paragraph-text">
+							The Department of Electronics and Communication Engineering (ECE) at ITS Engineering College, Greater Noida was established in 2006 with the mission to produce technically skilled, innovative, and socially responsible engineers capable of meeting global technological challenges. The department emphasizes quality education, research, and industry-oriented training to prepare students for diverse career opportunities.
+						</p>
+
+						<p class="paragraph-text">
+							The department offers a four-year B.Tech program in Electronics and Communication Engineering, affiliated to Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow (formerly UPTU). The program is accredited by the National Board of Accreditation (NBA), New Delhi, highlighting its commitment to academic excellence, outcome-based education, and continuous improvement.
+						</p>
+
+						<p class="paragraph-text">
+							The department has a team of highly qualified and experienced faculty members, many of whom are doctorates and degree holders from reputed institutions such as IITs, NITs, and IIITs. Their expertise spans across VLSI design, embedded systems, communication networks, signal processing, and automation, ensuring students receive both strong theoretical knowledge and practical insight.
+						</p>
+
+						<p class="paragraph-text">
+							To strengthen industry-academic collaboration, the department has established the NI-Innovation Center in partnership with National Instruments (NI). This center features an NI-based Instrumentation and LabVIEW Automation Laboratory, enabling students to work on advanced technology projects involving hardware-software integration and real-world applications.
+						</p>
+
+						<p class="paragraph-text">
+							Student creativity is further enriched through active technical bodies such as the IEEE Student Branch and the student activity club "e-Vision". These platforms organize workshops, seminars, webinars, technical quizzes, poster presentations, and project exhibitions, encouraging innovation, leadership, and professional development.
+						</p>
+
+						<p class="paragraph-text">
+							With modern laboratories, a research-driven environment, and dedicated faculty, the Department of Electronics and Communication Engineering continues to produce graduates who excel in fields like telecommunication, embedded systems, signal processing, automation, and software development, contributing to industry and society alike.
+						</p>
+
+						<!-- CMT Box -->
+						<div class="mt-4 p-3 bg-light rounded border">
+							<p class="mb-2" style="font-size: 0.85rem;">
+								<strong>NOTE: All papers must be submitted electronically through the Microsoft CMT conference management system.</strong>
+							</p>
+							<p class="mb-0 text-muted" style="font-size: 0.8rem;">
+								<strong>CMT Acknowledgement</strong><br>
+								The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud service as well as for software development and support.
+							</p>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Right Sidebar: Important Dates -->
+				<div class="col-lg-4">
+					<div class="important-dates-card sticky-top" style="top: 80px;">
+						<div class="important-dates-header">
+							Important Dates
+						</div>
+						<div class="important-dates-body">
+							<div class="date-block">
+								<div class="date-title">Early Bird Registration</div>
+								<div class="date-subtext">12.07.2026</div>
+							</div>
+							<div class="date-block">
+								<div class="date-title">Registration</div>
+								<div class="date-subtext">20.07.2026</div>
+							</div>
+							<div class="date-block">
+								<div class="date-title">Camera Ready Paper</div>
+								<div class="date-subtext">01.08.2026</div>
+							</div>
+							<div class="date-block">
+								<div class="date-title">Conference Date</div>
+								<div class="date-subtext">24th - 26th August 2026</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Visitor Counter Section -->
+	<section class="visitor-counter-section">
+		<div class="container">
+			<div class="visitor-number">5782</div>
+			<div class="visitor-label">Visitors</div>
+		</div>
+	</section>
+
+	<!-- Hon'ble Speakers Section -->
+	<section class="speakers-section text-center">
+		<div class="container">
+			<h2 class="section-heading mb-4">Hon'ble Speakers</h2>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
+				<!-- Speaker 1 -->
+				<div class="col">
+					<div class="speaker-card">
+						<div class="speaker-img-container">
+							<img src="https://picsum.photos/id/1005/300/380" alt="Speaker 1">
+						</div>
+						<span class="speaker-tag">International Speaker</span>
+						<div class="speaker-name">Dr. Injection Okene Akolo</div>
+						<div class="speaker-affiliation">
+							Department of Electrical and Electronics Engineering, Federal University of Technology, Minna
+						</div>
+					</div>
+				</div>
+
+				<!-- Speaker 2 -->
+				<div class="col">
+					<div class="speaker-card">
+						<div class="speaker-img-container">
+							<img src="https://picsum.photos/id/1025/300/380" alt="Speaker 2">
+						</div>
+						<span class="speaker-tag">International Speaker</span>
+						<div class="speaker-name">Dr. Ankur Goel</div>
+						<div class="speaker-affiliation">
+							Professor, Department of Electrical Engineering, UT, Malaysia
+						</div>
+					</div>
+				</div>
+
+				<!-- Speaker 3 -->
+				<div class="col">
+					<div class="speaker-card">
+						<div class="speaker-img-container">
+							<img src="https://picsum.photos/id/1062/300/380" alt="Speaker 3">
+						</div>
+						<span class="speaker-tag">International Speaker</span>
+						<div class="speaker-name">Prof. Shabana Urooj</div>
+						<div class="speaker-affiliation">
+							Department of Electrical Engineering, Princess Nourah Bint Abdulrahman University, Riyadh, Saudi Arabia
+						</div>
+					</div>
+				</div>
+
+				<!-- Speaker 4 -->
+				<div class="col">
+					<div class="speaker-card">
+						<div class="speaker-img-container">
+							<img src="https://picsum.photos/id/1012/300/380" alt="Speaker 4">
+						</div>
+						<span class="speaker-tag">International Speaker</span>
+						<div class="speaker-name">Dr. Chintanp. Mahapatra</div>
+						<div class="speaker-affiliation">
+							Associate Professor, Department of Computer Science and Engineering, IIT Indore, India
+						</div>
+					</div>
+				</div>
+
+				<!-- Speaker 5 -->
+				<div class="col">
+					<div class="speaker-card">
+						<div class="speaker-img-container">
+							<img src="https://picsum.photos/id/100/300/380" alt="Speaker 5">
+						</div>
+						<span class="speaker-tag">International Speaker</span>
+						<div class="speaker-name">Mr. Anbarasu Aladiyan</div>
+						<div class="speaker-affiliation">
+							Staff Software Engineer & AI Researcher, Lead Architect, Verizon Inc., USA
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<a href="#" class="btn-view-all">View all</a>
+		</div>
+	</section>
+
+	<!-- Footer Main -->
+	<footer class="footer-primary">
+		<div class="container">
+			<div class="footer-brand">
+				<i class="fa-solid fa-globe"></i>
+				<span>ICSSETES-26</span>
+			</div>
+			<div class="footer-desc">
+				International Conference on Sustainable<br>
+				Solutions in Engineering Technologies and<br>
+				Earth Science-ICSSETES-26
+			</div>
+		</div>
+	</footer>
+
+	<!-- Footer Bottom Strip -->
+	<div class="footer-bottom">
+		<div class="container d-flex justify-content-between align-items-center">
+			<div>Department of Electronics and Communication Engineering, ITSEC</div>
+			<div>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-solid fa-phone"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				<a href="#"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap 5 JS Bundle -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+</body>
+</html>

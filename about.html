@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>About – ICSSETES-26</title>
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<style>
+		:root {
+			--primary-red: #8C1C1C;
+			--dark-red: #6D1313;
+			--text-dark: #222222;
+			--badge-bg: #FDE8DB;
+			--badge-color: #D96A27;
+		}
+
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.6;
+			background-color: #ffffff;
+		}
+
+		/* top marquee */
+		.top-marquee-strip {
+			background-color: #ffffff;
+			color: #111;
+			font-size: 0.85rem;
+			font-weight: 600;
+			padding: 6px 0;
+			border-bottom: 1px solid #ddd;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 30s linear infinite;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		/* navbar */
+		.navbar-custom {
+			background-color: var(--primary-red);
+			padding: 10px 0;
+		}
+
+			.navbar-custom .navbar-brand {
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 1.35rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+		.menu-row {
+			width: 100%;
+			border-top: 1px solid rgba(255, 255, 255, 0.2);
+			padding-top: 8px;
+			margin-top: 8px;
+		}
+
+		.navbar-custom .nav-link {
+			color: #ffffff !important;
+			font-size: 0.75rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 6px 10px !important;
+			letter-spacing: 0.3px;
+		}
+
+			.navbar-custom .nav-link:hover {
+				opacity: 0.85;
+			}
+
+		.btn-submit-paper {
+			background-color: #0088cc;
+			color: #ffffff;
+			font-size: 0.8rem;
+			font-weight: 600;
+			border-radius: 4px;
+			padding: 6px 14px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+			.btn-submit-paper:hover {
+				background-color: #006699;
+				color: #fff;
+			}
+
+		/* hero (about) */
+		.about-hero {
+			padding: 30px 0 20px 0;
+			background: #fafafa;
+			border-bottom: 1px solid #eee;
+		}
+
+			.about-hero h1 {
+				font-weight: 800;
+				color: var(--primary-red);
+				font-size: 2rem;
+			}
+
+			.about-hero .breadcrumb-text {
+				font-size: 0.9rem;
+				color: #555;
+			}
+
+		/* main content */
+		.about-section {
+			padding: 40px 0;
+		}
+
+		.section-heading {
+			color: #111111;
+			font-weight: 800;
+			font-size: 1.5rem;
+			margin-bottom: 15px;
+			border-left: 5px solid var(--primary-red);
+			padding-left: 15px;
+		}
+
+		.paragraph-text {
+			color: #333333;
+			font-size: 0.95rem;
+			line-height: 1.7;
+			text-align: justify;
+			margin-bottom: 18px;
+		}
+
+		.about-card {
+			background: #f8f8f8;
+			border-radius: 8px;
+			padding: 20px 24px;
+			border-left: 4px solid var(--primary-red);
+			margin-bottom: 30px;
+		}
+
+			.about-card h5 {
+				font-weight: 700;
+				color: var(--primary-red);
+			}
+
+		.list-institute {
+			columns: 2;
+			column-gap: 30px;
+			list-style: none;
+			padding-left: 0;
+			margin-top: 15px;
+		}
+
+			.list-institute li {
+				padding: 4px 0;
+				font-weight: 500;
+				color: #1a1a1a;
+			}
+
+				.list-institute li::before {
+					content: "▹ ";
+					color: var(--primary-red);
+					font-weight: 700;
+				}
+
+		/* footer */
+		.footer-primary {
+			background-color: var(--primary-red);
+			color: #ffffff;
+			padding: 25px 0;
+		}
+
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.15rem;
+			margin-bottom: 10px;
+		}
+
+		.footer-desc {
+			font-size: 0.82rem;
+			line-height: 1.4;
+			opacity: 0.95;
+		}
+
+		.footer-bottom {
+			background-color: var(--dark-red);
+			color: #ffffff;
+			font-size: 0.78rem;
+			padding: 10px 0;
+		}
+
+			.footer-bottom a {
+				color: #ffffff;
+				margin-left: 12px;
+				text-decoration: none;
+			}
+	</style>
+</head>
+<body>
+
+	<!-- Top Scrolling Marquee -->
+	<div class="top-marquee-strip">
+		<div class="marquee-content">
+			International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26) &nbsp;&nbsp;&bull;&nbsp;&nbsp; International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26)
+		</div>
+	</div>
+
+	<!-- Navigation (exactly as in home) -->
+	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+		<div class="container-fluid px-lg-5 flex-column align-items-start">
+			<div class="d-flex justify-content-between align-items-center w-100">
+				<a class="navbar-brand" href="#">
+					<i class="fa-solid fa-globe"></i>
+					<span>ICSSETES-26</span>
+				</a>
+				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
+				<ul class="navbar-nav me-auto flex-wrap">
+					<li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+					<li class="nav-item"><a class="nav-link active" href="#">ABOUT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">GUIDELINES</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">SPEAKERS</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">COMMITTEE</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Advisory Committee</a></li>
+							<li><a class="dropdown-item" href="#">Organizing Committee</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">CALL FOR PAPERS</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REGISTER</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REFUND POLICY</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">PLAGIARISM POLICY</a></li>
+				</ul>
+				<div class="ms-auto mt-2 mt-xl-0">
+					<a href="#" class="btn-submit-paper">Submit Paper</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- About Hero (simple header) -->
+	<section class="about-hero">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8">
+					<h1>About ICSSETES-26</h1>
+					<p class="breadcrumb-text"><i class="fa-regular fa-building me-2"></i> ITS Engineering College · Greater Noida</p>
+				</div>
+				<div class="col-lg-4 text-lg-end">
+					<span class="badge bg-danger bg-opacity-10 text-danger p-2 px-3" style="font-weight:600;">IEEE Conference 2026</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main About Content (exactly from image + home code) -->
+	<section class="about-section">
+		<div class="container">
+
+			<!-- About ITS Group of Institute -->
+			<div class="about-card">
+				<h5><i class="fa-regular fa-building me-2"></i> About ITS Group of Institute</h5>
+				<p class="paragraph-text">
+					ITS - The Education Group, with its diversified presence across industries – including education, hospitality, medical, pharmacy, health care, wellness, legal, philanthropy and CSR – has been in a business leadership position for many decades. The company has undergone tremendous growth and has scaled up its operations in a big way over many years, in line with its global ambitions.
+				</p>
+				<p><strong>ITS Group of Institute include:</strong></p>
+				<ul class="list-institute">
+					<li>ITS Engineering College – Greater Noida</li>
+					<li>ITS Dental College – Greater Noida</li>
+					<li>ITS Management Institute – Ghaziabad</li>
+					<li>ITS Dental College – Ghaziabad</li>
+					<li>ITS Paramedical College – Ghaziabad</li>
+					<li>ITS Pharmacy College – Ghaziabad</li>
+				</ul>
+			</div>
+
+			<!-- About ITSEC -->
+			<h3 class="section-heading">About ITSEC</h3>
+			<p class="paragraph-text">
+				I.T.S Engineering College, situated in Greater Noida, stands as a distinguished institution for Engineering and Management. Established by prominent professionals with a commitment to delivering high-quality, industry-focused education at an affordable cost, the college has a rich history spanning approximately three decades. The ITS Education Group, with its roots firmly planted in North India, has become a significant player in higher education. The group oversees nine institutes with a collective student body exceeding 20,000 and a dedicated staff of over 1,250.
+			</p>
+			<p class="paragraph-text">
+				Operating with excellence in various disciplines, including Information Technology, Engineering, Management, Dental, Pharmacy, and Physiotherapy, the ITS Education Group has been a prominent force since its inception in 2006 under the visionary leadership of Chairman Dr. R.P. Chadha. ITS Engineering College boasts NBA accreditation, a testament to its unwavering commitment to providing top-notch education. The college, approved by AICTE and affiliated with AKTU-Lucknow, offers a diverse range of programs. These include B. Tech in Civil Engineering, Mechanical Engineering, Computer Science & Engineering (CSE), CSE with specializations in Artificial Intelligence and Machine Learning, and Data Science. Additionally, the college provides programs in Electronics and Communication Engineering (ECE), Electronics Engineering (VLSI Design and Technology), Electrical and Computer Engineering, Mechanical Engineering, and an MBA program.
+			</p>
+
+			<!-- About ECE (full content from image) -->
+			<h3 class="section-heading mt-5">About ECE</h3>
+			<p class="paragraph-text">
+				The Department of Electronics and Communication Engineering (ECE) at I.T.S Engineering College, Greater Noida, was established in 2006 with the vision to produce technically skilled, innovative, and socially responsible engineers capable of meeting global technological challenges. The department emphasizes quality education, research, and industry-oriented learning to prepare students for diverse career opportunities.
+			</p>
+			<p class="paragraph-text">
+				The department offers a four-year B.Tech program in Electronics and Communication Engineering, affiliated to Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow (formerly UPTU). The program is accredited by the National Board of Accreditation (NBA), New Delhi, highlighting its commitment to academic excellence, outcome-based education, and continuous improvement.
+			</p>
+			<p class="paragraph-text">
+				The department has a team of highly qualified and experienced faculty members, many of whom are postgraduates and doctorates from prestigious institutions such as IITs, NITs, and NSIT. Their expertise spans areas like VLSI design, embedded systems, communication networks, signal processing, and automation, ensuring students receive both in-depth theoretical knowledge and practical insight.
+			</p>
+			<p class="paragraph-text">
+				To strengthen industry-academia collaboration, the department has established the NI Innovation Centre in partnership with National Instruments (NI). This centre focuses on Virtual Instrumentation and Industrial Automation, enabling students to work on advanced technologies through real-time hardware–software integration and project-based learning.
+			</p>
+			<p class="paragraph-text">
+				Student growth is further enriched through active technical bodies such as the IEEE Student Branch and the student activity club “Envision.” These platforms organize workshops, seminars, webinars, technical quizzes, poster presentations, and project exhibitions, encouraging innovation, leadership, and professional development.
+			</p>
+			<p class="paragraph-text">
+				With modern laboratories, a research-driven environment, and dedicated faculty, the Department of Electronics and Communication Engineering continues to produce graduates who excel in fields like telecommunication, embedded systems, signal processing, automation, and software development, contributing to industry and society alike.
+			</p>
+
+			<!-- CMT note (as in home) -->
+			<div class="mt-4 p-3 bg-light rounded border">
+				<p class="mb-2" style="font-size: 0.85rem;">
+					<strong>NOTE: All papers must be submitted electronically through the Microsoft CMT conference management system.</strong>
+				</p>
+				<p class="mb-0 text-muted" style="font-size: 0.8rem;">
+					<strong>CMT Acknowledgement</strong><br>
+					The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud service as well as for software development and support.
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- Visitor Counter (same as home) -->
+	
+
+	<!-- Footer Primary (same as home) -->
+	<footer class="footer-primary">
+		<div class="container">
+			<div class="footer-brand">
+				<i class="fa-solid fa-globe"></i>
+				<span>ICSSETES-26</span>
+			</div>
+			<div class="footer-desc">
+				International Conference on Sustainable<br>
+				Solutions in Engineering Technologies and<br>
+				Earth Science-ICSSETES-26
+			</div>
+		</div>
+	</footer>
+
+	<!-- Footer Bottom Strip -->
+	<div class="footer-bottom">
+		<div class="container d-flex justify-content-between align-items-center">
+			<div>Department of Electronics and Communication Engineering, ITSEC</div>
+			<div>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-solid fa-phone"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				<a href="#"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+</body>
+</html>

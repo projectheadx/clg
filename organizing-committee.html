@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Organizing Committee – ICSSETES-26</title>
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<style>
+		:root {
+			--primary-red: #8C1C1C;
+			--dark-red: #6D1313;
+			--text-dark: #222222;
+			--badge-bg: #FDE8DB;
+			--badge-color: #D96A27;
+		}
+
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.6;
+			background-color: #ffffff;
+		}
+
+		/* top marquee */
+		.top-marquee-strip {
+			background-color: #ffffff;
+			color: #111;
+			font-size: 0.85rem;
+			font-weight: 600;
+			padding: 6px 0;
+			border-bottom: 1px solid #ddd;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 30s linear infinite;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		/* navbar */
+		.navbar-custom {
+			background-color: var(--primary-red);
+			padding: 10px 0;
+		}
+
+			.navbar-custom .navbar-brand {
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 1.35rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+		.menu-row {
+			width: 100%;
+			border-top: 1px solid rgba(255, 255, 255, 0.2);
+			padding-top: 8px;
+			margin-top: 8px;
+		}
+
+		.navbar-custom .nav-link {
+			color: #ffffff !important;
+			font-size: 0.75rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 6px 10px !important;
+			letter-spacing: 0.3px;
+		}
+
+			.navbar-custom .nav-link:hover {
+				opacity: 0.85;
+			}
+
+		.btn-submit-paper {
+			background-color: #0088cc;
+			color: #ffffff;
+			font-size: 0.8rem;
+			font-weight: 600;
+			border-radius: 4px;
+			padding: 6px 14px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+			.btn-submit-paper:hover {
+				background-color: #006699;
+				color: #fff;
+			}
+
+		/* hero */
+		.committee-hero {
+			padding: 30px 0 20px 0;
+			background: #fafafa;
+			border-bottom: 1px solid #eee;
+		}
+
+			.committee-hero h1 {
+				font-weight: 800;
+				color: var(--primary-red);
+				font-size: 2rem;
+			}
+
+		/* committee sections */
+		.committee-section {
+			padding: 30px 0 10px 0;
+		}
+
+		.section-heading {
+			font-weight: 800;
+			font-size: 1.5rem;
+			color: var(--primary-red);
+			border-left: 5px solid var(--primary-red);
+			padding-left: 16px;
+			margin-bottom: 20px;
+		}
+
+		.committee-card {
+			background: #fff;
+			border-radius: 10px;
+			padding: 14px 18px;
+			border: 1px solid #f0f0f0;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+			margin-bottom: 12px;
+			transition: 0.2s;
+		}
+
+			.committee-card:hover {
+				border-color: var(--primary-red);
+				box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+			}
+
+			.committee-card .role {
+				font-weight: 700;
+				font-size: 0.85rem;
+				color: var(--primary-red);
+				margin-bottom: 4px;
+			}
+
+			.committee-card .name {
+				font-weight: 600;
+				font-size: 0.95rem;
+				color: #111;
+			}
+
+			.committee-card .dept {
+				font-size: 0.8rem;
+				color: #666;
+			}
+
+			.committee-card .sub-list {
+				padding-left: 18px;
+				margin-top: 4px;
+			}
+
+				.committee-card .sub-list li {
+					font-size: 0.85rem;
+					color: #333;
+					list-style-type: none;
+				}
+
+					.committee-card .sub-list li::before {
+						content: "• ";
+						color: var(--primary-red);
+						font-weight: 700;
+					}
+
+		.badge-committee {
+			background: var(--badge-bg);
+			color: var(--badge-color);
+			font-size: 0.65rem;
+			font-weight: 700;
+			padding: 2px 12px;
+			border-radius: 20px;
+			text-transform: uppercase;
+			letter-spacing: 0.3px;
+			display: inline-block;
+			margin-bottom: 4px;
+		}
+
+		/* footer */
+		.footer-primary {
+			background-color: var(--primary-red);
+			color: #ffffff;
+			padding: 25px 0;
+		}
+
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.15rem;
+			margin-bottom: 10px;
+		}
+
+		.footer-desc {
+			font-size: 0.82rem;
+			line-height: 1.4;
+			opacity: 0.95;
+		}
+
+		.footer-bottom {
+			background-color: var(--dark-red);
+			color: #ffffff;
+			font-size: 0.78rem;
+			padding: 10px 0;
+		}
+
+			.footer-bottom a {
+				color: #ffffff;
+				margin-left: 12px;
+				text-decoration: none;
+			}
+
+		@media (max-width: 576px) {
+			.committee-card {
+				padding: 12px 14px;
+			}
+
+			.section-heading {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Top Scrolling Marquee -->
+	<div class="top-marquee-strip">
+		<div class="marquee-content">
+			International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26) &nbsp;&nbsp;&bull;&nbsp;&nbsp; International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26)
+		</div>
+	</div>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+		<div class="container-fluid px-lg-5 flex-column align-items-start">
+			<div class="d-flex justify-content-between align-items-center w-100">
+				<a class="navbar-brand" href="#">
+					<i class="fa-solid fa-globe"></i>
+					<span>ICSSETES-26</span>
+				</a>
+				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
+				<ul class="navbar-nav me-auto flex-wrap">
+					<li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">GUIDELINES</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">SPEAKERS</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle active" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">COMMITTEE</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Advisory Committee</a></li>
+							<li><a class="dropdown-item active" href="#">Organizing Committee</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">CALL FOR PAPERS</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REGISTER</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REFUND POLICY</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">PLAGIARISM POLICY</a></li>
+				</ul>
+				<div class="ms-auto mt-2 mt-xl-0">
+					<a href="#" class="btn-submit-paper">Submit Paper</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Committee Hero -->
+	<section class="committee-hero">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8">
+					<h1>Organising Committee</h1>
+					<p class="text-muted" style="font-size:0.95rem;">
+						<i class="fa-regular fa-users me-2"></i> ICSSETES-2026 · Core Team
+					</p>
+				</div>
+				<div class="col-lg-4 text-lg-end">
+					<span class="badge bg-danger bg-opacity-10 text-danger p-2 px-3" style="font-weight:600;">Leadership</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Committee Members -->
+	<section class="committee-section">
+		<div class="container">
+
+			<!-- Chief Patron -->
+			<h3 class="section-heading">Chief Patron</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Chief Patron</div>
+						<div class="name">Dr. R. P. Chadha</div>
+						<div class="dept">Chairman, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Chief Patron</div>
+						<div class="name">Shri Sohil Chadha</div>
+						<div class="dept">Vice Chairman, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Co-Chief Patrons -->
+			<h3 class="section-heading" style="margin-top:30px;">Co-Chief Patrons</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Co-Chief Patron</div>
+						<div class="name">Shri B. K. Arora</div>
+						<div class="dept">Secretary, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Co-Chief Patron</div>
+						<div class="name">Shri Surinder Sood</div>
+						<div class="dept">Director Public Relation, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Patrons -->
+			<h3 class="section-heading" style="margin-top:30px;">Patrons</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Patron</div>
+						<div class="name">Prof. (Dr.) S. N. Singh</div>
+						<div class="dept">Director, ABV-IIITM Gwalior</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Patron</div>
+						<div class="name">Prof. (Dr.) Mayank Garg</div>
+						<div class="dept">Director, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Co-Patrons -->
+			<h3 class="section-heading" style="margin-top:30px;">Co-Patrons</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Co-Patron</div>
+						<div class="name">Prof. (Dr.) J. Ramkumar</div>
+						<div class="dept">IIT Kanpur</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Co-Patron</div>
+						<div class="name">Prof. (Dr.) Satish Kumar Singh</div>
+						<div class="dept">IIIT-Allahabad, Prayagraj</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Conference General Chair -->
+			<h3 class="section-heading" style="margin-top:30px;">Conference General Chair</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Conference General Chair</div>
+						<div class="name">Prof. (Dr.) Asheesh Kumar Singh</div>
+						<div class="dept">MNNIT-Allahabad, Prayagraj</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Conference General Chair</div>
+						<div class="name">Prof. (Dr.) Prabhakar Tiwari</div>
+						<div class="dept">MMMUT, Gorakhpur</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Conference General Chair</div>
+						<div class="name">Prof. (Dr.) Varun Kakar</div>
+						<div class="dept">BTKIT, Dwarahat</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Convener & Conference Organising Chair -->
+			<h3 class="section-heading" style="margin-top:30px;">Convener &amp; Conference Organising Chair</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Convener &amp; Organising Chair</div>
+						<div class="name">Prof. (Dr.) Setu Garg</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Convener &amp; Organising Chair</div>
+						<div class="name">Prof. Prabhakar Sharma</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Conference Chair -->
+			<h3 class="section-heading" style="margin-top:30px;">Conference Chair</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Conference Chair</div>
+						<div class="name">Prof. (Dr.) A Ambikapathy</div>
+						<div class="dept">H.O.D, ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Conference Chair</div>
+						<div class="name">Prof. (Dr.) Agha Asim Husain</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Conference Chair</div>
+						<div class="name">Prof. (Dr.) Praveen Bhola</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Conference Publication Chair -->
+			<h3 class="section-heading" style="margin-top:30px;">Conference Publication Chair</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Publication Chair</div>
+						<div class="name">Prof. (Dr.) Jaspal Kumar</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Publication Chair</div>
+						<div class="name">Prof. Navneet Kumar</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Technical Program Chairs -->
+			<h3 class="section-heading" style="margin-top:30px;">Technical Program Chairs</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Technical Program Chair</div>
+						<div class="name">Prof. Shivam Gupta</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Technical Program Chair</div>
+						<div class="name">Prof. Shahid Khan</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Organizing Committee -->
+			<h3 class="section-heading" style="margin-top:30px;">Organizing Committee</h3>
+			<div class="row g-2">
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. (Dr.) Setu Garg</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. (Dr.) Agha Asim Husain</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. Prabhakar Sharma</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. Navneet Kumar</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. (Dr.) Jaspal Kumar</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. Shahid Khan</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. Shivam Gupta</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. (Dr.) Praveen Bhola</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. (Dr.) Upendra Agrawal</div>
+						<div class="dept">EEE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card">
+						<div class="name">Prof. (Dr.) Rajeev Ranjan</div>
+						<div class="dept">EEE, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Finance Committee -->
+			<h3 class="section-heading" style="margin-top:30px;">Finance Committee</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Finance Committee</div>
+						<div class="name">Prof. Prabhakar Sharma</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Finance Committee</div>
+						<div class="name">Prof. (Dr.) Praveen Bhola</div>
+						<div class="dept">EEE, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Website Committee -->
+			<h3 class="section-heading" style="margin-top:30px;">Website Committee</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Website Committee</div>
+						<div class="name">Prof. Shivam Gupta</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Website Committee</div>
+						<div class="name">Mr. Abhishek Patel</div>
+						<div class="dept">ECE Student, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Sponsorship/Media Committee -->
+			<h3 class="section-heading" style="margin-top:30px;">Sponsorship / Media Committee</h3>
+			<div class="row g-2">
+				<div class="col-md-6">
+					<div class="committee-card">
+						<div class="role">Sponsorship / Media Committee</div>
+						<div class="name">Prof. Shahid Khan</div>
+						<div class="dept">ECE, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Student Co-Ordinators -->
+			<h3 class="section-heading" style="margin-top:30px; font-size:1.2rem; border-left-color:#D96A27;">Student Co-Ordinators</h3>
+			<div class="row g-2">
+				<div class="col-md-4">
+					<div class="committee-card" style="border-left-color:#D96A27;">
+						<div class="name">Mr. Anket Srivastava</div>
+						<div class="dept">ECE Student, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card" style="border-left-color:#D96A27;">
+						<div class="name">Mr. Piyush Kumar</div>
+						<div class="dept">ECE Student, ITSEC</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="committee-card" style="border-left-color:#D96A27;">
+						<div class="name">Mr. Sanjeev Yadav</div>
+						<div class="dept">ECE Student, ITSEC</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Footer Primary -->
+	<footer class="footer-primary">
+		<div class="container">
+			<div class="footer-brand">
+				<i class="fa-solid fa-globe"></i>
+				<span>ICSSETES-26</span>
+			</div>
+			<div class="footer-desc">
+				International Conference on Sustainable<br>
+				Solutions in Engineering Technologies and<br>
+				Earth Science-ICSSETES-26
+			</div>
+		</div>
+	</footer>
+
+	<!-- Footer Bottom Strip -->
+	<div class="footer-bottom">
+		<div class="container d-flex justify-content-between align-items-center">
+			<div>Department of Electronics and Communication Engineering, ITSEC</div>
+			<div>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-solid fa-phone"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				<a href="#"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Contact – ICSSETES-26</title>
+	<!-- Bootstrap 5 CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<style>
+		:root {
+			--primary-red: #8C1C1C;
+			--dark-red: #6D1313;
+			--text-dark: #222222;
+			--badge-bg: #FDE8DB;
+			--badge-color: #D96A27;
+		}
+
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.6;
+			background-color: #ffffff;
+		}
+
+		/* top marquee */
+		.top-marquee-strip {
+			background-color: #ffffff;
+			color: #111;
+			font-size: 0.85rem;
+			font-weight: 600;
+			padding: 6px 0;
+			border-bottom: 1px solid #ddd;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 30s linear infinite;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		/* navbar */
+		.navbar-custom {
+			background-color: var(--primary-red);
+			padding: 10px 0;
+		}
+
+			.navbar-custom .navbar-brand {
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 1.35rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
+
+		.menu-row {
+			width: 100%;
+			border-top: 1px solid rgba(255, 255, 255, 0.2);
+			padding-top: 8px;
+			margin-top: 8px;
+		}
+
+		.navbar-custom .nav-link {
+			color: #ffffff !important;
+			font-size: 0.75rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 6px 10px !important;
+			letter-spacing: 0.3px;
+		}
+
+			.navbar-custom .nav-link:hover {
+				opacity: 0.85;
+			}
+
+		.btn-submit-paper {
+			background-color: #0088cc;
+			color: #ffffff;
+			font-size: 0.8rem;
+			font-weight: 600;
+			border-radius: 4px;
+			padding: 6px 14px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
+
+			.btn-submit-paper:hover {
+				background-color: #006699;
+				color: #fff;
+			}
+
+		/* hero */
+		.contact-hero {
+			padding: 30px 0 20px 0;
+			background: #fafafa;
+			border-bottom: 1px solid #eee;
+		}
+
+			.contact-hero h1 {
+				font-weight: 800;
+				color: var(--primary-red);
+				font-size: 2rem;
+			}
+
+		/* contact content */
+		.contact-section {
+			padding: 40px 0;
+		}
+
+		.section-heading {
+			font-weight: 800;
+			font-size: 1.4rem;
+			color: var(--primary-red);
+			border-left: 5px solid var(--primary-red);
+			padding-left: 16px;
+			margin-bottom: 20px;
+		}
+
+		.paragraph-text {
+			color: #333333;
+			font-size: 0.95rem;
+			line-height: 1.7;
+			margin-bottom: 24px;
+		}
+
+		.contact-card {
+			background: #fff;
+			border-radius: 10px;
+			padding: 20px 24px;
+			border: 1px solid #f0f0f0;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+			margin-bottom: 16px;
+			transition: 0.2s;
+		}
+
+			.contact-card:hover {
+				border-color: var(--primary-red);
+				box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+			}
+
+			.contact-card .icon-circle {
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				background: var(--badge-bg);
+				color: var(--primary-red);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.1rem;
+				flex-shrink: 0;
+			}
+
+			.contact-card .info-title {
+				font-weight: 700;
+				font-size: 0.85rem;
+				color: #555;
+				margin-bottom: 2px;
+			}
+
+			.contact-card .info-value {
+				font-weight: 600;
+				font-size: 0.95rem;
+				color: #111;
+			}
+
+				.contact-card .info-value a {
+					color: var(--primary-red);
+					text-decoration: none;
+				}
+
+					.contact-card .info-value a:hover {
+						text-decoration: underline;
+					}
+
+		/* form */
+		.form-control:focus {
+			border-color: var(--primary-red);
+			box-shadow: 0 0 0 0.2rem rgba(140, 28, 28, 0.15);
+		}
+
+		.btn-submit-contact {
+			background-color: var(--primary-red);
+			color: #fff;
+			font-weight: 700;
+			padding: 10px 30px;
+			border-radius: 6px;
+			border: none;
+			font-size: 0.95rem;
+			transition: 0.2s;
+		}
+
+			.btn-submit-contact:hover {
+				background-color: var(--dark-red);
+				color: #fff;
+			}
+
+		/* map placeholder */
+		.map-placeholder {
+			background: #e9ecef;
+			border-radius: 10px;
+			padding: 40px 20px;
+			text-align: center;
+			color: #888;
+			border: 1px solid #ddd;
+			min-height: 180px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+			.map-placeholder i {
+				font-size: 2.5rem;
+				color: var(--primary-red);
+				margin-bottom: 8px;
+			}
+
+		/* footer */
+		.footer-primary {
+			background-color: var(--primary-red);
+			color: #ffffff;
+			padding: 25px 0;
+		}
+
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.15rem;
+			margin-bottom: 10px;
+		}
+
+		.footer-desc {
+			font-size: 0.82rem;
+			line-height: 1.4;
+			opacity: 0.95;
+		}
+
+		.footer-bottom {
+			background-color: var(--dark-red);
+			color: #ffffff;
+			font-size: 0.78rem;
+			padding: 10px 0;
+		}
+
+			.footer-bottom a {
+				color: #ffffff;
+				margin-left: 12px;
+				text-decoration: none;
+			}
+
+		@media (max-width: 576px) {
+			.contact-card {
+				padding: 16px 18px;
+			}
+
+			.section-heading {
+				font-size: 1.2rem;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Top Scrolling Marquee -->
+	<div class="top-marquee-strip">
+		<div class="marquee-content">
+			International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26) &nbsp;&nbsp;&bull;&nbsp;&nbsp; International Conference on Sustainable Solutions in Engineering Technologies and Earth Science (ICSSETES-26)
+		</div>
+	</div>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
+		<div class="container-fluid px-lg-5 flex-column align-items-start">
+			<div class="d-flex justify-content-between align-items-center w-100">
+				<a class="navbar-brand" href="#">
+					<i class="fa-solid fa-globe"></i>
+					<span>ICSSETES-26</span>
+				</a>
+				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
+				<ul class="navbar-nav me-auto flex-wrap">
+					<li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">GUIDELINES</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">SPEAKERS</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">COMMITTEE</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Advisory Board</a></li>
+							<li><a class="dropdown-item" href="#">Organizing Committee</a></li>
+							<li><a class="dropdown-item" href="#">Technical Program Committee</a></li>
+						</ul>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="#">CALL FOR PAPERS</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REGISTER</a></li>
+					<li class="nav-item"><a class="nav-link active" href="#">CONTACT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">REFUND POLICY</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">PLAGIARISM POLICY</a></li>
+				</ul>
+				<div class="ms-auto mt-2 mt-xl-0">
+					<a href="#" class="btn-submit-paper">Submit Paper</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Contact Hero -->
+	<section class="contact-hero">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-8">
+					<h1>Contact Us</h1>
+					<p class="text-muted" style="font-size:0.95rem;">
+						<i class="fa-regular fa-envelope me-2"></i> Get in Touch with ICSSETES-26 Team
+					</p>
+				</div>
+				<div class="col-lg-4 text-lg-end">
+					<span class="badge bg-danger bg-opacity-10 text-danger p-2 px-3" style="font-weight:600;">Reach Us</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Content -->
+	<section class="contact-section">
+		<div class="container">
+
+			<div class="row">
+
+				<!-- Left Column: Form -->
+				<div class="col-lg-6">
+					<h3 class="section-heading">Send Us a Message</h3>
+					<p class="paragraph-text">Please fill the provided form, and we will get back to you as soon as possible.</p>
+
+					<form>
+						<div class="mb-3">
+							<label for="email" class="form-label fw-semibold">Your email <span class="text-danger">*</span></label>
+							<input type="email" class="form-control" id="email" placeholder="name@acme.com" required />
+						</div>
+						<div class="mb-3">
+							<label for="subject" class="form-label fw-semibold">Subject <span class="text-danger">*</span></label>
+							<select class="form-select" id="subject" required>
+								<option value="">Let us know how we can help you</option>
+								<option>General Inquiry</option>
+								<option>Paper Submission</option>
+								<option>Registration</option>
+								<option>Sponsorship</option>
+								<option>Other</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="message" class="form-label fw-semibold">Your message <span class="text-danger">*</span></label>
+							<textarea class="form-control" id="message" rows="4" placeholder="Leave a comment..." required></textarea>
+						</div>
+						<button type="submit" class="btn-submit-contact">
+							<i class="fa-regular fa-paper-plane me-2"></i> Submit
+						</button>
+					</form>
+				</div>
+
+				<!-- Right Column: Contact Info -->
+				<div class="col-lg-6">
+
+					<h3 class="section-heading">Get in Touch</h3>
+					<p class="paragraph-text">You can contact us on any of the following platforms, and we will get back to you.</p>
+
+					<!-- Email -->
+					<div class="contact-card d-flex align-items-center gap-3">
+						<div class="icon-circle"><i class="fa-regular fa-envelope"></i></div>
+						<div>
+							<div class="info-title">Email</div>
+							<div class="info-value"><a href="mailto:ceedept.conf@its.edu.in">ceedept.conf@its.edu.in</a></div>
+						</div>
+					</div>
+
+					<!-- Contact No -->
+					<div class="contact-card d-flex align-items-center gap-3">
+						<div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+						<div>
+							<div class="info-title">Contact No.</div>
+							<div class="info-value">
+								<a href="tel:+919990923145">+91-9990923145</a>,
+								<a href="tel:+916398370583">+91-6398370583</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Email 2 -->
+					<div class="contact-card d-flex align-items-center gap-3">
+						<div class="icon-circle"><i class="fa-regular fa-envelope"></i></div>
+						<div>
+							<div class="info-title">Email</div>
+							<div class="info-value"><a href="mailto:hod.ece@its.edu.in">hod.ece@its.edu.in</a></div>
+						</div>
+					</div>
+
+					<!-- Location -->
+					<div class="contact-card d-flex align-items-center gap-3">
+						<div class="icon-circle"><i class="fa-solid fa-location-dot"></i></div>
+						<div>
+							<div class="info-title">Location</div>
+							<div class="info-value">ITS Engineering College, 46, Knowledge Park III, Greater Noida, Uttar Pradesh 201310</div>
+						</div>
+					</div>
+
+					<!-- Map Placeholder -->
+					<div class="map-placeholder mt-3">
+						<i class="fa-solid fa-map-location-dot"></i>
+						<div style="font-weight:600; color:#333;">📍 ITS Engineering College</div>
+						<div style="font-size:0.85rem;">46, Knowledge Park III, Greater Noida, UP 201310</div>
+						<div style="font-size:0.75rem; color:#999; margin-top:6px;">
+							<i class="fa-brands fa-google me-1"></i> View on Google Maps
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<!-- Footer Primary -->
+	<footer class="footer-primary">
+		<div class="container">
+			<div class="footer-brand">
+				<i class="fa-solid fa-globe"></i>
+				<span>ICSSETES-26</span>
+			</div>
+			<div class="footer-desc">
+				International Conference on Sustainable<br>
+				Solutions in Engineering Technologies and<br>
+				Earth Science-ICSSETES-26
+			</div>
+		</div>
+	</footer>
+
+	<!-- Footer Bottom Strip -->
+	<div class="footer-bottom">
+		<div class="container d-flex justify-content-between align-items-center">
+			<div>Department of Electronics and Communication Engineering, ITSEC</div>
+			<div>
+				<a href="#"><i class="fa-brands fa-twitter"></i></a>
+				<a href="#"><i class="fa-solid fa-phone"></i></a>
+				<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				<a href="#"><i class="fa-solid fa-envelope"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap 5 JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+</body>
+</html>
