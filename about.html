@@ -8,337 +8,345 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<!-- Font Awesome Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-		  rel="stylesheet">
-
 	<!-- Bootstrap Icons -->
-	<link rel="stylesheet"
-		  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<!-- Your Custom CSS -->
 	<link rel="stylesheet" href="css/style.css">
 
-
-
-
-
-
 	<style>
-
-				/* ==============================
+		/* ==============================
 		   NAVBAR
 		============================== */
+		.navbar {
+			background: #ffffff;
+			padding: 0;
+			position: relative;
+			z-index: 1000;
+		}
 
-				.navbar {
-					background: #ffffff;
-					padding: 0;
-					position: relative;
-					z-index: 1000;
-				}
+		.menu-row {
+			overflow: visible !important;
+		}
 
-				.menu-row {
-					overflow: visible !important;
-				}
+		.navbar-nav {
+			align-items: center;
+		}
 
-				.navbar-nav {
-					align-items: center;
-				}
+		.navbar .nav-link {
+			color: #222;
+			font-size: 14px;
+			font-weight: 600;
+			padding: 18px 12px;
+			white-space: nowrap;
+		}
 
-				.navbar .nav-link {
-					color: #222;
-					font-size: 14px;
-					font-weight: 600;
-					padding: 18px 12px;
-					white-space: nowrap;
-				}
+			.navbar .nav-link:hover {
+				color: #0d6efd;
+			}
 
-					.navbar .nav-link:hover {
-						color: #0d6efd;
-					}
-
-
-				/* ==============================
+		/* ==============================
 		   DROPDOWN
 		============================== */
+		.navbar .dropdown {
+			position: relative;
+		}
 
-				.navbar .dropdown {
-					position: relative;
-				}
+		.navbar .dropdown-menu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			min-width: 240px;
+			margin-top: 0;
+			padding: 8px 0;
+			background: #ffffff;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+			z-index: 99999;
+		}
 
-				.navbar .dropdown-menu {
-					position: absolute;
-					top: 100%;
-					left: 0;
-					min-width: 240px;
-					margin-top: 0;
-					padding: 8px 0;
-					background: #ffffff;
-					border: 1px solid #ddd;
-					border-radius: 6px;
-					box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-					z-index: 99999;
-				}
+		.navbar .dropdown-item {
+			padding: 10px 18px;
+			font-size: 14px;
+			color: #222;
+		}
 
-				.navbar .dropdown-item {
-					padding: 10px 18px;
-					font-size: 14px;
-					color: #222;
-				}
+			.navbar .dropdown-item:hover {
+				background: #f1f5ff;
+				color: #0d6efd;
+			}
 
-					.navbar .dropdown-item:hover {
-						background: #f1f5ff;
-						color: #0d6efd;
-					}
-
-
-				/* ==============================
+		/* ==============================
 		   SUBMIT BUTTON
 		============================== */
+		.btn-submit-paper {
+			display: inline-block;
+			padding: 10px 18px;
+			background: #0d6efd;
+			color: #ffffff;
+			text-decoration: none;
+			font-weight: 600;
+			border-radius: 5px;
+		}
 
-				.btn-submit-paper {
-					display: inline-block;
-					padding: 10px 18px;
-					background: #0d6efd;
-					color: #ffffff;
-					text-decoration: none;
-					font-weight: 600;
-					border-radius: 5px;
-				}
+			.btn-submit-paper:hover {
+				background: #084298;
+				color: #ffffff;
+			}
 
-					.btn-submit-paper:hover {
-						background: #084298;
-						color: #ffffff;
-					}
-
-
-				/* ==============================
+		/* ==============================
 		   MOBILE
 		============================== */
+		@media (max-width: 1199px) {
+			.navbar .nav-link {
+				padding: 10px 15px;
+			}
 
-				@media (max-width: 1199px) {
+			.navbar .dropdown-menu {
+				position: static;
+				box-shadow: none;
+				border: 0;
+			}
 
-					.navbar .nav-link {
-						padding: 10px 15px;
-					}
+			.btn-submit-paper {
+				margin: 10px 15px;
+			}
+		}
 
-					.navbar .dropdown-menu {
-						position: static;
-						box-shadow: none;
-						border: 0;
-					}
+		/* ==============================
+		   ROOT & BASE
+		============================== */
+		:root {
+			--primary-red: #8C1C1C;
+			--dark-red: #6D1313;
+			--text-dark: #222222;
+			--badge-bg: #FDE8DB;
+			--badge-color: #D96A27;
+			--gold: #C9A84C;
+		}
 
-					.btn-submit-paper {
-						margin: 10px 15px;
-					}
-				}
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			color: var(--text-dark);
+			line-height: 1.6;
+			background-color: #ffffff;
+		}
 
+		/* top marquee */
+		.top-marquee-strip {
+			background-color: #ffffff;
+			color: #111;
+			font-size: 0.85rem;
+			font-weight: 600;
+			padding: 6px 0;
+			border-bottom: 1px solid #ddd;
+			overflow: hidden;
+			white-space: nowrap;
+		}
 
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 30s linear infinite;
+		}
 
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
 
+			100% {
+				transform: translateX(-100%);
+			}
+		}
 
+		/* navbar */
+		.navbar-custom {
+			background-color: var(--primary-red);
+			padding: 10px 0;
+		}
 
+			.navbar-custom .navbar-brand {
+				color: #ffffff;
+				font-weight: 700;
+				font-size: 1.35rem;
+				display: flex;
+				align-items: center;
+				gap: 10px;
+			}
 
-				:root {
-					--primary-red: #8C1C1C;
-					--dark-red: #6D1313;
-					--text-dark: #222222;
-					--badge-bg: #FDE8DB;
-					--badge-color: #D96A27;
-				}
+		.menu-row {
+			width: 100%;
+			border-top: 1px solid rgba(255, 255, 255, 0.2);
+			padding-top: 8px;
+			margin-top: 8px;
+		}
 
-				body {
-					font-family: Arial, Helvetica, sans-serif;
-					color: var(--text-dark);
-					line-height: 1.6;
-					background-color: #ffffff;
-				}
+		.navbar-custom .nav-link {
+			color: #ffffff !important;
+			font-size: 0.75rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 6px 10px !important;
+			letter-spacing: 0.3px;
+		}
 
-				/* top marquee */
-				.top-marquee-strip {
-					background-color: #ffffff;
-					color: #111;
-					font-size: 0.85rem;
-					font-weight: 600;
-					padding: 6px 0;
-					border-bottom: 1px solid #ddd;
-					overflow: hidden;
-					white-space: nowrap;
-				}
+			.navbar-custom .nav-link:hover {
+				opacity: 0.85;
+			}
 
-				.marquee-content {
-					display: inline-block;
-					animation: marquee 30s linear infinite;
-				}
+		.btn-submit-paper {
+			background-color: #0088cc;
+			color: #ffffff;
+			font-size: 0.8rem;
+			font-weight: 600;
+			border-radius: 4px;
+			padding: 6px 14px;
+			text-decoration: none;
+			white-space: nowrap;
+		}
 
-				@keyframes marquee {
-					0% {
-						transform: translateX(100%);
-					}
+			.btn-submit-paper:hover {
+				background-color: #006699;
+				color: #fff;
+			}
 
-					100% {
-						transform: translateX(-100%);
-					}
-				}
+		/* about hero */
+		.about-hero {
+			padding: 30px 0 20px 0;
+			background: #fafafa;
+			border-bottom: 1px solid #eee;
+		}
 
-				/* navbar */
-				.navbar-custom {
-					background-color: var(--primary-red);
-					padding: 10px 0;
-				}
+			.about-hero h1 {
+				font-weight: 800;
+				color: var(--primary-red);
+				font-size: 2rem;
+			}
 
-					.navbar-custom .navbar-brand {
-						color: #ffffff;
-						font-weight: 700;
-						font-size: 1.35rem;
-						display: flex;
-						align-items: center;
-						gap: 10px;
-					}
+			.about-hero .breadcrumb-text {
+				font-size: 0.9rem;
+				color: #555;
+			}
 
-				.menu-row {
-					width: 100%;
-					border-top: 1px solid rgba(255, 255, 255, 0.2);
-					padding-top: 8px;
-					margin-top: 8px;
-				}
+		/* main content */
+		.about-section {
+			padding: 40px 0;
+		}
 
-				.navbar-custom .nav-link {
-					color: #ffffff !important;
-					font-size: 0.75rem;
+		.section-heading {
+			color: #111111;
+			font-weight: 800;
+			font-size: 1.5rem;
+			margin-bottom: 15px;
+			border-left: 5px solid var(--primary-red);
+			padding-left: 15px;
+		}
+
+		.section-heading-gold {
+			border-left-color: var(--gold);
+		}
+
+		.paragraph-text {
+			color: #333333;
+			font-size: 0.95rem;
+			line-height: 1.8;
+			text-align: justify;
+			margin-bottom: 18px;
+		}
+
+		.about-card {
+			background: #f8f8f8;
+			border-radius: 8px;
+			padding: 24px 28px;
+			border-left: 4px solid var(--primary-red);
+			margin-bottom: 30px;
+			transition: all 0.3s ease;
+		}
+
+			.about-card:hover {
+				box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+			}
+
+			.about-card h5 {
+				font-weight: 700;
+				color: var(--primary-red);
+				font-size: 1.1rem;
+				margin-bottom: 12px;
+			}
+
+		.about-card-gold {
+			border-left-color: var(--gold);
+		}
+
+			.about-card-gold h5 {
+				color: var(--gold);
+			}
+
+		.list-institute {
+			columns: 2;
+			column-gap: 30px;
+			list-style: none;
+			padding-left: 0;
+			margin-top: 15px;
+		}
+
+			.list-institute li {
+				padding: 4px 0;
+				font-weight: 500;
+				color: #1a1a1a;
+			}
+
+				.list-institute li::before {
+					content: "▹ ";
+					color: var(--primary-red);
 					font-weight: 700;
-					text-transform: uppercase;
-					padding: 6px 10px !important;
-					letter-spacing: 0.3px;
 				}
 
-					.navbar-custom .nav-link:hover {
-						opacity: 0.85;
-					}
+		/* footer */
+		.footer-primary {
+			background-color: var(--primary-red);
+			color: #ffffff;
+			padding: 25px 0;
+		}
 
-				.btn-submit-paper {
-					background-color: #0088cc;
-					color: #ffffff;
-					font-size: 0.8rem;
-					font-weight: 600;
-					border-radius: 4px;
-					padding: 6px 14px;
-					text-decoration: none;
-					white-space: nowrap;
-				}
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.15rem;
+			margin-bottom: 10px;
+		}
 
-					.btn-submit-paper:hover {
-						background-color: #006699;
-						color: #fff;
-					}
+		.footer-desc {
+			font-size: 0.82rem;
+			line-height: 1.4;
+			opacity: 0.95;
+		}
 
-				/* hero (about) */
-				.about-hero {
-					padding: 30px 0 20px 0;
-					background: #fafafa;
-					border-bottom: 1px solid #eee;
-				}
+		.footer-bottom {
+			background-color: var(--dark-red);
+			color: #ffffff;
+			font-size: 0.78rem;
+			padding: 10px 0;
+		}
 
-					.about-hero h1 {
-						font-weight: 800;
-						color: var(--primary-red);
-						font-size: 2rem;
-					}
+			.footer-bottom a {
+				color: #ffffff;
+				margin-left: 12px;
+				text-decoration: none;
+			}
 
-					.about-hero .breadcrumb-text {
-						font-size: 0.9rem;
-						color: #555;
-					}
+		/* responsive */
+		@media (max-width: 576px) {
+			.list-institute {
+				columns: 1;
+			}
 
-				/* main content */
-				.about-section {
-					padding: 40px 0;
-				}
-
-				.section-heading {
-					color: #111111;
-					font-weight: 800;
-					font-size: 1.5rem;
-					margin-bottom: 15px;
-					border-left: 5px solid var(--primary-red);
-					padding-left: 15px;
-				}
-
-				.paragraph-text {
-					color: #333333;
-					font-size: 0.95rem;
-					line-height: 1.7;
-					text-align: justify;
-					margin-bottom: 18px;
-				}
-
-				.about-card {
-					background: #f8f8f8;
-					border-radius: 8px;
-					padding: 20px 24px;
-					border-left: 4px solid var(--primary-red);
-					margin-bottom: 30px;
-				}
-
-					.about-card h5 {
-						font-weight: 700;
-						color: var(--primary-red);
-					}
-
-				.list-institute {
-					columns: 2;
-					column-gap: 30px;
-					list-style: none;
-					padding-left: 0;
-					margin-top: 15px;
-				}
-
-					.list-institute li {
-						padding: 4px 0;
-						font-weight: 500;
-						color: #1a1a1a;
-					}
-
-						.list-institute li::before {
-							content: "▹ ";
-							color: var(--primary-red);
-							font-weight: 700;
-						}
-
-				/* footer */
-				.footer-primary {
-					background-color: var(--primary-red);
-					color: #ffffff;
-					padding: 25px 0;
-				}
-
-				.footer-brand {
-					display: flex;
-					align-items: center;
-					gap: 8px;
-					font-weight: 700;
-					font-size: 1.15rem;
-					margin-bottom: 10px;
-				}
-
-				.footer-desc {
-					font-size: 0.82rem;
-					line-height: 1.4;
-					opacity: 0.95;
-				}
-
-				.footer-bottom {
-					background-color: var(--dark-red);
-					color: #ffffff;
-					font-size: 0.78rem;
-					padding: 10px 0;
-				}
-
-					.footer-bottom a {
-						color: #ffffff;
-						margin-left: 12px;
-						text-decoration: none;
-					}
+			.about-card {
+				padding: 18px 16px;
+			}
+		}
 	</style>
 </head>
 <body>
@@ -350,7 +358,7 @@
 		</div>
 	</div>
 
-	<!-- Navigation (exactly as in home) -->
+	<!-- Navigation -->
 	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
 		<div class="container-fluid px-lg-5 flex-column align-items-start">
 			<div class="d-flex justify-content-between align-items-center w-100">
@@ -362,152 +370,139 @@
 					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
 				</button>
 			</div>
-			<!-- Next Line (Row 2): Menu Links -->
 			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
 				<ul class="navbar-nav me-auto flex-wrap">
-
 					<li class="nav-item">
 						<a class="nav-link" href="index.html">HOME</a>
 					</li>
-
 					<li class="nav-item">
 						<a class="nav-link" href="about.html">ABOUT</a>
 					</li>
-
-					<li class="nav-item">
-						
-					</li>
-
 					<li class="nav-item">
 						<a class="nav-link" href="speakers.html">SPEAKERS</a>
 					</li>
-
 					<!-- COMMITTEE -->
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"
-						   href="#"
-						   id="committeeDrop"
-						   role="button"
-						   data-bs-toggle="dropdown"
-						   aria-expanded="false">
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 							COMMITTEE
 						</a>
-
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
-
 							<li>
-								<a class="dropdown-item" href="advisory-board.html">
-									Advisory Committee
-								</a>
+								<a class="dropdown-item" href="advisory-board.html">Advisory Committee</a>
 							</li>
-
-						
-
 						</ul>
 					</li>
-
-
-
 					<li class="nav-item">
-						<a class="nav-link" href="contact.html">
-							CONTACT
-						</a>
+						<a class="nav-link" href="contact.html">CONTACT</a>
 					</li>
-
-					
-
 				</ul>
-
-				<div class="ms-auto mt-2 mt-xl-0">
-					<a href="" class="btn-submit-paper">
-						
-					</a>
-				</div>
+				
 			</div>
 		</div>
 	</nav>
 
-	<!-- About Hero (simple header) -->
+	<!-- About Hero -->
 	<section class="about-hero">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-8">
-					<h1>About ICSSET – 26</h1>
-					<p class="breadcrumb-text"><i class="fa-regular fa-building me-2"></i> ITS Engineering College · Greater Noida</p>
+					<h1>About Us</h1>
+					<p class="breadcrumb-text"><i class="fa-regular fa-building me-2"></i> Dhanalakshmi College of Engineering – ICSSET '26 Venue Partner</p>
 				</div>
-				<div class="col-lg-4 text-lg-end">
-					<span class="badge bg-danger bg-opacity-10 text-danger p-2 px-3" style="font-weight:600;">IEEE Conference 2026</span>
-				</div>
+				
 			</div>
 		</div>
 	</section>
 
-	<!-- Main About Content (exactly from image + home code) -->
+	<!-- Main About Content -->
 	<section class="about-section">
 		<div class="container">
 
-			<!-- About ITS Group of Institute -->
+			<!-- About Dhanalakshmi College of Engineering -->
 			<div class="about-card">
-				<h5><i class="fa-regular fa-building me-2"></i> About ITS Group of Institute</h5>
+				<h5><i class="fa-regular fa-building me-2"></i> About Dhanalakshmi College of Engineering (DCE)</h5>
 				<p class="paragraph-text">
-					ITS - The Education Group, with its diversified presence across industries – including education, hospitality, medical, pharmacy, health care, wellness, legal, philanthropy and CSR – has been in a business leadership position for many decades. The company has undergone tremendous growth and has scaled up its operations in a big way over many years, in line with its global ambitions.
+					<strong>Dhanalakshmi College of Engineering (DCE)</strong>, Tambaram, Chennai, is an autonomous institution affiliated to Anna University and accredited by NAAC with Grade 'A'. The institution focuses on delivering structured, outcome-oriented technical education that develops professionally competent and ethically responsible engineers through academic rigour and practical exposure.
 				</p>
-				<p><strong>ITS Group of Institute include:</strong></p>
-				<ul class="list-institute">
-					<li>ITS Engineering College – Greater Noida</li>
-					<li>ITS Dental College – Greater Noida</li>
-					<li>ITS Management Institute – Ghaziabad</li>
-					<li>ITS Dental College – Ghaziabad</li>
-					<li>ITS Paramedical College – Ghaziabad</li>
-					<li>ITS Pharmacy College – Ghaziabad</li>
-				</ul>
-			</div>
-
-			<!-- About ITSEC -->
-			<h3 class="section-heading">About ITSEC</h3>
-			<p class="paragraph-text">
-				I.T.S Engineering College, situated in Greater Noida, stands as a distinguished institution for Engineering and Management. Established by prominent professionals with a commitment to delivering high-quality, industry-focused education at an affordable cost, the college has a rich history spanning approximately three decades. The ITS Education Group, with its roots firmly planted in North India, has become a significant player in higher education. The group oversees nine institutes with a collective student body exceeding 20,000 and a dedicated staff of over 1,250.
-			</p>
-			<p class="paragraph-text">
-				Operating with excellence in various disciplines, including Information Technology, Engineering, Management, Dental, Pharmacy, and Physiotherapy, the ITS Education Group has been a prominent force since its inception in 2006 under the visionary leadership of Chairman Dr. R.P. Chadha. ITS Engineering College boasts NBA accreditation, a testament to its unwavering commitment to providing top-notch education. The college, approved by AICTE and affiliated with AKTU-Lucknow, offers a diverse range of programs. These include B. Tech in Civil Engineering, Mechanical Engineering, Computer Science & Engineering (CSE), CSE with specializations in Artificial Intelligence and Machine Learning, and Data Science. Additionally, the college provides programs in Electronics and Communication Engineering (ECE), Electronics Engineering (VLSI Design and Technology), Electrical and Computer Engineering, Mechanical Engineering, and an MBA program.
-			</p>
-
-			<!-- About ECE (full content from image) -->
-			<h3 class="section-heading mt-5">About ECE</h3>
-			<p class="paragraph-text">
-				The Department of Electronics and Communication Engineering (ECE) at I.T.S Engineering College, Greater Noida, was established in 2006 with the vision to produce technically skilled, innovative, and socially responsible engineers capable of meeting global technological challenges. The department emphasizes quality education, research, and industry-oriented learning to prepare students for diverse career opportunities.
-			</p>
-			<p class="paragraph-text">
-				The department offers a four-year B.Tech program in Electronics and Communication Engineering, affiliated to Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow (formerly UPTU). The program is accredited by the National Board of Accreditation (NBA), New Delhi, highlighting its commitment to academic excellence, outcome-based education, and continuous improvement.
-			</p>
-			<p class="paragraph-text">
-				The department has a team of highly qualified and experienced faculty members, many of whom are postgraduates and doctorates from prestigious institutions such as IITs, NITs, and NSIT. Their expertise spans areas like VLSI design, embedded systems, communication networks, signal processing, and automation, ensuring students receive both in-depth theoretical knowledge and practical insight.
-			</p>
-			<p class="paragraph-text">
-				To strengthen industry-academia collaboration, the department has established the NI Innovation Centre in partnership with National Instruments (NI). This centre focuses on Virtual Instrumentation and Industrial Automation, enabling students to work on advanced technologies through real-time hardware–software integration and project-based learning.
-			</p>
-			<p class="paragraph-text">
-				Student growth is further enriched through active technical bodies such as the IEEE Student Branch and the student activity club “Envision.” These platforms organize workshops, seminars, webinars, technical quizzes, poster presentations, and project exhibitions, encouraging innovation, leadership, and professional development.
-			</p>
-			<p class="paragraph-text">
-				With modern laboratories, a research-driven environment, and dedicated faculty, the Department of Electronics and Communication Engineering continues to produce graduates who excel in fields like telecommunication, embedded systems, signal processing, automation, and software development, contributing to industry and society alike.
-			</p>
-
-			<!-- CMT note (as in home) -->
-			<div class="mt-4 p-3 bg-light rounded border">
-				<p class="mb-2" style="font-size: 0.85rem;">
-					<strong>NOTE: All papers must be submitted electronically through the Microsoft CMT conference management system.</strong>
-				</p>
-				<p class="mb-0 text-muted" style="font-size: 0.8rem;">
-					<strong>CMT Acknowledgement</strong><br>
-					The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud service as well as for software development and support.
+				<p class="paragraph-text">
+					Dhanalakshmi College of Engineering is an autonomous engineering institution committed to provide quality technical education in a structured and disciplined academic environment. The institution is affiliated to Anna University and accredited by NAAC with Grade 'A'. DCE offers undergraduate and postgraduate engineering programmes designed to build strong academic foundations, professional competence, and ethical responsibility. The institution focuses on academic rigour, student development, and continuous improvement in teaching and learning practices.
 				</p>
 			</div>
+
+			<!-- DCE Genesis -->
+			<div class="about-card about-card-gold">
+				<h5><i class="fa-solid fa-tree me-2"></i> DCE Genesis</h5>
+				<p class="paragraph-text">
+					Dhanalakshmi College of Engineering (DCE), a sprout of the esteemed Dhanalakshmi Educational Trust was set up near Tambaram at Chennai in the year 2001-2002. It is said that "Every one has a will to win but very few have the will to prepare to win". <strong>Dr V P Ramamurthi, M.Sc.(Engg.), Ph.D.</strong> (fondly known as Dr VPR) a former professor of Anna University, is one among those very few. He has realized the dream of serving the student community by establishing a "Temple of Learning" namely Dhanalakshmi College of Engineering, popularly known as DCE, is the brain child of the Clairvoyant and committed academician Dr VPR.
+				</p>
+				<p class="paragraph-text">
+					The college is approved by the All India Council for Technical Education (AICTE), New Delhi and affiliated to the Anna University (Chennai). DCE is a sister institute of the Indian Institute of Professional Education (IIPE), an institute offering coaching for professional courses entrance examinations, also founded by Dr VPR in the year 1993.
+				</p>
+				<p class="paragraph-text">
+					Dhanalakshmi College of Engineering has now grown into a <strong>'Distinguished Centre for Engineering and Technological Studies'</strong>, providing a serene environment and congenial atmosphere for learning. The institution not only provides quality engineering education to mould the students into technologically sound, efficient, effective, and creative engineers but also moulds them as responsible human beings.
+				</p>
+			</div>
+
+			<!-- Programmes Offered -->
+			<h3 class="section-heading">Programmes Offered</h3>
+
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="about-card" style="border-left-color: #0088cc;">
+						<h5 style="color: #0088cc;"><i class="fa-solid fa-graduation-cap me-2"></i> Undergraduate Programmes</h5>
+						<ul class="list-institute" style="columns: 1;">
+							<li>B.E. Computer Science and Engineering</li>
+							<li>B.Tech. Artificial Intelligence and Data Science</li>
+							<li>B.Tech. Information Technology</li>
+							<li>B.E. Computer Science and Engineering (Cyber Security)</li>
+							<li>B.E. Computer Science and Engineering (AI & ML)</li>
+							<li>B.E. Electronics and Communication Engineering</li>
+							<li>B.E. Electrical and Electronics Engineering</li>
+							<li>B.E. Mechanical Engineering</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="about-card" style="border-left-color: #C9A84C;">
+						<h5 style="color: #C9A84C;"><i class="fa-solid fa-microscope me-2"></i> Postgraduate Programmes</h5>
+						<ul class="list-institute" style="columns: 1;">
+							<li>M.E. Embedded Systems and Technologies</li>
+							<li>M.E. Computer Science and Engineering</li>
+							<li>M.E. CAD / CAM</li>
+						</ul>
+						<br>
+						<p style="margin-top: 10px; font-weight: 600; color: var(--primary-red);">
+							<i class="fa-solid fa-award me-2"></i> Accredited by NAAC with Grade 'A'
+						</p>
+					</div>
+				</div>
+			</div>
+
+			
+			<!-- Vision & Mission -->
+			<div class="row mt-4">
+				<div class="col-md-6">
+					<div class="about-card" style="border-left-color: var(--primary-red);">
+						<h5><i class="fa-regular fa-eye me-2"></i> Vision</h5>
+						<p class="paragraph-text" style="margin-bottom: 0;">
+							To be a centre of excellence in engineering education and research, producing competent engineers with strong ethical values and social responsibility.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="about-card" style="border-left-color: var(--gold);">
+						<h5 style="color: var(--gold);"><i class="fa-regular fa-flag me-2"></i> Mission</h5>
+						<p class="paragraph-text" style="margin-bottom: 0;">
+							To provide quality technical education through innovative teaching, industry collaboration, and research, fostering holistic development of students to meet global challenges.
+						</p>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</section>
 
-	<!-- Visitor Counter (same as home) -->
-	<!-- Footer Primary (same as home) -->
+	<!-- Footer Primary -->
 	<footer class="footer-primary">
 		<div class="container">
 			<div class="footer-brand">
@@ -525,7 +520,6 @@
 	<!-- Footer Bottom Strip -->
 	<div class="footer-bottom">
 		<div class="container d-flex justify-content-between align-items-center">
-			
 			<div>
 				<a href="#"><i class="fa-brands fa-twitter"></i></a>
 				<a href="#"><i class="fa-solid fa-phone"></i></a>
@@ -537,15 +531,7 @@
 
 	<!-- Bootstrap 5 JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-
-	<!-- Bootstrap 5 JS Bundle -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-
-
-	<!-- Bootstrap 5.3.3 Bundle JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-	<!-- Your Custom JS - optional -->
 	<script src="js/script.js"></script>
 
 </body>

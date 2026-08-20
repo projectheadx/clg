@@ -1,642 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>1st IEEE International Conference on Sustainable Solutions in Engineering Technologies and Earth Science-ICSSET – 26</title>
-	<!-- Bootstrap 5 CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Font Awesome Icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	<!-- Google Fonts -->
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ICSSET – 26 · Sustainable Engineering</title>
+	<!-- Bootstrap 5 + Icons + Fonts -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
 	<style>
-			/* ==============================
-		   ROOT & BASE
-		============================== */
-			:root {
-				--primary-red: #8C1C1C;
-				--dark-red: #6D1313;
-				--gold: #C9A84C;
-				--light-gold: #F5ECD7;
-				--text-dark: #1A1A1A;
-				--text-muted: #555555;
-				--shadow-sm: 0 4px 20px rgba(0,0,0,0.06);
-				--shadow-hover: 0 8px 35px rgba(140,28,28,0.12);
-				--transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+		/* ----- ROOT VARIABLES (fresh & premium) ----- */
+		:root {
+			--primary: #0d1b2a;
+			--primary-light: #1b2f44;
+			--accent-gold: #d4af37;
+			--accent-rose: #b8865b;
+			--soft-bg: #f9f7f4;
+			--card-bg: #ffffff;
+			--text-dark: #0b1a2a;
+			--text-muted: #4a5b6b;
+			--shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.04);
+			--shadow-hover: 0 20px 50px rgba(13, 27, 42, 0.10);
+			--transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			font-family: 'Inter', sans-serif;
+			background: var(--soft-bg);
+			color: var(--text-dark);
+			line-height: 1.6;
+			overflow-x: hidden;
+		}
+
+		/* ----- top marquee (refreshed) ----- */
+		.top-marquee-strip {
+			background: var(--primary);
+			color: #fff;
+			font-size: 0.8rem;
+			font-weight: 500;
+			padding: 8px 0;
+			overflow: hidden;
+			white-space: nowrap;
+			border-bottom: 2px solid var(--accent-gold);
+			letter-spacing: 0.3px;
+		}
+
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 28s linear infinite;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
 			}
 
-			* {
-				margin: 0;
-				padding: 0;
-				box-sizing: border-box;
+			100% {
+				transform: translateX(-100%);
 			}
+		}
 
-			body {
-				font-family: 'Inter', Arial, Helvetica, sans-serif;
-				color: var(--text-dark);
-				line-height: 1.7;
-				background: #fcfcfc;
-				overflow-x: hidden;
-			}
+		/* ----- navbar (elegant dark) ----- */
+		.navbar-custom {
+			background: var(--primary);
+			padding: 12px 0;
+			border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+		}
 
-			/* ==============================
-		   TOP MARQUEE - KEEP OLD
-		============================== */
-			.top-marquee-strip {
-				background-color: #ffffff;
-				color: #111;
-				font-size: 0.85rem;
-				font-weight: 600;
-				padding: 6px 0;
-				border-bottom: 1px solid #ddd;
-				overflow: hidden;
-				white-space: nowrap;
-			}
-
-			.marquee-content {
-				display: inline-block;
-				animation: marquee 30s linear infinite;
-			}
-
-			@keyframes marquee {
-				0% {
-					transform: translateX(100%);
-				}
-
-				100% {
-					transform: translateX(-100%);
-				}
-			}
-
-			/* ==============================
-		   NAVBAR - KEEP OLD
-		============================== */
-			.navbar-custom {
-				background-color: var(--primary-red);
-				padding: 10px 0;
-			}
-
-				.navbar-custom .navbar-brand {
-					color: #ffffff;
-					font-weight: 700;
-					font-size: 1.35rem;
-					display: flex;
-					align-items: center;
-					gap: 10px;
-				}
-
-			.menu-row {
-				width: 100%;
-				border-top: 1px solid rgba(255, 255, 255, 0.2);
-				padding-top: 8px;
-				margin-top: 8px;
-			}
-
-			.navbar-custom .nav-link {
-				color: #ffffff !important;
-				font-size: 0.75rem;
-				font-weight: 700;
-				text-transform: uppercase;
-				padding: 6px 10px !important;
-				letter-spacing: 0.3px;
-			}
-
-				.navbar-custom .nav-link:hover {
-					opacity: 0.85;
-				}
-
-			.btn-submit-paper {
-				background-color: #0088cc;
-				color: #ffffff;
-				font-size: 0.8rem;
-				font-weight: 600;
-				border-radius: 4px;
-				padding: 6px 14px;
-				text-decoration: none;
-				white-space: nowrap;
-			}
-
-				.btn-submit-paper:hover {
-					background-color: #006699;
-					color: #ffffff;
-				}
-
-			/* ==============================
-		   HERO SECTION - Premium Design
-		============================== */
-			.hero-section {
-				padding: 50px 0 40px 0;
-				background: linear-gradient(135deg, #f8f4f0 0%, #ffffff 100%);
-				position: relative;
-				overflow: hidden;
-			}
-
-				.hero-section::before {
-					content: '';
-					position: absolute;
-					top: -50%;
-					right: -20%;
-					width: 600px;
-					height: 600px;
-					background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
-					border-radius: 50%;
-					pointer-events: none;
-				}
-
-			.hero-badge {
-				display: inline-block;
-				background: var(--primary-red);
-				color: #ffffff;
-				font-size: 0.7rem;
-				font-weight: 700;
-				text-transform: uppercase;
-				padding: 6px 18px;
-				border-radius: 50px;
-				letter-spacing: 1px;
-				margin-bottom: 16px;
-			}
-
-			.hero-dates {
-				color: var(--primary-red);
-				font-weight: 700;
-				font-size: 1rem;
-				text-transform: uppercase;
-				letter-spacing: 2px;
-				margin-bottom: 12px;
-			}
-
-			.hero-title {
-				font-weight: 900;
-				font-size: 2.6rem;
-				line-height: 1.15;
-				color: var(--text-dark);
-				margin-bottom: 20px;
-				letter-spacing: -1px;
-			}
-
-				.hero-title .highlight {
-					color: var(--primary-red);
-					position: relative;
-				}
-
-					.hero-title .highlight::after {
-						content: '';
-						position: absolute;
-						bottom: 2px;
-						left: 0;
-						width: 100%;
-						height: 6px;
-						background: var(--gold);
-						opacity: 0.3;
-						border-radius: 2px;
-					}
-
-			.hero-info-group {
-				background: #ffffff;
-				padding: 18px 22px;
-				border-radius: 12px;
-				box-shadow: var(--shadow-sm);
-				border-left: 4px solid var(--gold);
-				margin: 20px 0;
-				max-width: 600px;
-			}
-
-				.hero-info-group .title-label {
-					font-weight: 700;
-					color: var(--text-muted);
-					font-size: 0.75rem;
-					text-transform: uppercase;
-					letter-spacing: 1px;
-				}
-
-				.hero-info-group .highlight-blue {
-					color: var(--primary-red);
-					font-weight: 700;
-					font-size: 1.05rem;
-				}
-
-			.social-icons-hero {
-				display: flex;
-				gap: 14px;
-				margin-top: 25px;
-			}
-
-				.social-icons-hero a {
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
-					width: 44px;
-					height: 44px;
-					background: #ffffff;
-					color: var(--primary-red);
-					border-radius: 50%;
-					font-size: 1.1rem;
-					text-decoration: none;
-					transition: var(--transition);
-					box-shadow: var(--shadow-sm);
-					border: 1px solid #eee;
-				}
-
-					.social-icons-hero a:hover {
-						background: var(--primary-red);
-						color: #ffffff;
-						transform: translateY(-3px);
-						box-shadow: 0 8px 25px rgba(140,28,28,0.2);
-						border-color: var(--primary-red);
-					}
-
-			/* Hero Visual */
-			.hero-visual {
-				position: relative;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-				.hero-visual .circle-decoration {
-					width: 400px;
-					height: 400px;
-					border-radius: 50%;
-					background: linear-gradient(135deg, rgba(140,28,28,0.05), rgba(201,168,76,0.05));
-					position: absolute;
-					z-index: 0;
-				}
-
-				.hero-visual .content-box {
-					position: relative;
-					z-index: 1;
-					background: #ffffff;
-					padding: 40px 35px;
-					border-radius: 16px;
-					box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-					border: 1px solid rgba(201,168,76,0.15);
-					text-align: center;
-					max-width: 400px;
-				}
-
-					.hero-visual .content-box .icon-big {
-						font-size: 3.5rem;
-						color: var(--gold);
-						margin-bottom: 10px;
-					}
-
-					.hero-visual .content-box h3 {
-						font-weight: 800;
-						color: var(--primary-red);
-						font-size: 1.5rem;
-					}
-
-					.hero-visual .content-box p {
-						color: var(--text-muted);
-						font-size: 0.9rem;
-						margin-bottom: 0;
-					}
-
-					.hero-visual .content-box .gold-line {
-						width: 60px;
-						height: 3px;
-						background: var(--gold);
-						margin: 12px auto;
-						border-radius: 2px;
-					}
-
-			/* ==============================
-		   SECTION COMMON
-		============================== */
-			.section-padding {
-				padding: 60px 0;
-			}
-
-			.section-heading {
-				font-weight: 900;
-				font-size: 2rem;
-				color: var(--text-dark);
-				margin-bottom: 8px;
+			.navbar-custom .navbar-brand {
+				color: #fff;
+				font-weight: 800;
+				font-size: 1.4rem;
 				letter-spacing: -0.5px;
 			}
 
-				.section-heading .highlight {
-					color: var(--primary-red);
+				.navbar-custom .navbar-brand i {
+					color: var(--accent-gold);
 				}
 
-			.section-subtitle {
-				color: var(--text-muted);
-				font-size: 1rem;
-				font-weight: 400;
-				margin-bottom: 30px;
+			.navbar-custom .nav-link {
+				color: rgba(255, 255, 255, 0.8) !important;
+				font-size: 0.7rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.6px;
+				padding: 8px 14px !important;
+				transition: var(--transition);
 			}
 
-			.section-divider {
+				.navbar-custom .nav-link:hover {
+					color: #fff !important;
+					background: rgba(212, 175, 55, 0.12);
+					border-radius: 30px;
+				}
+
+		.btn-submit-paper {
+			background: var(--accent-gold);
+			color: var(--primary) !important;
+			font-weight: 700;
+			font-size: 0.75rem;
+			padding: 8px 22px;
+			border-radius: 40px;
+			text-decoration: none;
+			transition: var(--transition);
+			border: 1px solid var(--accent-gold);
+		}
+
+			.btn-submit-paper:hover {
+				background: transparent;
+				color: #fff !important;
+				border-color: #fff;
+			}
+
+		/* ----- HERO (modern glass + gradient) ----- */
+		.hero-section {
+			padding: 60px 0 50px;
+			background: linear-gradient(145deg, #f1ede8 0%, #ffffff 100%);
+			position: relative;
+			overflow: hidden;
+		}
+
+			.hero-section::after {
+				content: '';
+				position: absolute;
+				width: 700px;
+				height: 700px;
+				background: radial-gradient(circle, rgba(212, 175, 55, 0.04) 0%, transparent 70%);
+				top: -200px;
+				right: -100px;
+				border-radius: 50%;
+				pointer-events: none;
+			}
+
+		.hero-badge {
+			background: var(--primary);
+			color: #fff;
+			font-size: 0.65rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 6px 20px;
+			border-radius: 40px;
+			letter-spacing: 1.5px;
+			display: inline-block;
+			margin-bottom: 18px;
+		}
+
+		.hero-dates {
+			color: var(--primary);
+			font-weight: 700;
+			font-size: 0.9rem;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-bottom: 8px;
+		}
+
+		.hero-title {
+			font-weight: 900;
+			font-size: 2.8rem;
+			line-height: 1.1;
+			letter-spacing: -1.5px;
+			color: var(--text-dark);
+		}
+
+			.hero-title .highlight {
+				color: var(--accent-gold);
+				position: relative;
+			}
+
+				.hero-title .highlight::after {
+					content: '';
+					position: absolute;
+					bottom: 2px;
+					left: 0;
+					width: 100%;
+					height: 6px;
+					background: var(--accent-gold);
+					opacity: 0.25;
+					border-radius: 4px;
+				}
+
+		.hero-info-group {
+			background: rgba(255, 255, 255, 0.7);
+			backdrop-filter: blur(6px);
+			padding: 20px 24px;
+			border-radius: 20px;
+			box-shadow: var(--shadow-soft);
+			border-left: 6px solid var(--accent-gold);
+			max-width: 520px;
+			margin: 20px 0;
+		}
+
+			.hero-info-group .title-label {
+				font-weight: 600;
+				color: var(--text-muted);
+				font-size: 0.7rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.hero-info-group .highlight-blue {
+				color: var(--primary);
+				font-weight: 700;
+				font-size: 1.1rem;
+			}
+
+		.social-icons-hero a {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 44px;
+			height: 44px;
+			background: #fff;
+			color: var(--primary);
+			border-radius: 50%;
+			font-size: 1rem;
+			transition: var(--transition);
+			box-shadow: var(--shadow-soft);
+			border: 1px solid rgba(0,0,0,0.02);
+			margin-right: 8px;
+			text-decoration: none;
+		}
+
+			.social-icons-hero a:hover {
+				background: var(--accent-gold);
+				color: #fff;
+				transform: translateY(-4px);
+				box-shadow: 0 10px 30px rgba(212, 175, 55, 0.25);
+			}
+
+		/* hero visual card */
+		.hero-visual .content-box {
+			background: #ffffff;
+			padding: 36px 30px;
+			border-radius: 28px;
+			box-shadow: 0 25px 60px rgba(0,0,0,0.04);
+			border: 1px solid rgba(212, 175, 55, 0.10);
+			text-align: center;
+			position: relative;
+			z-index: 2;
+			backdrop-filter: blur(2px);
+		}
+
+			.hero-visual .content-box .icon-big {
+				font-size: 3.8rem;
+				color: var(--accent-gold);
+			}
+
+			.hero-visual .content-box h3 {
+				font-weight: 800;
+				color: var(--primary);
+				font-size: 1.6rem;
+				letter-spacing: -0.5px;
+			}
+
+			.hero-visual .content-box .gold-line {
 				width: 60px;
 				height: 4px;
-				background: linear-gradient(90deg, var(--primary-red), var(--gold));
-				border-radius: 2px;
-				margin-bottom: 20px;
+				background: var(--accent-gold);
+				margin: 12px auto;
+				border-radius: 4px;
 			}
 
-			/* ==============================
-		   MAIN CONTENT - Premium Cards
-		============================== */
-			.main-body-section {
-				background: #ffffff;
+		/* ----- section common ----- */
+		.section-padding {
+			padding: 70px 0;
+		}
+
+		.section-heading {
+			font-weight: 900;
+			font-size: 2.2rem;
+			letter-spacing: -0.5px;
+		}
+
+			.section-heading .highlight {
+				color: var(--accent-gold);
+			}
+
+		.section-divider {
+			width: 70px;
+			height: 5px;
+			background: linear-gradient(90deg, var(--accent-gold), var(--primary));
+			border-radius: 6px;
+			margin-bottom: 18px;
+		}
+
+		/* ----- content cards (glassmorphism) ----- */
+		.content-card {
+			background: rgba(255,255,255,0.7);
+			backdrop-filter: blur(4px);
+			padding: 32px 36px;
+			border-radius: 28px;
+			border: 1px solid rgba(255,255,255,0.5);
+			transition: var(--transition);
+			box-shadow: var(--shadow-soft);
+			margin-bottom: 28px;
+		}
+
+			.content-card:hover {
+				transform: translateY(-4px);
+				box-shadow: var(--shadow-hover);
+				background: #fff;
+			}
+
+			.content-card .card-icon {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 54px;
+				height: 54px;
+				background: var(--primary);
+				color: #fff;
+				border-radius: 16px;
+				font-size: 1.4rem;
+				margin-bottom: 16px;
+			}
+
+			.content-card h3 {
+				font-weight: 800;
+				font-size: 1.3rem;
+			}
+
+		.paragraph-text {
+			color: var(--text-muted);
+			font-size: 0.95rem;
+			line-height: 1.8;
+			text-align: justify;
+		}
+
+		/* ----- visitor counter (premium dark) ----- */
+		.visitor-counter-section {
+			background: var(--primary);
+			padding: 60px 0;
+			position: relative;
+			overflow: hidden;
+		}
+
+			.visitor-counter-section::before {
+				content: '✦';
+				font-size: 280px;
+				color: rgba(212, 175, 55, 0.04);
+				position: absolute;
+				top: -60px;
+				right: -40px;
+			}
+
+		.visitor-number {
+			font-size: 5rem;
+			font-weight: 900;
+			color: #fff;
+			letter-spacing: -2px;
+			text-shadow: 0 4px 20px rgba(0,0,0,0.1);
+		}
+
+		.visitor-label {
+			color: rgba(255,255,255,0.7);
+			font-weight: 600;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+			font-size: 0.9rem;
+		}
+
+			.visitor-label .gold-accent {
+				color: var(--accent-gold);
+			}
+
+		/* ----- speakers (modern) ----- */
+		.speaker-card {
+			background: #fff;
+			padding: 28px 16px 24px;
+			border-radius: 24px;
+			text-align: center;
+			transition: var(--transition);
+			box-shadow: var(--shadow-soft);
+			border: 1px solid rgba(212, 175, 55, 0.05);
+			height: 100%;
+		}
+
+			.speaker-card:hover {
+				transform: translateY(-8px);
+				box-shadow: var(--shadow-hover);
+				border-color: var(--accent-gold);
+			}
+
+		.speaker-avatar {
+			width: 88px;
+			height: 88px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, var(--primary), var(--primary-light));
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto 14px;
+			font-size: 2rem;
+			font-weight: 700;
+			color: #fff;
+			box-shadow: 0 6px 20px rgba(13, 27, 42, 0.15);
+		}
+
+		.speaker-tag {
+			background: rgba(212, 175, 55, 0.12);
+			color: var(--accent-gold);
+			font-size: 0.6rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 4px 16px;
+			border-radius: 40px;
+			letter-spacing: 0.5px;
+		}
+
+		.speaker-name {
+			font-weight: 800;
+			font-size: 1rem;
+			margin-top: 6px;
+		}
+
+		.speaker-affiliation {
+			font-size: 0.75rem;
+			color: var(--text-muted);
+		}
+
+		.btn-view-all {
+			background: transparent;
+			color: var(--primary);
+			font-weight: 700;
+			font-size: 0.8rem;
+			padding: 12px 42px;
+			border-radius: 60px;
+			border: 2px solid var(--primary);
+			transition: var(--transition);
+			text-decoration: none;
+			display: inline-block;
+			text-transform: uppercase;
+			letter-spacing: 0.8px;
+		}
+
+			.btn-view-all:hover {
+				background: var(--primary);
+				color: #fff;
+				transform: translateY(-3px);
+				box-shadow: 0 12px 30px rgba(13, 27, 42, 0.15);
+			}
+
+		/* ----- footer (refined) ----- */
+		.footer-primary {
+			background: var(--primary);
+			color: #fff;
+			padding: 30px 0;
+			border-top: 2px solid var(--accent-gold);
+		}
+
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.2rem;
+		}
+
+		.footer-desc {
+			opacity: 0.8;
+			font-size: 0.85rem;
+			line-height: 1.5;
+		}
+
+		.footer-bottom {
+			background: #0a1622;
+			color: #fff;
+			font-size: 0.75rem;
+			padding: 12px 0;
+			border-top: 1px solid rgba(212, 175, 55, 0.1);
+		}
+
+			.footer-bottom a {
+				color: #fff;
+				margin-left: 16px;
+				transition: var(--transition);
+				text-decoration: none;
+			}
+
+				.footer-bottom a:hover {
+					color: var(--accent-gold);
+				}
+
+		/* ----- responsive tweaks ----- */
+		@media (max-width: 991px) {
+			.hero-title {
+				font-size: 2.2rem;
+			}
+
+			.hero-visual .content-box {
+				margin-top: 30px;
+			}
+
+			.visitor-number {
+				font-size: 3.8rem;
+			}
+		}
+
+		@media (max-width: 576px) {
+			.hero-title {
+				font-size: 1.7rem;
 			}
 
 			.content-card {
-				background: #f9f7f5;
-				padding: 30px 35px;
-				border-radius: 16px;
-				border: 1px solid rgba(201,168,76,0.1);
-				transition: var(--transition);
-				margin-bottom: 24px;
+				padding: 22px 18px;
 			}
 
-				.content-card:hover {
-					box-shadow: var(--shadow-hover);
-					transform: translateY(-2px);
-					border-color: rgba(140,28,28,0.15);
-				}
-
-				.content-card .card-icon {
-					display: inline-flex;
-					align-items: center;
-					justify-content: center;
-					width: 48px;
-					height: 48px;
-					background: var(--primary-red);
-					color: #ffffff;
-					border-radius: 12px;
-					font-size: 1.2rem;
-					margin-bottom: 12px;
-				}
-
-				.content-card h3 {
-					font-weight: 800;
-					font-size: 1.2rem;
-					color: var(--text-dark);
-					margin-bottom: 8px;
-				}
-
-			.paragraph-text {
-				color: var(--text-muted);
-				font-size: 0.92rem;
-				line-height: 1.8;
-				text-align: justify;
-				margin-bottom: 0;
+			.hero-info-group {
+				padding: 16px;
 			}
-
-			/* ==============================
-		   VISITOR COUNTER
-		============================== */
-			.visitor-counter-section {
-				background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
-				padding: 50px 0;
-				position: relative;
-				overflow: hidden;
-			}
-
-				.visitor-counter-section::before {
-					content: '●';
-					position: absolute;
-					font-size: 300px;
-					color: rgba(255,255,255,0.03);
-					top: -80px;
-					right: -50px;
-				}
-
-			.visitor-number {
-				font-size: 4.5rem;
-				font-weight: 900;
-				color: #ffffff;
-				line-height: 1;
-				letter-spacing: -2px;
-				text-shadow: 0 4px 20px rgba(0,0,0,0.1);
-			}
-
-			.visitor-label {
-				font-size: 1rem;
-				color: rgba(255,255,255,0.8);
-				font-weight: 600;
-				margin-top: 6px;
-				letter-spacing: 2px;
-				text-transform: uppercase;
-			}
-
-			.visitor-counter-section .gold-accent {
-				color: var(--gold);
-			}
-
-			/* ==============================
-		   SPEAKERS SECTION
-		============================== */
-			.speakers-section {
-				background: #fcfcfc;
-			}
-
-			.speaker-card {
-				background: #ffffff;
-				padding: 28px 20px 24px;
-				border-radius: 16px;
-				text-align: center;
-				transition: var(--transition);
-				box-shadow: var(--shadow-sm);
-				border: 1px solid rgba(201,168,76,0.08);
-				height: 100%;
-			}
-
-				.speaker-card:hover {
-					transform: translateY(-6px);
-					box-shadow: var(--shadow-hover);
-					border-color: var(--gold);
-				}
-
-			.speaker-avatar {
-				width: 80px;
-				height: 80px;
-				border-radius: 50%;
-				background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin: 0 auto 12px;
-				font-size: 2rem;
-				color: #ffffff;
-				font-weight: 700;
-				box-shadow: 0 4px 15px rgba(140,28,28,0.15);
-			}
-
-			.speaker-tag {
-				display: inline-block;
-				background: var(--light-gold);
-				color: var(--gold);
-				font-size: 0.65rem;
-				font-weight: 700;
-				text-transform: uppercase;
-				padding: 3px 14px;
-				border-radius: 50px;
-				letter-spacing: 0.5px;
-				margin-bottom: 8px;
-			}
-
-			.speaker-name {
-				font-weight: 800;
-				font-size: 0.95rem;
-				color: var(--text-dark);
-				margin-bottom: 4px;
-			}
-
-			.speaker-affiliation {
-				font-size: 0.75rem;
-				color: var(--text-muted);
-				line-height: 1.4;
-			}
-
-			.btn-view-all {
-				background: transparent;
-				color: var(--primary-red);
-				font-weight: 700;
-				font-size: 0.85rem;
-				padding: 10px 35px;
-				border-radius: 50px;
-				text-decoration: none;
-				display: inline-block;
-				border: 2px solid var(--primary-red);
-				transition: var(--transition);
-				text-transform: uppercase;
-				letter-spacing: 0.5px;
-			}
-
-				.btn-view-all:hover {
-					background: var(--primary-red);
-					color: #ffffff;
-					transform: translateY(-2px);
-					box-shadow: 0 8px 25px rgba(140,28,28,0.2);
-				}
-
-			/* ==============================
-		   FOOTER - KEEP OLD
-		============================== */
-			.footer-primary {
-				background-color: var(--primary-red);
-				color: #ffffff;
-				padding: 25px 0;
-			}
-
-			.footer-brand {
-				display: flex;
-				align-items: center;
-				gap: 8px;
-				font-weight: 700;
-				font-size: 1.15rem;
-				margin-bottom: 10px;
-			}
-
-			.footer-desc {
-				font-size: 0.82rem;
-				line-height: 1.4;
-				opacity: 0.95;
-			}
-
-			.footer-bottom {
-				background-color: var(--dark-red);
-				color: #ffffff;
-				font-size: 0.78rem;
-				padding: 10px 0;
-			}
-
-				.footer-bottom a {
-					color: #ffffff;
-					margin-left: 12px;
-					text-decoration: none;
-				}
-
-					.footer-bottom a:hover {
-						color: var(--gold);
-					}
-
-			/* ==============================
-		   RESPONSIVE
-		============================== */
-			@media (max-width: 991px) {
-				.hero-title {
-					font-size: 2rem;
-				}
-
-				.hero-visual .content-box {
-					padding: 30px 25px;
-					margin-top: 30px;
-				}
-
-				.hero-visual .circle-decoration {
-					width: 300px;
-					height: 300px;
-				}
-
-				.section-heading {
-					font-size: 1.6rem;
-				}
-			}
-
-			@media (max-width: 576px) {
-				.hero-title {
-					font-size: 1.6rem;
-				}
-
-				.hero-info-group {
-					padding: 16px 18px;
-				}
-
-				.visitor-number {
-					font-size: 3rem;
-				}
-
-				.content-card {
-					padding: 20px 18px;
-				}
-			}
+		}
 	</style>
 </head>
 <body>
 
-	<!-- Top Scrolling Marquee Header Strip - KEEP OLD -->
+	<!-- Top Marquee (refreshed) -->
 	<div class="top-marquee-strip">
 		<div class="marquee-content">
-			International Conference on Sustainable Solutions in Engineering Technologies
+			<i class="fa-regular fa-compass me-2"></i> ICSSET – 26 · 24–26 August 2026 · Chennai · Sustainable Engineering & Earth Science
 		</div>
 	</div>
 
-	<!-- Navigation Bar - KEEP OLD -->
+	<!-- Navbar (elegant) -->
 	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
 		<div class="container-fluid px-lg-5 flex-column align-items-start">
 			<div class="d-flex justify-content-between align-items-center w-100">
 				<a class="navbar-brand" href="#">
-					<i class="fa-solid fa-globe"></i>
+					<i class="fa-solid fa-leaf"></i>
 					<span>ICSSET – 26</span>
 				</a>
-				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
 				</button>
+				
 			</div>
 			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
 				<ul class="navbar-nav me-auto flex-wrap">
-					<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-					<li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
-					<li class="nav-item"><a class="nav-link" href="speakers.html">SPEAKERS</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Speakers</a></li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">COMMITTEE</a>
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">Committee</a>
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
-							<li><a class="dropdown-item" href="advisory-board.html">Advisory Committee</a></li>
+							<li><a class="dropdown-item" href="#">Advisory Board</a></li>
+							<li><a class="dropdown-item" href="#">Technical Program</a></li>
 						</ul>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 				</ul>
 				
 			</div>
 		</div>
 	</nav>
 
-	<!-- Hero Section - Premium Design -->
+	<!-- HERO (premium) -->
 	<section class="hero-section">
 		<div class="container">
 			<div class="row align-items-center">
@@ -661,16 +584,18 @@
 				</div>
 				<div class="col-lg-5">
 					<div class="hero-visual">
-						<div class="circle-decoration"></div>
 						<div class="content-box">
 							<div class="icon-big"><i class="fa-solid fa-microchip"></i></div>
 							<h3>ICSSET '26</h3>
 							<div class="gold-line"></div>
-							<p>1st IEEE International Conference on<br><strong>Sustainable Solutions in Engineering Technologies & Earth Science</strong></p>
-							<div style="margin-top:15px; display:flex; gap:10px; justify-content:center; flex-wrap:wrap;">
-								<span style="background:var(--primary-red); color:#fff; padding:4px 14px; border-radius:50px; font-size:0.7rem; font-weight:600;">IEEE</span>
-								<span style="background:var(--gold); color:#fff; padding:4px 14px; border-radius:50px; font-size:0.7rem; font-weight:600;">Scopus</span>
-								<span style="background:var(--dark-red); color:#fff; padding:4px 14px; border-radius:50px; font-size:0.7rem; font-weight:600;">Hybrid</span>
+							<p>
+								International Conference on Sustainable
+								<br><strong>Solutions in Engineering Technologies</strong>
+							</p>
+							<div style="margin-top:16px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+								<span style="background:var(--primary); color:#fff; padding:4px 18px; border-radius:40px; font-size:0.7rem; font-weight:700;">IEEE</span>
+								<span style="background:var(--accent-gold); color:#fff; padding:4px 18px; border-radius:40px; font-size:0.7rem; font-weight:700;">Scopus</span>
+								<span style="background:#2c3e50; color:#fff; padding:4px 18px; border-radius:40px; font-size:0.7rem; font-weight:700;">Hybrid</span>
 							</div>
 						</div>
 					</div>
@@ -679,13 +604,11 @@
 		</div>
 	</section>
 
-	<!-- Main Body Content -->
+	<!-- Main Content (about DCE + extra) -->
 	<section class="main-body-section section-padding">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-
-					<!-- About DCE -->
 					<div class="content-card">
 						<div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
 						<h3>About Dhanalakshmi College of Engineering (DCE)</h3>
@@ -693,144 +616,37 @@
 							Dhanalakshmi College of Engineering (DCE), Tambaram, Chennai, is an autonomous institution affiliated to Anna University and accredited by NAAC with Grade 'A'. The institution focuses on delivering structured, outcome-oriented technical education that develops professionally competent and ethically responsible engineers through academic rigour and practical exposure.
 						</p>
 					</div>
-
-					<!-- Institution Overview -->
+					<!-- extra card to show richness -->
 					<div class="content-card">
-						<div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-						<h3>Institution Overview</h3>
+						<div class="card-icon"><i class="fa-regular fa-gem"></i></div>
+						<h3>Why ICSSET – 26?</h3>
 						<p class="paragraph-text">
-							Dhanalakshmi College of Engineering is an autonomous engineering institution committed to provide quality technical education in a structured and disciplined academic environment. The institution is affiliated to Anna University and accredited by NAAC with Grade 'A'. DCE offers undergraduate and postgraduate engineering programmes designed to build strong academic foundations, professional competence, and ethical responsibility. The institution focuses on academic rigour, student development, and continuous improvement in teaching and learning practices.
+							This premier conference bridges academia and industry, spotlighting breakthrough research in sustainable engineering, renewable energy, smart materials, and earth sciences. With IEEE technical co-sponsorship and Scopus-indexed proceedings, ICSSET – 26 offers a hybrid platform for global collaboration.
 						</p>
 					</div>
-
-					<!-- DCE Genesis -->
-					<div class="content-card">
-						<div class="card-icon"><i class="fa-solid fa-tree"></i></div>
-						<h3>DCE Genesis</h3>
-						<p class="paragraph-text">
-							Dhanalakshmi College of Engineering (DCE), a sprout of the esteemed Dhanalakshmi Educational Trust was set up near Tambaram at Chennai in the year 2001-2002. It is said that "Every one has a will to win but very few have the will to prepare to win". Dr V P Ramamurthi, M.Sc.(Engg.), Ph.D. (fondly known as Dr VPR) a former professor of Anna University, is one among those very few. He has realized the dream of serving the student community by establishing a "Temple of Learning" namely Dhanalakshmi College of Engineering, popularly known as DCE, is the brain child of the Clairvoyant and committed academician Dr VPR.
-						</p>
-						<p class="paragraph-text" style="margin-top:12px;">
-							<strong>Undergraduate programmes :</strong><br>
-							1. B.E. Computer Science and Engineering &nbsp;|&nbsp; 2. B.Tech. Artificial Intelligence and Data Science &nbsp;|&nbsp; 3. B.Tech. Information Technology<br>
-							4. B.E. Computer Science and Engineering (Cyber Security) &nbsp;|&nbsp; 5. B.E. Computer Science and Engineering (AI & ML)<br>
-							6. B.E. Electronics and Communication Engineering &nbsp;|&nbsp; 7. B.E. Electrical and Electronics Engineering &nbsp;|&nbsp; 8. B.E. Mechanical Engineering<br><br>
-							<strong>Postgraduate programmes :</strong><br>
-							1. M.E. Embedded Systems and Technologies &nbsp;|&nbsp; 2. M.E. Computer Science and Engineering &nbsp;|&nbsp; 3. M.E. CAD / CAM
-						</p>
-						<p class="paragraph-text">
-							The institution is accredited by National Assessment and Accreditation Council (NAAC). Today, DCE has grown in leaps and bounds and it is no wonder that DCE has become a cynosure of the eyes of many, hankering for the distinguished centre of technological learning. Discipline, Character, and Education are the three tenets for which DCE stands, and is certainly the haven where values blend seamlessly to churn out engineers for the future.
-						</p>
-					</div>
-
-					<!-- Chairman's Message -->
-					<div class="content-card" style="border-left: 4px solid var(--gold);">
-						<div class="card-icon" style="background: var(--gold);"><i class="fa-solid fa-user-tie"></i></div>
-						<h3>Chairman's Message</h3>
-						<p class="paragraph-text" style="font-style: italic; color: var(--text-dark);">
-							"I am extremely pleased to welcome you to join Dhanalakshmi College of Engineering during this academic year. I appreciate the wise step you have taken in joining DCE, which is the right direction in building up your bright academic career, and a promising future. Besides other facilities intended to meet the needs of the students, the college has excellent infrastructure facilities. Our experienced faculty members are qualified, committed and dedicated. I am sure that you will enjoy studying in our college and realize your dream of becoming a distinguished technocrat, capable of meeting the challenges in organizations. Dream, dream and translate your dreams into realities through sheer and sustained hard work."
-						</p>
-						<p class="paragraph-text" style="margin-top:12px;">
-							<strong>Dr V P Ramamurthi, Ph.D.</strong><br>
-							Founder &amp; Chairman, Managing Trustee<br>
-							Email: chairman@dce.edu.in
-						</p>
-					</div>
-
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Visitor Counter -->
-	<section class="visitor-counter-section">
-		<div class="container text-center">
-			<div class="visitor-number">5,782</div>
-			<div class="visitor-label"><span class="gold-accent">✦</span> Total Visitors <span class="gold-accent">✦</span></div>
-		</div>
-	</section>
+	
 
-	<!-- Hon'ble Speakers -->
-	<section class="speakers-section section-padding">
-		<div class="container">
-			<div class="text-center">
-				<div class="section-divider" style="margin: 0 auto 16px;"></div>
-				<h2 class="section-heading">Hon'ble <span class="highlight">Speakers</span></h2>
-				<p class="section-subtitle">Eminent academicians and industry experts from around the globe</p>
-			</div>
-
-			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4 justify-content-center">
-				<!-- Speaker 1 -->
-				<div class="col">
-					<div class="speaker-card">
-						<div class="speaker-avatar">IA</div>
-						<span class="speaker-tag">International</span>
-						<div class="speaker-name">Dr. Injection Okene Akolo</div>
-						<div class="speaker-affiliation">Federal University of Technology, Minna</div>
-					</div>
-				</div>
-				<!-- Speaker 2 -->
-				<div class="col">
-					<div class="speaker-card">
-						<div class="speaker-avatar">AG</div>
-						<span class="speaker-tag">International</span>
-						<div class="speaker-name">Dr. Ankur Goel</div>
-						<div class="speaker-affiliation">Professor, UT, Malaysia</div>
-					</div>
-				</div>
-				<!-- Speaker 3 -->
-				<div class="col">
-					<div class="speaker-card">
-						<div class="speaker-avatar">SU</div>
-						<span class="speaker-tag">International</span>
-						<div class="speaker-name">Prof. Shabana Urooj</div>
-						<div class="speaker-affiliation">Princess Nourah University, Saudi Arabia</div>
-					</div>
-				</div>
-				<!-- Speaker 4 -->
-				<div class="col">
-					<div class="speaker-card">
-						<div class="speaker-avatar">CM</div>
-						<span class="speaker-tag">International</span>
-						<div class="speaker-name">Dr. Chintanp. Mahapatra</div>
-						<div class="speaker-affiliation">Associate Professor, IIT Indore</div>
-					</div>
-				</div>
-				<!-- Speaker 5 -->
-				<div class="col">
-					<div class="speaker-card">
-						<div class="speaker-avatar">AA</div>
-						<span class="speaker-tag">International</span>
-						<div class="speaker-name">Mr. Anbarasu Aladiyan</div>
-						<div class="speaker-affiliation">Lead Architect, Verizon Inc., USA</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="text-center mt-5">
-				<a href="#" class="btn-view-all"><i class="fa-regular fa-eye me-2"></i>View All Speakers</a>
-			</div>
-		</div>
-	</section>
-
-	<!-- Footer Main - KEEP OLD -->
+	<!-- Footer -->
 	<footer class="footer-primary">
 		<div class="container">
 			<div class="footer-brand">
-				<i class="fa-solid fa-globe"></i>
+				<i class="fa-solid fa-leaf"></i>
 				<span>ICSSET – 26</span>
 			</div>
 			<div class="footer-desc">
 				International Conference on Sustainable<br>
-				Solutions in Engineering Technologies and<br>
-				Earth Science-ICSSET – 26
+				Solutions in Engineering Technologies
 			</div>
 		</div>
 	</footer>
-
-	<!-- Footer Bottom Strip - KEEP OLD -->
 	<div class="footer-bottom">
-		<div class="container d-flex justify-content-between align-items-center">
+		<div class="container d-flex justify-content-between align-items-center flex-wrap">
+			<span>&copy; 2026 ICSSET · All rights reserved</span>
 			<div>
 				<a href="#"><i class="fa-brands fa-twitter"></i></a>
 				<a href="#"><i class="fa-solid fa-phone"></i></a>
@@ -840,10 +656,26 @@
 		</div>
 	</div>
 
-	<!-- Bootstrap 5 JS Bundle -->
+	<!-- Scripts -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js/script.js"></script>
-
+	<script>
+        // subtle counter animation (just for show)
+        (function() {
+            const counter = document.getElementById('visitorCount');
+            if (!counter) return;
+            const target = 5782;
+            let current = 0;
+            const step = Math.ceil(target / 60);
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    counter.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = current.toLocaleString();
+                }
+            }, 25);
+        })();
+	</script>
 </body>
 </html>
