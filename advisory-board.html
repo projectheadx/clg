@@ -3,437 +3,385 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Advisory Board – ICSSET – 26</title>
-	<!-- Bootstrap 5 CSS -->
+	<title>Advisory Board – ICSSET – 26 · Sustainable Engineering</title>
+	<!-- Bootstrap 5 + Icons + Fonts -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<!-- Font Awesome Icons -->
-
-
-
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-
-
-
-
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-		  rel="stylesheet">
-
-	<!-- Bootstrap Icons -->
-	<link rel="stylesheet"
-		  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-	<!-- Your Custom CSS -->
-	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
 	<style>
+		/* ----- ROOT (premium palette) ----- */
+		:root {
+			--primary: #0b1c2f;
+			--primary-light: #1a334a;
+			--accent-gold: #d4af37;
+			--accent-rose: #b8865b;
+			--soft-bg: #f6f4f0;
+			--card-bg: #ffffff;
+			--text-dark: #0b1a2a;
+			--text-muted: #4a5b6b;
+			--shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.03);
+			--shadow-hover: 0 20px 50px rgba(13, 27, 42, 0.08);
+			--transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+		}
 
-				/* ==============================
-		   NAVBAR
-		============================== */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-				.navbar {
-					background: #ffffff;
-					padding: 0;
-					position: relative;
-					z-index: 1000;
+		body {
+			font-family: 'Inter', sans-serif;
+			background: var(--soft-bg);
+			color: var(--text-dark);
+			line-height: 1.6;
+			overflow-x: hidden;
+		}
+
+		/* ----- top marquee (refreshed) ----- */
+		.top-marquee-strip {
+			background: var(--primary);
+			color: #fff;
+			font-size: 0.8rem;
+			font-weight: 500;
+			padding: 8px 0;
+			overflow: hidden;
+			white-space: nowrap;
+			border-bottom: 2px solid var(--accent-gold);
+			letter-spacing: 0.3px;
+		}
+
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 28s linear infinite;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		/* ----- navbar (elegant dark) ----- */
+		.navbar-custom {
+			background: var(--primary);
+			padding: 12px 0;
+			border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+		}
+
+			.navbar-custom .navbar-brand {
+				color: #fff;
+				font-weight: 800;
+				font-size: 1.4rem;
+				letter-spacing: -0.5px;
+			}
+
+				.navbar-custom .navbar-brand i {
+					color: var(--accent-gold);
 				}
 
-				.menu-row {
-					overflow: visible !important;
+			.navbar-custom .nav-link {
+				color: rgba(255, 255, 255, 0.8) !important;
+				font-size: 0.7rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.6px;
+				padding: 8px 14px !important;
+				transition: var(--transition);
+			}
+
+				.navbar-custom .nav-link:hover {
+					color: #fff !important;
+					background: rgba(212, 175, 55, 0.12);
+					border-radius: 30px;
 				}
 
-				.navbar-nav {
-					align-items: center;
+		.btn-submit-paper {
+			background: var(--accent-gold);
+			color: var(--primary) !important;
+			font-weight: 700;
+			font-size: 0.75rem;
+			padding: 8px 22px;
+			border-radius: 40px;
+			text-decoration: none;
+			transition: var(--transition);
+			border: 1px solid var(--accent-gold);
+		}
+
+			.btn-submit-paper:hover {
+				background: transparent;
+				color: #fff !important;
+				border-color: #fff;
+			}
+
+		/* ----- committee hero (glass) ----- */
+		.committee-hero {
+			padding: 50px 0 40px;
+			background: linear-gradient(145deg, #f1ede8 0%, #ffffff 100%);
+			border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+			position: relative;
+		}
+
+			.committee-hero h1 {
+				font-weight: 900;
+				font-size: 2.8rem;
+				letter-spacing: -1px;
+				color: var(--primary);
+			}
+
+				.committee-hero h1 span {
+					color: var(--accent-gold);
 				}
 
-				.navbar .nav-link {
-					color: #222;
-					font-size: 14px;
-					font-weight: 600;
-					padding: 18px 12px;
-					white-space: nowrap;
+		.breadcrumb-text {
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			background: rgba(255,255,255,0.6);
+			backdrop-filter: blur(4px);
+			padding: 10px 22px;
+			border-radius: 60px;
+			display: inline-block;
+			border: 1px solid rgba(212, 175, 55, 0.15);
+		}
+
+		/* ----- member cards (with passport-size avatar) ----- */
+		.member-card {
+			background: rgba(255, 255, 255, 0.7);
+			backdrop-filter: blur(4px);
+			border-radius: 20px;
+			padding: 16px 18px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			box-shadow: var(--shadow-soft);
+			transition: var(--transition);
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			gap: 14px;
+		}
+
+			.member-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 5px;
+				height: 100%;
+				background: var(--accent-gold);
+				opacity: 0.2;
+				border-radius: 20px 0 0 20px;
+				transition: var(--transition);
+			}
+
+			.member-card:hover {
+				transform: translateY(-4px);
+				box-shadow: var(--shadow-hover);
+				background: #ffffff;
+				border-color: var(--accent-gold);
+			}
+
+				.member-card:hover::before {
+					opacity: 1;
+					background: var(--accent-gold);
 				}
 
-					.navbar .nav-link:hover {
-						color: #0d6efd;
-					}
+		/* Passport-size avatar - 2x3 ratio style */
+		.member-avatar {
+			width: 56px;
+			height: 70px;
+			flex-shrink: 0;
+			border-radius: 8px;
+			overflow: hidden;
+			background: linear-gradient(135deg, var(--primary), var(--primary-light));
+			border: 2px solid rgba(212, 175, 55, 0.15);
+			transition: var(--transition);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.2rem;
+			font-weight: 700;
+			color: #fff;
+			position: relative;
+		}
 
+		.member-card:hover .member-avatar {
+			border-color: var(--accent-gold);
+			box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+		}
 
-				/* ==============================
-		   DROPDOWN
-		============================== */
+		.member-avatar img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
 
-				.navbar .dropdown {
-					position: relative;
+		.member-info {
+			flex: 1;
+			min-width: 0;
+		}
+
+		.member-card .badge-advisory {
+			background: rgba(212, 175, 55, 0.12);
+			color: var(--accent-gold);
+			font-size: 0.5rem;
+			font-weight: 700;
+			padding: 2px 10px;
+			border-radius: 40px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			display: inline-block;
+			margin-bottom: 3px;
+		}
+
+		.member-card .name {
+			font-weight: 800;
+			font-size: 0.85rem;
+			color: var(--primary);
+			line-height: 1.2;
+			margin-bottom: 1px;
+		}
+
+		.member-card .affil {
+			font-size: 0.65rem;
+			color: var(--text-muted);
+			line-height: 1.3;
+		}
+
+		/* ----- section heading ----- */
+		.section-heading {
+			font-weight: 900;
+			font-size: 2rem;
+			letter-spacing: -0.5px;
+			margin-bottom: 28px;
+			border-left: 6px solid var(--accent-gold);
+			padding-left: 20px;
+		}
+
+			.section-heading .highlight {
+				color: var(--accent-gold);
+			}
+
+		/* ----- footer (refined) ----- */
+		.footer-primary {
+			background: var(--primary);
+			color: #fff;
+			padding: 30px 0;
+			border-top: 2px solid var(--accent-gold);
+		}
+
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.2rem;
+		}
+
+		.footer-desc {
+			opacity: 0.8;
+			font-size: 0.85rem;
+			line-height: 1.5;
+		}
+
+		.footer-bottom {
+			background: #0a1622;
+			color: #fff;
+			font-size: 0.75rem;
+			padding: 12px 0;
+			border-top: 1px solid rgba(212, 175, 55, 0.08);
+		}
+
+			.footer-bottom a {
+				color: #fff;
+				margin-left: 16px;
+				transition: var(--transition);
+				text-decoration: none;
+			}
+
+				.footer-bottom a:hover {
+					color: var(--accent-gold);
 				}
 
-				.navbar .dropdown-menu {
-					position: absolute;
-					top: 100%;
-					left: 0;
-					min-width: 240px;
-					margin-top: 0;
-					padding: 8px 0;
-					background: #ffffff;
-					border: 1px solid #ddd;
-					border-radius: 6px;
-					box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-					z-index: 99999;
-				}
+		/* ----- responsive ----- */
+		@media (max-width: 991px) {
+			.committee-hero h1 {
+				font-size: 2.2rem;
+			}
+		}
 
-				.navbar .dropdown-item {
-					padding: 10px 18px;
-					font-size: 14px;
-					color: #222;
-				}
+		@media (max-width: 576px) {
+			.committee-hero h1 {
+				font-size: 1.7rem;
+			}
 
-					.navbar .dropdown-item:hover {
-						background: #f1f5ff;
-						color: #0d6efd;
-					}
+			.member-card {
+				padding: 12px 14px;
+				gap: 10px;
+			}
 
+			.member-avatar {
+				width: 44px;
+				height: 56px;
+				font-size: 1rem;
+			}
 
-				/* ==============================
-		   SUBMIT BUTTON
-		============================== */
+			.member-card .name {
+				font-size: 0.75rem;
+			}
 
-				.btn-submit-paper {
-					display: inline-block;
-					padding: 10px 18px;
-					background: #0d6efd;
-					color: #ffffff;
-					text-decoration: none;
-					font-weight: 600;
-					border-radius: 5px;
-				}
-
-					.btn-submit-paper:hover {
-						background: #084298;
-						color: #ffffff;
-					}
-
-
-				/* ==============================
-		   MOBILE
-		============================== */
-
-				@media (max-width: 1199px) {
-
-					.navbar .nav-link {
-						padding: 10px 15px;
-					}
-
-					.navbar .dropdown-menu {
-						position: static;
-						box-shadow: none;
-						border: 0;
-					}
-
-					.btn-submit-paper {
-						margin: 10px 15px;
-					}
-				}
-
-
-
-
-
-
-
-
-
-
-
-
-
-				:root {
-					--primary-red: #8C1C1C;
-					--dark-red: #6D1313;
-					--text-dark: #222222;
-					--badge-bg: #FDE8DB;
-					--badge-color: #D96A27;
-				}
-
-				body {
-					font-family: Arial, Helvetica, sans-serif;
-					color: var(--text-dark);
-					line-height: 1.6;
-					background-color: #ffffff;
-				}
-
-				/* top marquee */
-				.top-marquee-strip {
-					background-color: #ffffff;
-					color: #111;
-					font-size: 0.85rem;
-					font-weight: 600;
-					padding: 6px 0;
-					border-bottom: 1px solid #ddd;
-					overflow: hidden;
-					white-space: nowrap;
-				}
-
-				.marquee-content {
-					display: inline-block;
-					animation: marquee 30s linear infinite;
-				}
-
-				@keyframes marquee {
-					0% {
-						transform: translateX(100%);
-					}
-
-					100% {
-						transform: translateX(-100%);
-					}
-				}
-
-				/* navbar */
-				.navbar-custom {
-					background-color: var(--primary-red);
-					padding: 10px 0;
-				}
-
-					.navbar-custom .navbar-brand {
-						color: #ffffff;
-						font-weight: 700;
-						font-size: 1.35rem;
-						display: flex;
-						align-items: center;
-						gap: 10px;
-					}
-
-				.menu-row {
-					width: 100%;
-					border-top: 1px solid rgba(255, 255, 255, 0.2);
-					padding-top: 8px;
-					margin-top: 8px;
-				}
-
-				.navbar-custom .nav-link {
-					color: #ffffff !important;
-					font-size: 0.75rem;
-					font-weight: 700;
-					text-transform: uppercase;
-					padding: 6px 10px !important;
-					letter-spacing: 0.3px;
-				}
-
-					.navbar-custom .nav-link:hover {
-						opacity: 0.85;
-					}
-
-				.btn-submit-paper {
-					background-color: #0088cc;
-					color: #ffffff;
-					font-size: 0.8rem;
-					font-weight: 600;
-					border-radius: 4px;
-					padding: 6px 14px;
-					text-decoration: none;
-					white-space: nowrap;
-				}
-
-					.btn-submit-paper:hover {
-						background-color: #006699;
-						color: #fff;
-					}
-
-				/* hero */
-				.committee-hero {
-					padding: 30px 0 20px 0;
-					background: #fafafa;
-					border-bottom: 1px solid #eee;
-				}
-
-					.committee-hero h1 {
-						font-weight: 800;
-						color: var(--primary-red);
-						font-size: 2rem;
-					}
-
-				/* committee sections */
-				.committee-section {
-					padding: 30px 0 10px 0;
-				}
-
-				.section-heading {
-					font-weight: 800;
-					font-size: 1.5rem;
-					color: var(--primary-red);
-					border-left: 5px solid var(--primary-red);
-					padding-left: 16px;
-					margin-bottom: 20px;
-				}
-
-				.member-card {
-					background: #fff;
-					border-radius: 10px;
-					padding: 14px 18px;
-					border: 1px solid #f0f0f0;
-					box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-					margin-bottom: 12px;
-					transition: 0.2s;
-					height: 100%;
-				}
-
-					.member-card:hover {
-						border-color: var(--primary-red);
-						box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-					}
-
-					.member-card .name {
-						font-weight: 600;
-						font-size: 0.95rem;
-						color: #111;
-					}
-
-					.member-card .affil {
-						font-size: 0.8rem;
-						color: #666;
-						line-height: 1.4;
-					}
-
-					.member-card .badge-advisory {
-						background: var(--badge-bg);
-						color: var(--badge-color);
-						font-size: 0.6rem;
-						font-weight: 700;
-						padding: 2px 10px;
-						border-radius: 20px;
-						text-transform: uppercase;
-						letter-spacing: 0.3px;
-						display: inline-block;
-						margin-bottom: 4px;
-					}
-
-				/* footer */
-				.footer-primary {
-					background-color: var(--primary-red);
-					color: #ffffff;
-					padding: 25px 0;
-				}
-
-				.footer-brand {
-					display: flex;
-					align-items: center;
-					gap: 8px;
-					font-weight: 700;
-					font-size: 1.15rem;
-					margin-bottom: 10px;
-				}
-
-				.footer-desc {
-					font-size: 0.82rem;
-					line-height: 1.4;
-					opacity: 0.95;
-				}
-
-				.footer-bottom {
-					background-color: var(--dark-red);
-					color: #ffffff;
-					font-size: 0.78rem;
-					padding: 10px 0;
-				}
-
-					.footer-bottom a {
-						color: #ffffff;
-						margin-left: 12px;
-						text-decoration: none;
-					}
-
-				@media (max-width: 576px) {
-					.member-card {
-						padding: 12px 14px;
-					}
-
-					.section-heading {
-						font-size: 1.2rem;
-					}
-				}
+			.member-card .affil {
+				font-size: 0.6rem;
+			}
+		}
 	</style>
 </head>
 <body>
 
-	<!-- Top Scrolling Marquee -->
+	<!-- Top Marquee (refreshed) -->
 	<div class="top-marquee-strip">
 		<div class="marquee-content">
-			International Conference on Sustainable Solutions in Engineering Technologies
+			<i class="fa-regular fa-compass me-2"></i> ICSSET – 26 · 24–26 August 2026 · Chennai · Sustainable Engineering & Earth Science
 		</div>
 	</div>
 
-	<!-- Navigation -->
+	<!-- Navbar (elegant) -->
 	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
 		<div class="container-fluid px-lg-5 flex-column align-items-start">
 			<div class="d-flex justify-content-between align-items-center w-100">
 				<a class="navbar-brand" href="#">
-					<i class="fa-solid fa-globe"></i>
+					<i class="fa-solid fa-leaf"></i>
 					<span>ICSSET – 26</span>
 				</a>
-				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
 				</button>
+				<div class="d-none d-xl-block">
+					<a href="#" class="btn-submit-paper"><i class="fa-regular fa-paper-plane me-2"></i>Submit Paper</a>
+				</div>
 			</div>
-			<!-- Next Line (Row 2): Menu Links -->
 			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
 				<ul class="navbar-nav me-auto flex-wrap">
-
-					<li class="nav-item">
-						<a class="nav-link" href="index.html">HOME</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="about.html">ABOUT</a>
-					</li>
-
-					<li class="nav-item">
-						
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="speakers.html">SPEAKERS</a>
-					</li>
-
-					<!-- COMMITTEE -->
+					<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+					<li class="nav-item"><a class="nav-link active" href="Sessionchair.html">Session Chairs</a></li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"
-						   href="#"
-						   id="committeeDrop"
-						   role="button"
-						   data-bs-toggle="dropdown"
-						   aria-expanded="false">
-							COMMITTEE
-						</a>
-
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">Committee</a>
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
-
-							<li>
-								<a class="dropdown-item" href="advisory-board.html">
-									Advisory Committee
-								</a>
-							</li>
-
-						
+							<li><a class="dropdown-item" href="advisory-board.html">Advisory Board</a></li>
 
 						</ul>
 					</li>
-
-					
-
-
-					<li class="nav-item">
-						<a class="nav-link" href="contact.html">
-							CONTACT
-						</a>
-					</li>
-
-
+					<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
 				</ul>
 
-				
 			</div>
 		</div>
 	</nav>
@@ -443,444 +391,571 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-8">
-					<h1>Advisory Board</h1>
-					<p class="text-muted" style="font-size:0.95rem;">
-						<i class="fa-regular fa-users me-2"></i> ICSSETES-2026
-					</p>
+					<h1>Advisory <span>Board</span></h1>
+					<div class="breadcrumb-text">
+						<i class="fa-regular fa-users me-2"></i> ICSSETES-2026 
+					</div>
 				</div>
-				<div class="col-lg-4 text-lg-end">
-					<span class="badge bg-danger bg-opacity-10 text-danger p-2 px-3" style="font-weight:600;"></span>
+				<div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+					<span class="badge" style="background: var(--accent-gold); color: var(--primary); padding: 8px 20px; border-radius: 40px; font-weight: 700;"><i class="fa-regular fa-calendar me-2"></i>24–26 Aug 2026</span>
 				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Advisory Board Members -->
-	<section class="committee-section">
+	<section style="padding: 40px 0 70px 0; background: var(--soft-bg);">
 		<div class="container">
-
 			<div class="row g-3">
 
 				<!-- 1 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Sri Niwas Singh</div>
-						<div class="affil">Director, ABV-IIITM, Gwalior, INDIA</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Sri Niwas Singh"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Sri Niwas Singh</div>
+							<div class="affil">Director, ABV-IIITM, Gwalior, INDIA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 2 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) J. Ramkumar</div>
-						<div class="affil">IIT Kanpur, INDIA</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/2.jpg" alt="J. Ramkumar"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) J. Ramkumar</div>
+							<div class="affil">IIT Kanpur, INDIA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 3 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Prabhakar Tiwari</div>
-						<div class="affil">MMMUT Gorakhpur, INDIA</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Prabhakar Tiwari"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Prabhakar Tiwari</div>
+							<div class="affil">MMMUT Gorakhpur, INDIA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 4 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Asheesh Kumar Singh</div>
-						<div class="affil">MNNIT-Allahabad, Prayagraj, INDIA</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Asheesh Kumar Singh"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Asheesh Kumar Singh</div>
+							<div class="affil">MNNIT-Allahabad, Prayagraj, INDIA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 5 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Satish Kumar Singh</div>
-						<div class="affil">IIIT-Allahabad, Prayagraj, INDIA</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/5.jpg" alt="Satish Kumar Singh"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Satish Kumar Singh</div>
+							<div class="affil">IIIT-Allahabad, Prayagraj, INDIA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 6 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Varun Kakar</div>
-						<div class="affil">BTKIT, Dwarahat, INDIA</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/6.jpg" alt="Varun Kakar"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Varun Kakar</div>
+							<div class="affil">BTKIT, Dwarahat, INDIA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 7 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Pardeep Kumar</div>
-						<div class="affil">Pro - Vice Chancellor, MRIIRS, Faridabad, INDIA</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/7.jpg" alt="Pardeep Kumar"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Pardeep Kumar</div>
+							<div class="affil">Pro - Vice Chancellor, MRIIRS, Faridabad, INDIA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 8 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Badrul Hisham Ahmad</div>
-						<div class="affil">Universiti Teknikal Malaysia Melaka, Malaysia</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/8.jpg" alt="Badrul Hisham Ahmad"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Badrul Hisham Ahmad</div>
+							<div class="affil">Universiti Teknikal Malaysia Melaka, Malaysia</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 9 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Mr. Mokhtar Shouran</div>
-						<div class="affil">Wolfson Centre for Magnetics, Cardiff University, Cardiff, United Kingdom</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/9.jpg" alt="Mokhtar Shouran"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Mr. Mokhtar Shouran</div>
+							<div class="affil">Wolfson Centre for Magnetics, Cardiff University, UK</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 10 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Badrul Hisham Bin Ahmad</div>
-						<div class="affil">Universiti Teknikal, Malaysia</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/10.jpg" alt="Badrul Hisham Bin Ahmad"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Badrul Hisham Bin Ahmad</div>
+							<div class="affil">Universiti Teknikal, Malaysia</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 11 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Bidereddin Abdul Samad</div>
-						<div class="affil">Electrical and Electronic Dept, Azahra Higher Institution of Sciences and Technology, Azahra, Libya</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Bidereddin Abdul Samad"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Bidereddin Abdul Samad</div>
+							<div class="affil">Azahra Higher Institution, Libya</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 12 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Ing. Justice Ohene-Akoto</div>
-						<div class="affil">Board Member, FEL, World Energy Council</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/12.jpg" alt="Justice Ohene-Akoto"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Ing. Justice Ohene-Akoto</div>
+							<div class="affil">Board Member, FEL, World Energy Council</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 13 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Mokhtar Shouran</div>
-						<div class="affil">Libyan Centre for Engineering Research and Information Technology, Bani Walid, Libya</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/13.jpg" alt="Mokhtar Shouran"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Mokhtar Shouran</div>
+							<div class="affil">Libyan Centre for Engineering Research, Libya</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 14 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Sivakumar Kalimuthu</div>
-						<div class="affil">Senior Lecturer, SEGi University, Damansara, Kuala Lumpur, Malaysia</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/14.jpg" alt="Sivakumar Kalimuthu"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Sivakumar Kalimuthu</div>
+							<div class="affil">Senior Lecturer, SEGi University, Malaysia</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 15 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Asst. Prof. Khalid YAHYA</div>
-						<div class="affil">Faculty of Engineering and Architecture, Electrical and Electronics Engineering, Egypt</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Khalid YAHYA"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Asst. Prof. Khalid YAHYA</div>
+							<div class="affil">Faculty of Engineering, Egypt</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 16 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. Shabana Mehfuz</div>
-						<div class="affil">Jamia Millia Islamia, New Delhi</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Shabana Mehfuz"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. Shabana Mehfuz</div>
+							<div class="affil">Jamia Millia Islamia, New Delhi</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 17 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Ayoub Khan</div>
-						<div class="affil">College of Computers and IT, University of Bisha, Bisha, Saudi Arabia</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/16.jpg" alt="Ayoub Khan"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Ayoub Khan</div>
+							<div class="affil">University of Bisha, Saudi Arabia</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 18 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. (Dr.) Ahmad Elngar</div>
-						<div class="affil">Beni-Suef University, Egypt</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Ahmad Elngar"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. (Dr.) Ahmad Elngar</div>
+							<div class="affil">Beni-Suef University, Egypt</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 19 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">D. K. Lobiyal</div>
-						<div class="affil">JNU, New Delhi</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/18.jpg" alt="D. K. Lobiyal"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">D. K. Lobiyal</div>
+							<div class="affil">JNU, New Delhi</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 20 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Vinay Kumar</div>
-						<div class="affil">MNIT, Jaipur</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/19.jpg" alt="Vinay Kumar"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Vinay Kumar</div>
+							<div class="affil">MNIT, Jaipur</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 21 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Rajendra Sahu</div>
-						<div class="affil">IIITM, Gwalior</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/20.jpg" alt="Rajendra Sahu"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Rajendra Sahu</div>
+							<div class="affil">IIITM, Gwalior</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 22 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Ms. Ezhilarasi</div>
-						<div class="affil">ISRO, Trivandrum, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/women/2.jpg" alt="Ezhilarasi"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Ms. Ezhilarasi</div>
+							<div class="affil">ISRO, Trivandrum, India</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 23 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Rajeev Sharma</div>
-						<div class="affil">DST, New Delhi, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/21.jpg" alt="Rajeev Sharma"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Rajeev Sharma</div>
+							<div class="affil">DST, New Delhi, India</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 24 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Daniel Okunbor</div>
-						<div class="affil">Fayetteville State University, North Carolina</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Daniel Okunbor"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Daniel Okunbor</div>
+							<div class="affil">Fayetteville State University, USA</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 25 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Y. K. Mishra</div>
-						<div class="affil">K.N.I.T. Sultanpur, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/23.jpg" alt="Y. K. Mishra"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Y. K. Mishra</div>
+							<div class="affil">K.N.I.T. Sultanpur, India</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 26 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Sunil Kumar Khatri</div>
-						<div class="affil">Amity University, Tashkent</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/24.jpg" alt="Sunil Kumar Khatri"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Sunil Kumar Khatri</div>
+							<div class="affil">Amity University, Tashkent</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 27 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Ravi Bhushan Mishra</div>
-						<div class="affil">National Institute of Technology, Patna</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/25.jpg" alt="Ravi Bhushan Mishra"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Ravi Bhushan Mishra</div>
+							<div class="affil">National Institute of Technology, Patna</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 28 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Ahmed T. AlTaani</div>
-						<div class="affil">Yarmouk University, Jordan</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/26.jpg" alt="Ahmed T. AlTaani"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Ahmed T. AlTaani</div>
+							<div class="affil">Yarmouk University, Jordan</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 29 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Syed Afzal Murtaza Rizvi</div>
-						<div class="affil">Jamia Millia Islamia, New Delhi</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/27.jpg" alt="Syed Afzal Murtaza Rizvi"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Syed Afzal Murtaza Rizvi</div>
+							<div class="affil">Jamia Millia Islamia, New Delhi</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 30 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Prof. Ohene-Akoto, Justice</div>
-						<div class="affil">Kwame Nkrumah University of Science and Technology (KNUST), Ghana, West Africa</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Justice Ohene-Akoto"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Prof. Ohene-Akoto, Justice</div>
+							<div class="affil">KNUST, Ghana, West Africa</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 31 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Siti Nuurul Huda Binti Mohammad Azmin</div>
-						<div class="affil">University of Malaysia Kelabitab, Jeli</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Siti Nuurul Huda"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Siti Nuurul Huda Binti M. Azmin</div>
+							<div class="affil">University of Malaysia Kelabitab</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 32 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Syed Hamid Hassan</div>
-						<div class="affil">King Abdulaziz University, Jeddah, Saudi Arabia</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Syed Hamid Hassan"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Syed Hamid Hassan</div>
+							<div class="affil">King Abdulaziz University, Jeddah, Saudi Arabia</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 33 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Mario Jose Divan</div>
-						<div class="affil">National University of La Pampa, Argentina</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/30.jpg" alt="Mario Jose Divan"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Mario Jose Divan</div>
+							<div class="affil">National University of La Pampa, Argentina</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 34 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Marcelo Martin Marciszack</div>
-						<div class="affil">National Technological University Cordoba, Argentina</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Marcelo Martin Marciszack"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Marcelo Martin Marciszack</div>
+							<div class="affil">National Technological University, Argentina</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 35 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Adin Will</div>
-						<div class="affil">Director, National Technological University, Argentina</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Adin Will"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Adin Will</div>
+							<div class="affil">Director, National Technological University, Argentina</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 36 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Abhinit Anand</div>
-						<div class="affil">Chitkara University, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Abhinit Anand"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Abhinit Anand</div>
+							<div class="affil">Chitkara University, India</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 37 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Afaq Ahmad</div>
-						<div class="affil">Sultan Qaboos University, Oman</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Afaq Ahmad"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Afaq Ahmad</div>
+							<div class="affil">Sultan Qaboos University, Oman</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 38 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. H.G. Muazu</div>
-						<div class="affil">Modibbo Adama University Technology, Nigeria</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/35.jpg" alt="H.G. Muazu"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. H.G. Muazu</div>
+							<div class="affil">Modibbo Adama University, Nigeria</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 39 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Abubakkar Mohammed</div>
-						<div class="affil">Modibbo Adama University Technology, Nigeria</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Abubakkar Mohammed"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Abubakkar Mohammed</div>
+							<div class="affil">Modibbo Adama University, Nigeria</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 40 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Syed Akhter Hossain</div>
-						<div class="affil">Daffodil University, Bangladesh</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/37.jpg" alt="Syed Akhter Hossain"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Syed Akhter Hossain</div>
+							<div class="affil">Daffodil University, Bangladesh</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 41 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. A.K. Jain</div>
-						<div class="affil">Galgotias University, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/38.jpg" alt="A.K. Jain"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. A.K. Jain</div>
+							<div class="affil">Galgotias University, India</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 42 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Parma Nand</div>
-						<div class="affil">Sharda University, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/39.jpg" alt="Parma Nand"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Parma Nand</div>
+							<div class="affil">Sharda University, India</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 43 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Ajay Rana</div>
-						<div class="affil">Amity University, Amity, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/40.jpg" alt="Ajay Rana"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Ajay Rana</div>
+							<div class="affil">Amity University, Amity, India</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- 44 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="member-card">
-						<span class="badge-advisory">Advisory Board</span>
-						<div class="name">Dr. Ajay Kumar</div>
-						<div class="affil">Chitkara University, India</div>
+						<div class="member-avatar"><img src="https://randomuser.me/api/portraits/men/41.jpg" alt="Ajay Kumar"></div>
+						<div class="member-info">
+							<span class="badge-advisory">Advisory Board</span>
+							<div class="name">Dr. Ajay Kumar</div>
+							<div class="affil">Chitkara University, India</div>
+						</div>
 					</div>
 				</div>
 
 			</div>
-
 		</div>
 	</section>
 
-	<!-- Footer Primary -->
+	<!-- Footer -->
 	<footer class="footer-primary">
 		<div class="container">
 			<div class="footer-brand">
-				<i class="fa-solid fa-globe"></i>
+				<i class="fa-solid fa-leaf"></i>
 				<span>ICSSET – 26</span>
 			</div>
 			<div class="footer-desc">
 				International Conference on Sustainable<br>
-				Solutions in Engineering Technologies<br>
-				
+				Solutions in Engineering Technologies & Earth Science
 			</div>
 		</div>
 	</footer>
-
-	<!-- Footer Bottom Strip -->
 	<div class="footer-bottom">
-		<div class="container d-flex justify-content-between align-items-center">
-			
+		<div class="container d-flex justify-content-between align-items-center flex-wrap">
+			<span>&copy; 2026 ICSSET · All rights reserved</span>
 			<div>
 				<a href="#"><i class="fa-brands fa-twitter"></i></a>
 				<a href="#"><i class="fa-solid fa-phone"></i></a>
@@ -890,17 +965,7 @@
 		</div>
 	</div>
 
-	<!-- Bootstrap 5 JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-	<!-- Bootstrap 5 JS Bundle -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-
-
-	<!-- Bootstrap 5.3.3 Bundle JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-	<!-- Your Custom JS - optional -->
-	<script src="js/script.js"></script>
-
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,150 +3,58 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>About – ICSSET – 26</title>
-	<!-- Bootstrap 5 CSS -->
+	<title>About – ICSSET – 26 · Sustainable Engineering</title>
+	<!-- Bootstrap 5 + Icons + Fonts -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<!-- Font Awesome Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-	<!-- Bootstrap Icons -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-	<!-- Your Custom CSS -->
-	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
 	<style>
-		/* ==============================
-		   NAVBAR
-		============================== */
-		.navbar {
-			background: #ffffff;
-			padding: 0;
-			position: relative;
-			z-index: 1000;
-		}
-
-		.menu-row {
-			overflow: visible !important;
-		}
-
-		.navbar-nav {
-			align-items: center;
-		}
-
-		.navbar .nav-link {
-			color: #222;
-			font-size: 14px;
-			font-weight: 600;
-			padding: 18px 12px;
-			white-space: nowrap;
-		}
-
-			.navbar .nav-link:hover {
-				color: #0d6efd;
-			}
-
-		/* ==============================
-		   DROPDOWN
-		============================== */
-		.navbar .dropdown {
-			position: relative;
-		}
-
-		.navbar .dropdown-menu {
-			position: absolute;
-			top: 100%;
-			left: 0;
-			min-width: 240px;
-			margin-top: 0;
-			padding: 8px 0;
-			background: #ffffff;
-			border: 1px solid #ddd;
-			border-radius: 6px;
-			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-			z-index: 99999;
-		}
-
-		.navbar .dropdown-item {
-			padding: 10px 18px;
-			font-size: 14px;
-			color: #222;
-		}
-
-			.navbar .dropdown-item:hover {
-				background: #f1f5ff;
-				color: #0d6efd;
-			}
-
-		/* ==============================
-		   SUBMIT BUTTON
-		============================== */
-		.btn-submit-paper {
-			display: inline-block;
-			padding: 10px 18px;
-			background: #0d6efd;
-			color: #ffffff;
-			text-decoration: none;
-			font-weight: 600;
-			border-radius: 5px;
-		}
-
-			.btn-submit-paper:hover {
-				background: #084298;
-				color: #ffffff;
-			}
-
-		/* ==============================
-		   MOBILE
-		============================== */
-		@media (max-width: 1199px) {
-			.navbar .nav-link {
-				padding: 10px 15px;
-			}
-
-			.navbar .dropdown-menu {
-				position: static;
-				box-shadow: none;
-				border: 0;
-			}
-
-			.btn-submit-paper {
-				margin: 10px 15px;
-			}
-		}
-
-		/* ==============================
-		   ROOT & BASE
-		============================== */
+		/* ----- ROOT (premium palette) ----- */
 		:root {
-			--primary-red: #8C1C1C;
-			--dark-red: #6D1313;
-			--text-dark: #222222;
-			--badge-bg: #FDE8DB;
-			--badge-color: #D96A27;
-			--gold: #C9A84C;
+			--primary: #0b1c2f;
+			--primary-light: #1a334a;
+			--accent-gold: #d4af37;
+			--accent-rose: #b8865b;
+			--soft-bg: #f6f4f0;
+			--card-bg: #ffffff;
+			--text-dark: #0b1a2a;
+			--text-muted: #4a5b6b;
+			--shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.03);
+			--shadow-hover: 0 20px 50px rgba(13, 27, 42, 0.08);
+			--transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
 		}
 
 		body {
-			font-family: Arial, Helvetica, sans-serif;
+			font-family: 'Inter', sans-serif;
+			background: var(--soft-bg);
 			color: var(--text-dark);
 			line-height: 1.6;
-			background-color: #ffffff;
+			overflow-x: hidden;
 		}
 
-		/* top marquee */
+		/* ----- top marquee (refreshed) ----- */
 		.top-marquee-strip {
-			background-color: #ffffff;
-			color: #111;
-			font-size: 0.85rem;
-			font-weight: 600;
-			padding: 6px 0;
-			border-bottom: 1px solid #ddd;
+			background: var(--primary);
+			color: #fff;
+			font-size: 0.8rem;
+			font-weight: 500;
+			padding: 8px 0;
 			overflow: hidden;
 			white-space: nowrap;
+			border-bottom: 2px solid var(--accent-gold);
+			letter-spacing: 0.3px;
 		}
 
 		.marquee-content {
 			display: inline-block;
-			animation: marquee 30s linear infinite;
+			animation: marquee 28s linear infinite;
 		}
 
 		@keyframes marquee {
@@ -159,154 +67,204 @@
 			}
 		}
 
-		/* navbar */
+		/* ----- navbar (elegant dark) ----- */
 		.navbar-custom {
-			background-color: var(--primary-red);
-			padding: 10px 0;
+			background: var(--primary);
+			padding: 12px 0;
+			border-bottom: 1px solid rgba(212, 175, 55, 0.12);
 		}
 
 			.navbar-custom .navbar-brand {
-				color: #ffffff;
-				font-weight: 700;
-				font-size: 1.35rem;
-				display: flex;
-				align-items: center;
-				gap: 10px;
+				color: #fff;
+				font-weight: 800;
+				font-size: 1.4rem;
+				letter-spacing: -0.5px;
 			}
 
-		.menu-row {
-			width: 100%;
-			border-top: 1px solid rgba(255, 255, 255, 0.2);
-			padding-top: 8px;
-			margin-top: 8px;
-		}
+				.navbar-custom .navbar-brand i {
+					color: var(--accent-gold);
+				}
 
-		.navbar-custom .nav-link {
-			color: #ffffff !important;
-			font-size: 0.75rem;
-			font-weight: 700;
-			text-transform: uppercase;
-			padding: 6px 10px !important;
-			letter-spacing: 0.3px;
-		}
-
-			.navbar-custom .nav-link:hover {
-				opacity: 0.85;
+			.navbar-custom .nav-link {
+				color: rgba(255, 255, 255, 0.8) !important;
+				font-size: 0.7rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.6px;
+				padding: 8px 14px !important;
+				transition: var(--transition);
 			}
+
+				.navbar-custom .nav-link:hover {
+					color: #fff !important;
+					background: rgba(212, 175, 55, 0.12);
+					border-radius: 30px;
+				}
 
 		.btn-submit-paper {
-			background-color: #0088cc;
-			color: #ffffff;
-			font-size: 0.8rem;
-			font-weight: 600;
-			border-radius: 4px;
-			padding: 6px 14px;
+			background: var(--accent-gold);
+			color: var(--primary) !important;
+			font-weight: 700;
+			font-size: 0.75rem;
+			padding: 8px 22px;
+			border-radius: 40px;
 			text-decoration: none;
-			white-space: nowrap;
+			transition: var(--transition);
+			border: 1px solid var(--accent-gold);
 		}
 
 			.btn-submit-paper:hover {
-				background-color: #006699;
-				color: #fff;
+				background: transparent;
+				color: #fff !important;
+				border-color: #fff;
 			}
 
-		/* about hero */
+		/* ----- about hero (glass) ----- */
 		.about-hero {
-			padding: 30px 0 20px 0;
-			background: #fafafa;
-			border-bottom: 1px solid #eee;
+			padding: 50px 0 40px;
+			background: linear-gradient(145deg, #f1ede8 0%, #ffffff 100%);
+			border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+			position: relative;
 		}
 
 			.about-hero h1 {
-				font-weight: 800;
-				color: var(--primary-red);
-				font-size: 2rem;
+				font-weight: 900;
+				font-size: 2.8rem;
+				letter-spacing: -1px;
+				color: var(--primary);
 			}
 
-			.about-hero .breadcrumb-text {
-				font-size: 0.9rem;
-				color: #555;
-			}
+				.about-hero h1 span {
+					color: var(--accent-gold);
+				}
 
-		/* main content */
-		.about-section {
-			padding: 40px 0;
+		.breadcrumb-text {
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			background: rgba(255,255,255,0.6);
+			backdrop-filter: blur(4px);
+			padding: 10px 22px;
+			border-radius: 60px;
+			display: inline-block;
+			border: 1px solid rgba(212, 175, 55, 0.15);
+		}
+
+		/* ----- section common ----- */
+		.section-padding {
+			padding: 70px 0;
 		}
 
 		.section-heading {
-			color: #111111;
-			font-weight: 800;
-			font-size: 1.5rem;
-			margin-bottom: 15px;
-			border-left: 5px solid var(--primary-red);
-			padding-left: 15px;
+			font-weight: 900;
+			font-size: 2rem;
+			letter-spacing: -0.5px;
+			margin-bottom: 28px;
+			border-left: 6px solid var(--accent-gold);
+			padding-left: 20px;
 		}
 
-		.section-heading-gold {
-			border-left-color: var(--gold);
+			.section-heading .highlight {
+				color: var(--accent-gold);
+			}
+
+		/* ----- about cards (glassmorphism) ----- */
+		.about-card {
+			background: rgba(255, 255, 255, 0.7);
+			backdrop-filter: blur(4px);
+			padding: 32px 34px;
+			border-radius: 28px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			transition: var(--transition);
+			box-shadow: var(--shadow-soft);
+			margin-bottom: 28px;
+			position: relative;
+			overflow: hidden;
 		}
+
+			.about-card::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 6px;
+				height: 100%;
+				background: var(--accent-gold);
+				border-radius: 28px 0 0 28px;
+			}
+
+		.about-card-gold::before {
+			background: var(--accent-gold);
+		}
+
+		.about-card:hover {
+			transform: translateY(-4px);
+			box-shadow: var(--shadow-hover);
+			background: #fff;
+		}
+
+		.about-card h5 {
+			font-weight: 800;
+			font-size: 1.2rem;
+			color: var(--primary);
+			margin-bottom: 12px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+			.about-card h5 i {
+				color: var(--accent-gold);
+			}
 
 		.paragraph-text {
-			color: #333333;
+			color: var(--text-muted);
 			font-size: 0.95rem;
 			line-height: 1.8;
 			text-align: justify;
-			margin-bottom: 18px;
 		}
 
-		.about-card {
-			background: #f8f8f8;
-			border-radius: 8px;
-			padding: 24px 28px;
-			border-left: 4px solid var(--primary-red);
-			margin-bottom: 30px;
-			transition: all 0.3s ease;
-		}
-
-			.about-card:hover {
-				box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-			}
-
-			.about-card h5 {
-				font-weight: 700;
-				color: var(--primary-red);
-				font-size: 1.1rem;
-				margin-bottom: 12px;
-			}
-
-		.about-card-gold {
-			border-left-color: var(--gold);
-		}
-
-			.about-card-gold h5 {
-				color: var(--gold);
-			}
-
+		/* programme lists */
 		.list-institute {
-			columns: 2;
-			column-gap: 30px;
+			columns: 1;
 			list-style: none;
 			padding-left: 0;
-			margin-top: 15px;
+			margin-top: 10px;
 		}
 
 			.list-institute li {
-				padding: 4px 0;
+				padding: 6px 0;
 				font-weight: 500;
-				color: #1a1a1a;
+				color: var(--text-dark);
+				border-bottom: 1px solid rgba(0,0,0,0.02);
+				display: flex;
+				align-items: center;
+				gap: 8px;
 			}
 
 				.list-institute li::before {
-					content: "▹ ";
-					color: var(--primary-red);
-					font-weight: 700;
+					content: "◆";
+					color: var(--accent-gold);
+					font-size: 0.7rem;
 				}
 
-		/* footer */
+		/* badge */
+		.badge-dce {
+			background: var(--primary);
+			color: #fff;
+			padding: 6px 18px;
+			border-radius: 40px;
+			font-weight: 600;
+			font-size: 0.7rem;
+			letter-spacing: 0.5px;
+			display: inline-block;
+		}
+
+		/* ----- footer (refined) ----- */
 		.footer-primary {
-			background-color: var(--primary-red);
-			color: #ffffff;
-			padding: 25px 0;
+			background: var(--primary);
+			color: #fff;
+			padding: 30px 0;
+			border-top: 2px solid var(--accent-gold);
 		}
 
 		.footer-brand {
@@ -314,124 +272,135 @@
 			align-items: center;
 			gap: 8px;
 			font-weight: 700;
-			font-size: 1.15rem;
-			margin-bottom: 10px;
+			font-size: 1.2rem;
 		}
 
 		.footer-desc {
-			font-size: 0.82rem;
-			line-height: 1.4;
-			opacity: 0.95;
+			opacity: 0.8;
+			font-size: 0.85rem;
+			line-height: 1.5;
 		}
 
 		.footer-bottom {
-			background-color: var(--dark-red);
-			color: #ffffff;
-			font-size: 0.78rem;
-			padding: 10px 0;
+			background: #0a1622;
+			color: #fff;
+			font-size: 0.75rem;
+			padding: 12px 0;
+			border-top: 1px solid rgba(212, 175, 55, 0.08);
 		}
 
 			.footer-bottom a {
-				color: #ffffff;
-				margin-left: 12px;
+				color: #fff;
+				margin-left: 16px;
+				transition: var(--transition);
 				text-decoration: none;
 			}
 
-		/* responsive */
+				.footer-bottom a:hover {
+					color: var(--accent-gold);
+				}
+
+		/* ----- responsive ----- */
+		@media (max-width: 991px) {
+			.about-hero h1 {
+				font-size: 2.2rem;
+			}
+		}
+
 		@media (max-width: 576px) {
-			.list-institute {
-				columns: 1;
+			.about-hero h1 {
+				font-size: 1.8rem;
 			}
 
 			.about-card {
-				padding: 18px 16px;
+				padding: 22px 18px;
+			}
+
+			.list-institute {
+				columns: 1;
 			}
 		}
 	</style>
 </head>
 <body>
 
-	<!-- Top Scrolling Marquee -->
+	<!-- Top Marquee (refreshed) -->
 	<div class="top-marquee-strip">
 		<div class="marquee-content">
-			International Conference on Sustainable Solutions in Engineering Technologies
+			<i class="fa-regular fa-compass me-2"></i> ICSSET – 26 · 24–26 August 2026 · Chennai · Sustainable Engineering & Earth Science
 		</div>
 	</div>
 
-	<!-- Navigation -->
+	<!-- Navbar (elegant) -->
 	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
 		<div class="container-fluid px-lg-5 flex-column align-items-start">
 			<div class="d-flex justify-content-between align-items-center w-100">
 				<a class="navbar-brand" href="#">
-					<i class="fa-solid fa-globe"></i>
+					<i class="fa-solid fa-leaf"></i>
 					<span>ICSSET – 26</span>
 				</a>
-				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
 				</button>
+				<div class="d-none d-xl-block">
+					<a href="#" class="btn-submit-paper"><i class="fa-regular fa-paper-plane me-2"></i>Submit Paper</a>
+				</div>
 			</div>
 			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
 				<ul class="navbar-nav me-auto flex-wrap">
-					<li class="nav-item">
-						<a class="nav-link" href="index.html">HOME</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="about.html">ABOUT</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="speakers.html">SPEAKERS</a>
-					</li>
-					<!-- COMMITTEE -->
+					<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+					<li class="nav-item"><a class="nav-link active" href="Sessionchair.html">Session Chairs</a></li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							COMMITTEE
-						</a>
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">Committee</a>
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
-							<li>
-								<a class="dropdown-item" href="advisory-board.html">Advisory Committee</a>
-							</li>
+							<li><a class="dropdown-item" href="advisory-board.html">Advisory Board</a></li>
+
 						</ul>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact.html">CONTACT</a>
-					</li>
+					<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
 				</ul>
-				
+
 			</div>
 		</div>
 	</nav>
 
-	<!-- About Hero -->
+	<!-- About Hero (modern) -->
 	<section class="about-hero">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-8">
-					<h1>About Us</h1>
-					<p class="breadcrumb-text"><i class="fa-regular fa-building me-2"></i> Dhanalakshmi College of Engineering – ICSSET '26 Venue Partner</p>
+					<h1>About <span>ICSSET – 26</span></h1>
+					<div class="breadcrumb-text">
+						<i class="fa-regular fa-building me-2"></i> Dhanalakshmi College of Engineering · Venue Partner
+					</div>
 				</div>
-				
+				<div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+					<span class="badge-dce"><i class="fa-regular fa-calendar me-2"></i>24–26 Aug 2026</span>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Main About Content -->
-	<section class="about-section">
+	<section class="section-padding">
 		<div class="container">
 
-			<!-- About Dhanalakshmi College of Engineering -->
+			<!-- About DCE -->
 			<div class="about-card">
-				<h5><i class="fa-regular fa-building me-2"></i> About Dhanalakshmi College of Engineering (DCE)</h5>
+				<h5><i class="fa-regular fa-building"></i> About Dhanalakshmi College of Engineering (DCE)</h5>
 				<p class="paragraph-text">
 					<strong>Dhanalakshmi College of Engineering (DCE)</strong>, Tambaram, Chennai, is an autonomous institution affiliated to Anna University and accredited by NAAC with Grade 'A'. The institution focuses on delivering structured, outcome-oriented technical education that develops professionally competent and ethically responsible engineers through academic rigour and practical exposure.
 				</p>
 				<p class="paragraph-text">
-					Dhanalakshmi College of Engineering is an autonomous engineering institution committed to provide quality technical education in a structured and disciplined academic environment. The institution is affiliated to Anna University and accredited by NAAC with Grade 'A'. DCE offers undergraduate and postgraduate engineering programmes designed to build strong academic foundations, professional competence, and ethical responsibility. The institution focuses on academic rigour, student development, and continuous improvement in teaching and learning practices.
+					DCE offers undergraduate and postgraduate engineering programmes designed to build strong academic foundations, professional competence, and ethical responsibility. The institution focuses on academic rigour, student development, and continuous improvement in teaching and learning practices.
 				</p>
 			</div>
 
 			<!-- DCE Genesis -->
 			<div class="about-card about-card-gold">
-				<h5><i class="fa-solid fa-tree me-2"></i> DCE Genesis</h5>
+				<h5><i class="fa-solid fa-tree"></i> DCE Genesis</h5>
 				<p class="paragraph-text">
 					Dhanalakshmi College of Engineering (DCE), a sprout of the esteemed Dhanalakshmi Educational Trust was set up near Tambaram at Chennai in the year 2001-2002. It is said that "Every one has a will to win but very few have the will to prepare to win". <strong>Dr V P Ramamurthi, M.Sc.(Engg.), Ph.D.</strong> (fondly known as Dr VPR) a former professor of Anna University, is one among those very few. He has realized the dream of serving the student community by establishing a "Temple of Learning" namely Dhanalakshmi College of Engineering, popularly known as DCE, is the brain child of the Clairvoyant and committed academician Dr VPR.
 				</p>
@@ -443,83 +412,29 @@
 				</p>
 			</div>
 
-			<!-- Programmes Offered -->
-			<h3 class="section-heading">Programmes Offered</h3>
-
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="about-card" style="border-left-color: #0088cc;">
-						<h5 style="color: #0088cc;"><i class="fa-solid fa-graduation-cap me-2"></i> Undergraduate Programmes</h5>
-						<ul class="list-institute" style="columns: 1;">
-							<li>B.E. Computer Science and Engineering</li>
-							<li>B.Tech. Artificial Intelligence and Data Science</li>
-							<li>B.Tech. Information Technology</li>
-							<li>B.E. Computer Science and Engineering (Cyber Security)</li>
-							<li>B.E. Computer Science and Engineering (AI & ML)</li>
-							<li>B.E. Electronics and Communication Engineering</li>
-							<li>B.E. Electrical and Electronics Engineering</li>
-							<li>B.E. Mechanical Engineering</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="about-card" style="border-left-color: #C9A84C;">
-						<h5 style="color: #C9A84C;"><i class="fa-solid fa-microscope me-2"></i> Postgraduate Programmes</h5>
-						<ul class="list-institute" style="columns: 1;">
-							<li>M.E. Embedded Systems and Technologies</li>
-							<li>M.E. Computer Science and Engineering</li>
-							<li>M.E. CAD / CAM</li>
-						</ul>
-						<br>
-						<p style="margin-top: 10px; font-weight: 600; color: var(--primary-red);">
-							<i class="fa-solid fa-award me-2"></i> Accredited by NAAC with Grade 'A'
-						</p>
-					</div>
-				</div>
-			</div>
-
 			
 			<!-- Vision & Mission -->
-			<div class="row mt-4">
-				<div class="col-md-6">
-					<div class="about-card" style="border-left-color: var(--primary-red);">
-						<h5><i class="fa-regular fa-eye me-2"></i> Vision</h5>
-						<p class="paragraph-text" style="margin-bottom: 0;">
-							To be a centre of excellence in engineering education and research, producing competent engineers with strong ethical values and social responsibility.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="about-card" style="border-left-color: var(--gold);">
-						<h5 style="color: var(--gold);"><i class="fa-regular fa-flag me-2"></i> Mission</h5>
-						<p class="paragraph-text" style="margin-bottom: 0;">
-							To provide quality technical education through innovative teaching, industry collaboration, and research, fostering holistic development of students to meet global challenges.
-						</p>
-					</div>
-				</div>
-			</div>
+			
 
 		</div>
 	</section>
 
-	<!-- Footer Primary -->
+	<!-- Footer -->
 	<footer class="footer-primary">
 		<div class="container">
 			<div class="footer-brand">
-				<i class="fa-solid fa-globe"></i>
+				<i class="fa-solid fa-leaf"></i>
 				<span>ICSSET – 26</span>
 			</div>
 			<div class="footer-desc">
 				International Conference on Sustainable<br>
-				Solutions in Engineering Technologies and<br>
-				Earth Science-ICSSET – 26
+				Solutions in Engineering Technologies & Earth Science
 			</div>
 		</div>
 	</footer>
-
-	<!-- Footer Bottom Strip -->
 	<div class="footer-bottom">
-		<div class="container d-flex justify-content-between align-items-center">
+		<div class="container d-flex justify-content-between align-items-center flex-wrap">
+			<span>&copy; 2026 ICSSET · All rights reserved</span>
 			<div>
 				<a href="#"><i class="fa-brands fa-twitter"></i></a>
 				<a href="#"><i class="fa-solid fa-phone"></i></a>
@@ -529,10 +444,7 @@
 		</div>
 	</div>
 
-	<!-- Bootstrap 5 JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="js/script.js"></script>
-
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

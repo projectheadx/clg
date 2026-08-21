@@ -3,439 +3,354 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Speakers – ICSSET – 26</title>
-	<!-- Bootstrap 5 CSS -->
+	<title>Speakers – ICSSET – 26 · Sustainable Engineering</title>
+	<!-- Bootstrap 5 + Icons + Fonts -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-	<!-- Font Awesome Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-
-
-
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-		  rel="stylesheet">
-
-	<!-- Bootstrap Icons -->
-	<link rel="stylesheet"
-		  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-	<!-- Your Custom CSS -->
-	<link rel="stylesheet" href="css/style.css">
-
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
 	<style>
+		/* ----- ROOT (premium palette) ----- */
+		:root {
+			--primary: #0b1c2f;
+			--primary-light: #1a334a;
+			--accent-gold: #d4af37;
+			--accent-rose: #b8865b;
+			--soft-bg: #f6f4f0;
+			--card-bg: #ffffff;
+			--text-dark: #0b1a2a;
+			--text-muted: #4a5b6b;
+			--shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.03);
+			--shadow-hover: 0 20px 50px rgba(13, 27, 42, 0.08);
+			--transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+		}
 
-				/* ==============================
-		   NAVBAR
-		============================== */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-				.navbar {
-					background: #ffffff;
-					padding: 0;
-					position: relative;
-					z-index: 1000;
+		body {
+			font-family: 'Inter', sans-serif;
+			background: var(--soft-bg);
+			color: var(--text-dark);
+			line-height: 1.6;
+			overflow-x: hidden;
+		}
+
+		/* ----- top marquee (refreshed) ----- */
+		.top-marquee-strip {
+			background: var(--primary);
+			color: #fff;
+			font-size: 0.8rem;
+			font-weight: 500;
+			padding: 8px 0;
+			overflow: hidden;
+			white-space: nowrap;
+			border-bottom: 2px solid var(--accent-gold);
+			letter-spacing: 0.3px;
+		}
+
+		.marquee-content {
+			display: inline-block;
+			animation: marquee 28s linear infinite;
+		}
+
+		@keyframes marquee {
+			0% {
+				transform: translateX(100%);
+			}
+
+			100% {
+				transform: translateX(-100%);
+			}
+		}
+
+		/* ----- navbar (elegant dark) ----- */
+		.navbar-custom {
+			background: var(--primary);
+			padding: 12px 0;
+			border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+		}
+
+			.navbar-custom .navbar-brand {
+				color: #fff;
+				font-weight: 800;
+				font-size: 1.4rem;
+				letter-spacing: -0.5px;
+			}
+
+				.navbar-custom .navbar-brand i {
+					color: var(--accent-gold);
 				}
 
-				.menu-row {
-					overflow: visible !important;
+			.navbar-custom .nav-link {
+				color: rgba(255, 255, 255, 0.8) !important;
+				font-size: 0.7rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.6px;
+				padding: 8px 14px !important;
+				transition: var(--transition);
+			}
+
+				.navbar-custom .nav-link:hover {
+					color: #fff !important;
+					background: rgba(212, 175, 55, 0.12);
+					border-radius: 30px;
 				}
 
-				.navbar-nav {
-					align-items: center;
+		.btn-submit-paper {
+			background: var(--accent-gold);
+			color: var(--primary) !important;
+			font-weight: 700;
+			font-size: 0.75rem;
+			padding: 8px 22px;
+			border-radius: 40px;
+			text-decoration: none;
+			transition: var(--transition);
+			border: 1px solid var(--accent-gold);
+		}
+
+			.btn-submit-paper:hover {
+				background: transparent;
+				color: #fff !important;
+				border-color: #fff;
+			}
+
+		/* ----- speakers hero (glass) ----- */
+		.speakers-hero {
+			padding: 50px 0 40px;
+			background: linear-gradient(145deg, #f1ede8 0%, #ffffff 100%);
+			border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+			position: relative;
+		}
+
+			.speakers-hero h1 {
+				font-weight: 900;
+				font-size: 2.8rem;
+				letter-spacing: -1px;
+				color: var(--primary);
+			}
+
+				.speakers-hero h1 span {
+					color: var(--accent-gold);
 				}
 
-				.navbar .nav-link {
-					color: #222;
-					font-size: 14px;
-					font-weight: 600;
-					padding: 18px 12px;
-					white-space: nowrap;
+		.breadcrumb-text {
+			font-size: 0.95rem;
+			color: var(--text-muted);
+			background: rgba(255,255,255,0.6);
+			backdrop-filter: blur(4px);
+			padding: 10px 22px;
+			border-radius: 60px;
+			display: inline-block;
+			border: 1px solid rgba(212, 175, 55, 0.15);
+		}
+
+		/* ----- speaker cards (horizontal, premium) ----- */
+		.speaker-card-horizontal {
+			background: rgba(255, 255, 255, 0.7);
+			backdrop-filter: blur(4px);
+			border-radius: 20px;
+			padding: 14px 16px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			box-shadow: var(--shadow-soft);
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			height: 100%;
+			transition: var(--transition);
+			position: relative;
+			overflow: hidden;
+		}
+
+			.speaker-card-horizontal::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 5px;
+				height: 100%;
+				background: var(--accent-gold);
+				opacity: 0.3;
+				border-radius: 20px 0 0 20px;
+				transition: var(--transition);
+			}
+
+			.speaker-card-horizontal:hover {
+				transform: translateY(-5px);
+				box-shadow: var(--shadow-hover);
+				background: #ffffff;
+				border-color: var(--accent-gold);
+			}
+
+				.speaker-card-horizontal:hover::before {
+					opacity: 1;
+					background: var(--accent-gold);
 				}
 
-					.navbar .nav-link:hover {
-						color: #0d6efd;
-					}
+		.speaker-img-square {
+			width: 80px;
+			height: 90px;
+			flex-shrink: 0;
+			border-radius: 14px;
+			overflow: hidden;
+			background: #e9ecef;
+			border: 2px solid rgba(212, 175, 55, 0.15);
+			transition: var(--transition);
+		}
 
+		.speaker-card-horizontal:hover .speaker-img-square {
+			border-color: var(--accent-gold);
+		}
 
-				/* ==============================
-		   DROPDOWN
-		============================== */
+		.speaker-img-square img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
 
-				.navbar .dropdown {
-					position: relative;
+		.speaker-card-horizontal .speaker-tag {
+			background: rgba(212, 175, 55, 0.12);
+			color: var(--accent-gold);
+			font-size: 0.6rem;
+			font-weight: 700;
+			padding: 3px 14px;
+			border-radius: 40px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			display: inline-block;
+			margin-bottom: 4px;
+		}
+
+		.speaker-card-horizontal .speaker-name {
+			font-weight: 800;
+			font-size: 0.95rem;
+			color: var(--primary);
+			line-height: 1.25;
+			margin-bottom: 2px;
+		}
+
+		.speaker-card-horizontal .speaker-affil {
+			font-size: 0.7rem;
+			color: var(--text-muted);
+			line-height: 1.35;
+		}
+
+		/* ----- footer (refined) ----- */
+		.footer-primary {
+			background: var(--primary);
+			color: #fff;
+			padding: 30px 0;
+			border-top: 2px solid var(--accent-gold);
+		}
+
+		.footer-brand {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-weight: 700;
+			font-size: 1.2rem;
+		}
+
+		.footer-desc {
+			opacity: 0.8;
+			font-size: 0.85rem;
+			line-height: 1.5;
+		}
+
+		.footer-bottom {
+			background: #0a1622;
+			color: #fff;
+			font-size: 0.75rem;
+			padding: 12px 0;
+			border-top: 1px solid rgba(212, 175, 55, 0.08);
+		}
+
+			.footer-bottom a {
+				color: #fff;
+				margin-left: 16px;
+				transition: var(--transition);
+				text-decoration: none;
+			}
+
+				.footer-bottom a:hover {
+					color: var(--accent-gold);
 				}
 
-				.navbar .dropdown-menu {
-					position: absolute;
-					top: 100%;
-					left: 0;
-					min-width: 240px;
-					margin-top: 0;
-					padding: 8px 0;
-					background: #ffffff;
-					border: 1px solid #ddd;
-					border-radius: 6px;
-					box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-					z-index: 99999;
-				}
+		/* ----- responsive ----- */
+		@media (max-width: 991px) {
+			.speakers-hero h1 {
+				font-size: 2.2rem;
+			}
+		}
 
-				.navbar .dropdown-item {
-					padding: 10px 18px;
-					font-size: 14px;
-					color: #222;
-				}
+		@media (max-width: 576px) {
+			.speakers-hero h1 {
+				font-size: 1.7rem;
+			}
 
-					.navbar .dropdown-item:hover {
-						background: #f1f5ff;
-						color: #0d6efd;
-					}
+			.speaker-img-square {
+				width: 70px;
+				height: 80px;
+			}
 
-
-				/* ==============================
-		   SUBMIT BUTTON
-		============================== */
-
-				.btn-submit-paper {
-					display: inline-block;
-					padding: 10px 18px;
-					background: #0d6efd;
-					color: #ffffff;
-					text-decoration: none;
-					font-weight: 600;
-					border-radius: 5px;
-				}
-
-					.btn-submit-paper:hover {
-						background: #084298;
-						color: #ffffff;
-					}
-
-
-				/* ==============================
-		   MOBILE
-		============================== */
-
-				@media (max-width: 1199px) {
-
-					.navbar .nav-link {
-						padding: 10px 15px;
-					}
-
-					.navbar .dropdown-menu {
-						position: static;
-						box-shadow: none;
-						border: 0;
-					}
-
-					.btn-submit-paper {
-						margin: 10px 15px;
-					}
-				}
-
-
-
-
-
-
-
-				:root {
-					--primary-red: #8C1C1C;
-					--dark-red: #6D1313;
-					--text-dark: #222222;
-					--badge-bg: #FDE8DB;
-					--badge-color: #D96A27;
-				}
-
-				body {
-					font-family: Arial, Helvetica, sans-serif;
-					color: var(--text-dark);
-					line-height: 1.6;
-					background-color: #ffffff;
-				}
-				/* top marquee */
-				.top-marquee-strip {
-					background-color: #ffffff;
-					color: #111;
-					font-size: 0.85rem;
-					font-weight: 600;
-					padding: 6px 0;
-					border-bottom: 1px solid #ddd;
-					overflow: hidden;
-					white-space: nowrap;
-				}
-
-				.marquee-content {
-					display: inline-block;
-					animation: marquee 30s linear infinite;
-				}
-
-				@keyframes marquee {
-					0% {
-						transform: translateX(100%);
-					}
-
-					100% {
-						transform: translateX(-100%);
-					}
-				}
-				/* navbar */
-				.navbar-custom {
-					background-color: var(--primary-red);
-					padding: 10px 0;
-				}
-
-					.navbar-custom .navbar-brand {
-						color: #ffffff;
-						font-weight: 700;
-						font-size: 1.35rem;
-						display: flex;
-						align-items: center;
-						gap: 10px;
-					}
-
-				.menu-row {
-					width: 100%;
-					border-top: 1px solid rgba(255, 255, 255, 0.2);
-					padding-top: 8px;
-					margin-top: 8px;
-				}
-
-				.navbar-custom .nav-link {
-					color: #ffffff !important;
-					font-size: 0.75rem;
-					font-weight: 700;
-					text-transform: uppercase;
-					padding: 6px 10px !important;
-					letter-spacing: 0.3px;
-				}
-
-					.navbar-custom .nav-link:hover {
-						opacity: 0.85;
-					}
-
-				.btn-submit-paper {
-					background-color: #0088cc;
-					color: #ffffff;
-					font-size: 0.8rem;
-					font-weight: 600;
-					border-radius: 4px;
-					padding: 6px 14px;
-					text-decoration: none;
-					white-space: nowrap;
-				}
-
-					.btn-submit-paper:hover {
-						background-color: #006699;
-						color: #fff;
-					}
-
-				/* speakers hero */
-				.speakers-hero {
-					padding: 30px 0 20px 0;
-					background: #fafafa;
-					border-bottom: 1px solid #eee;
-				}
-
-					.speakers-hero h1 {
-						font-weight: 800;
-						color: var(--primary-red);
-						font-size: 2rem;
-					}
-
-				/* Horizontal Card Layout */
-				.speaker-card-horizontal {
-					background: #fdfdfd;
-					border-radius: 12px;
-					padding: 12px 14px;
-					border: 1px solid #eaeaea;
-					box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-					display: flex;
-					align-items: center;
-					gap: 14px;
-					height: 100%;
-					text-align: left;
-					transition: 0.2s;
-				}
-
-					.speaker-card-horizontal:hover {
-						border-color: var(--primary-red);
-						box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-					}
-
-				.speaker-img-square {
-					width: 85px;
-					height: 95px;
-					flex-shrink: 0;
-					border-radius: 8px;
-					overflow: hidden;
-					background: #e9ecef;
-					border: 2px solid #f0f0f0;
-				}
-
-					.speaker-img-square img {
-						width: 100%;
-						height: 100%;
-						object-fit: cover;
-						display: block;
-					}
-
-				.speaker-card-horizontal .speaker-tag {
-					background: #fde8db;
-					color: #d96a27;
-					font-size: 0.6rem;
-					font-weight: 700;
-					padding: 2px 10px;
-					border-radius: 4px;
-					text-transform: uppercase;
-					display: inline-block;
-					margin-bottom: 3px;
-					letter-spacing: 0.3px;
-				}
+			.speaker-card-horizontal {
+				padding: 12px;
+				gap: 12px;
+			}
 
 				.speaker-card-horizontal .speaker-name {
-					font-weight: 700;
-					font-size: 0.9rem;
-					color: #111;
-					margin-bottom: 2px;
-					line-height: 1.25;
+					font-size: 0.85rem;
 				}
 
 				.speaker-card-horizontal .speaker-affil {
-					font-size: 0.7rem;
-					color: #666;
-					line-height: 1.35;
+					font-size: 0.65rem;
 				}
-
-				/* footer */
-				.footer-primary {
-					background-color: var(--primary-red);
-					color: #ffffff;
-					padding: 25px 0;
-				}
-
-				.footer-brand {
-					display: flex;
-					align-items: center;
-					gap: 8px;
-					font-weight: 700;
-					font-size: 1.15rem;
-					margin-bottom: 10px;
-				}
-
-				.footer-desc {
-					font-size: 0.82rem;
-					line-height: 1.4;
-					opacity: 0.95;
-				}
-
-				.footer-bottom {
-					background-color: var(--dark-red);
-					color: #ffffff;
-					font-size: 0.78rem;
-					padding: 10px 0;
-				}
-
-					.footer-bottom a {
-						color: #ffffff;
-						margin-left: 12px;
-						text-decoration: none;
-					}
-
-				@media (max-width: 576px) {
-					.speaker-img-square {
-						width: 70px;
-						height: 80px;
-					}
-
-					.speaker-card-horizontal {
-						padding: 10px 12px;
-						gap: 10px;
-					}
-
-						.speaker-card-horizontal .speaker-name {
-							font-size: 0.8rem;
-						}
-
-						.speaker-card-horizontal .speaker-affil {
-							font-size: 0.65rem;
-						}
-				}
+		}
 	</style>
 </head>
 <body>
 
-	<!-- Top Scrolling Marquee -->
+	<!-- Top Marquee (refreshed) -->
 	<div class="top-marquee-strip">
 		<div class="marquee-content">
-			International Conference on Sustainable Solutions in Engineering Technologies
+			<i class="fa-regular fa-compass me-2"></i> ICSSET – 26 · 24–26 August 2026 · Chennai · Sustainable Engineering & Earth Science
 		</div>
 	</div>
 
-	<!-- Navigation (same as home) -->
+	<!-- Navbar (elegant) -->
 	<nav class="navbar navbar-expand-xl navbar-custom sticky-top">
 		<div class="container-fluid px-lg-5 flex-column align-items-start">
 			<div class="d-flex justify-content-between align-items-center w-100">
 				<a class="navbar-brand" href="#">
-					<i class="fa-solid fa-globe"></i>
+					<i class="fa-solid fa-leaf"></i>
 					<span>ICSSET – 26</span>
 				</a>
-				<button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
 				</button>
+				<div class="d-none d-xl-block">
+					<a href="#" class="btn-submit-paper"><i class="fa-regular fa-paper-plane me-2"></i>Submit Paper</a>
+				</div>
 			</div>
-			<!-- Next Line (Row 2): Menu Links -->
 			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
 				<ul class="navbar-nav me-auto flex-wrap">
-
-					<li class="nav-item">
-						<a class="nav-link" href="index.html">HOME</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="about.html">ABOUT</a>
-					</li>
-
-					<li class="nav-item">
-						
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="speakers.html">SPEAKERS</a>
-					</li>
-
-					<!-- COMMITTEE -->
+					<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+					<li class="nav-item"><a class="nav-link active" href="Sessionchair.html">Session Chairs</a></li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle"
-						   href="#"
-						   id="committeeDrop"
-						   role="button"
-						   data-bs-toggle="dropdown"
-						   aria-expanded="false">
-							COMMITTEE
-						</a>
-
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">Committee</a>
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
-
-							<li>
-								<a class="dropdown-item" href="advisory-board.html">
-									Advisory Committee
-								</a>
-							</li>
-
-							
+							<li><a class="dropdown-item" href="advisory-board.html">Advisory Board</a></li>
 
 						</ul>
 					</li>
-
-					
-					<li class="nav-item">
-						<a class="nav-link" href="contact.html">
-							CONTACT
-						</a>
-					</li>
-
-					
-
+					<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
 				</ul>
 
 			</div>
@@ -447,16 +362,18 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-lg-8">
-					<h1>Speakers for ICSSETES-2026</h1>
+					<h1>Speakers for <span>ICSSETES-2026</span></h1>
 					
 				</div>
-				
+				<div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+					<span class="badge" style="background: var(--accent-gold); color: var(--primary); padding: 8px 20px; border-radius: 40px; font-weight: 700;"><i class="fa-regular fa-calendar me-2"></i>24–26 Aug 2026</span>
+				</div>
 			</div>
 		</div>
 	</section>
 
 	<!-- Speakers Grid -->
-	<section style="padding: 30px 0 60px 0; background-color: #fcfcfc;">
+	<section style="padding: 40px 0 70px 0; background: var(--soft-bg);">
 		<div class="container">
 			<div class="row g-3">
 
@@ -465,7 +382,7 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=1" alt="S. N. Singh"></div>
 						<div>
-							<span class="speaker-tag">Keynote Speaker</span>
+							<span class="speaker-tag">Keynote</span>
 							<div class="speaker-name">Prof. (Dr.) S. N. Singh</div>
 							<div class="speaker-affil">Director, ABV-IIITM Gwalior</div>
 						</div>
@@ -477,9 +394,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=4" alt="Selvaraj Oyyan"></div>
 						<div>
-							<span class="speaker-tag">Keynote Speaker</span>
+							<span class="speaker-tag">Keynote</span>
 							<div class="speaker-name">Prof. (Dr.) Selvaraj Oyyan</div>
-							<div class="speaker-affil">Vice President, Twintech International Univ. College of Technology, Malaysia</div>
+							<div class="speaker-affil">Vice President, Twintech International Univ., Malaysia</div>
 						</div>
 					</div>
 				</div>
@@ -489,9 +406,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=6" alt="J. Ramkumar"></div>
 						<div>
-							<span class="speaker-tag">Keynote Speaker</span>
+							<span class="speaker-tag">Keynote</span>
 							<div class="speaker-name">Prof. (Dr.) J. Ramkumar</div>
-							<div class="speaker-affil">Professor, Mechanical Engineering, IIT Kanpur, India</div>
+							<div class="speaker-affil">Professor, IIT Kanpur, India</div>
 						</div>
 					</div>
 				</div>
@@ -501,9 +418,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=2" alt="Asheesh K. Singh"></div>
 						<div>
-							<span class="speaker-tag">Keynote Speaker</span>
+							<span class="speaker-tag">Keynote</span>
 							<div class="speaker-name">Prof. (Dr.) Asheesh K. Singh</div>
-							<div class="speaker-affil">EE Department, MNNIT Allahabad</div>
+							<div class="speaker-affil">EE Dept, MNNIT Allahabad</div>
 						</div>
 					</div>
 				</div>
@@ -513,9 +430,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=3" alt="Satish Kumar Singh"></div>
 						<div>
-							<span class="speaker-tag">Keynote Speaker</span>
+							<span class="speaker-tag">Keynote</span>
 							<div class="speaker-name">Dr. Satish Kumar Singh</div>
-							<div class="speaker-affil">Professor, IIIT Allahabad, Prayagraj, India</div>
+							<div class="speaker-affil">Professor, IIIT Allahabad, India</div>
 						</div>
 					</div>
 				</div>
@@ -525,9 +442,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=5" alt="Prabhakar Tiwari"></div>
 						<div>
-							<span class="speaker-tag">Keynote Speaker</span>
+							<span class="speaker-tag">Keynote</span>
 							<div class="speaker-name">Dr. Prabhakar Tiwari</div>
-							<div class="speaker-affil">Assoc. Professor, EE, MMMUT Gorakhpur, U.P., India</div>
+							<div class="speaker-affil">Assoc. Professor, MMMUT Gorakhpur</div>
 						</div>
 					</div>
 				</div>
@@ -537,9 +454,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=7" alt="Varun Kakar"></div>
 						<div>
-							<span class="speaker-tag">Keynote Speaker</span>
+							<span class="speaker-tag">Keynote</span>
 							<div class="speaker-name">Dr. Varun Kakar</div>
-							<div class="speaker-affil">B. T. Kumaon Institute of Technology, Dwarahat, Uttarakhand, India</div>
+							<div class="speaker-affil">B. T. Kumaon Institute, Uttarakhand</div>
 						</div>
 					</div>
 				</div>
@@ -549,33 +466,33 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=8" alt="Bdereddin Abdul Samad"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Bdereddin Abdul Samad</div>
-							<div class="speaker-affil">Dept of Electrical and Electronics, Asasria Higher Institution, Alzawia, Libya</div>
+							<div class="speaker-affil">Asasria Higher Institution, Libya</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 9. Dr. Halit Yahya (Khalid Yahya) -->
+				<!-- 9. Dr. Halit Yahya -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=9" alt="Halit Yahya"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
-							<div class="speaker-name">Dr. Halit Yahya (Khalid Yahya)</div>
-							<div class="speaker-affil">Dept of Electrical and Electronics Eng, Istanbul Gelisim Univ, Turkey</div>
+							<span class="speaker-tag">International</span>
+							<div class="speaker-name">Dr. Halit Yahya (Khalid)</div>
+							<div class="speaker-affil">Istanbul Gelisim Univ, Turkey</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 10. Mr. Somasundaraprabhu Suryanarayanan -->
+				<!-- 10. Mr. Somasundaraprabhu S. -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=10" alt="Somasundaraprabhu"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Somasundaraprabhu S.</div>
-							<div class="speaker-affil">Staff QA Automation Eng, CookUnity, San Francisco, CA, USA</div>
+							<div class="speaker-affil">CookUnity, San Francisco, USA</div>
 						</div>
 					</div>
 				</div>
@@ -583,11 +500,11 @@
 				<!-- 11. Mr. Jayesh Radadiya -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=11" alt="jayesh radadiya"></div>
+						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=11" alt="Jayesh Radadiya"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Jayesh Radadiya</div>
-							<div class="speaker-affil">Sr. Electrical Engineer, META, San Jose, California, USA</div>
+							<div class="speaker-affil">Sr. Electrical Engineer, META, USA</div>
 						</div>
 					</div>
 				</div>
@@ -597,9 +514,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=12" alt="Lalith Chandra Bandaru"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Lalith Chandra Bandaru</div>
-							<div class="speaker-affil">ITDS Architect, Sage Group Technologies INC</div>
+							<div class="speaker-affil">ITDS Architect, Sage Group INC</div>
 						</div>
 					</div>
 				</div>
@@ -609,9 +526,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=13" alt="Justice Ohene Akoto"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Dr. Ing Justice Ohene Akoto</div>
-							<div class="speaker-affil">Founder, Africa Sustainable Energy Centre (ASEC)</div>
+							<div class="speaker-affil">Founder, Africa Sustainable Energy Centre</div>
 						</div>
 					</div>
 				</div>
@@ -621,19 +538,19 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=14" alt="Mohammed Shakeer"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
-							<div class="speaker-name">Mr. Mohammed Shakeer Bandrevu</div>
-							<div class="speaker-affil">Senior Software Developer, Tata Consulting Services</div>
+							<span class="speaker-tag">International</span>
+							<div class="speaker-name">Mr. Mohammed Shakeer B.</div>
+							<div class="speaker-affil">Senior Software Developer, TCS</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 15. Mr. Sathish Kaniganahalli Ramareddy -->
+				<!-- 15. Mr. Sathish K. Ramareddy -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=15" alt="Sathish Ramareddy"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Sathish K. Ramareddy</div>
 							<div class="speaker-affil">Vice President, Northern Trust Bank, USA</div>
 						</div>
@@ -645,9 +562,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=16" alt="Ankur Goel"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Dr. Ankur Goel</div>
-							<div class="speaker-affil">Program Director, East Kent College Group, Canterbury, UK</div>
+							<div class="speaker-affil">Program Director, East Kent College, UK</div>
 						</div>
 					</div>
 				</div>
@@ -657,9 +574,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=17" alt="Shabana Urooj"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Prof. Shabana Urooj</div>
-							<div class="speaker-affil">EE Dept, Princess Nourah Univ, Riyadh, Saudi Arabia</div>
+							<div class="speaker-affil">Princess Nourah Univ, Saudi Arabia</div>
 						</div>
 					</div>
 				</div>
@@ -669,9 +586,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=18" alt="Chitranjan Mahapatra"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Dr. Chitranjan Mahapatra</div>
-							<div class="speaker-affil">Scientist, Human Brain Project, Nanyang Tech, Singapore</div>
+							<div class="speaker-affil">Human Brain Project, Nanyang Tech, Singapore</div>
 						</div>
 					</div>
 				</div>
@@ -681,9 +598,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=19" alt="Rakesh Kumar Mali"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Rakesh Kumar Mali</div>
-							<div class="speaker-affil">Delivery Module Lead, Mphasis, New York, NY, USA</div>
+							<div class="speaker-affil">Delivery Module Lead, Mphasis, USA</div>
 						</div>
 					</div>
 				</div>
@@ -693,7 +610,7 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=20" alt="Anbarasu Aladiyan"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Anbarasu Aladiyan</div>
 							<div class="speaker-affil">Software Developer, Computers Inc., USA</div>
 						</div>
@@ -705,9 +622,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=21" alt="Ling Mee Hong"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Dr. Ling Mee Hong</div>
-							<div class="speaker-affil">Senior Lecturer, Sunway University, Kuala Lumpur, Malaysia</div>
+							<div class="speaker-affil">Senior Lecturer, Sunway Univ, Malaysia</div>
 						</div>
 					</div>
 				</div>
@@ -717,9 +634,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=22" alt="Nor Hafizah"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
-							<div class="speaker-name">Dr Nor Hafizah Binti Mohamed Halip</div>
-							<div class="speaker-affil">Lecturer, Sunway University, Kuala Lumpur, Malaysia</div>
+							<span class="speaker-tag">International</span>
+							<div class="speaker-name">Dr Nor Hafizah Bt M. Halip</div>
+							<div class="speaker-affil">Lecturer, Sunway Univ, Malaysia</div>
 						</div>
 					</div>
 				</div>
@@ -729,9 +646,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=23" alt="Zahiraniza Mustaffa"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Dr. Zahiraniza binti Mustaffa</div>
-							<div class="speaker-affil">Assoc. Professor, Universiti Teknologi PETRONAS (UTP), Malaysia</div>
+							<div class="speaker-affil">Assoc. Professor, UTP, Malaysia</div>
 						</div>
 					</div>
 				</div>
@@ -741,9 +658,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=24" alt="Manuj Arora"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Mr. Manuj Arora</div>
-							<div class="speaker-affil">Sr Solutions Architect, Amazon Web Services, USA</div>
+							<div class="speaker-affil">Sr Solutions Architect, AWS, USA</div>
 						</div>
 					</div>
 				</div>
@@ -753,9 +670,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=25" alt="Bhanu Sri Katta"></div>
 						<div>
-							<span class="speaker-tag">International Speaker</span>
+							<span class="speaker-tag">International</span>
 							<div class="speaker-name">Ms. Bhanu Sri Katta</div>
-							<div class="speaker-affil">Senior SailPoint Engineer, Optiv Security INC., USA</div>
+							<div class="speaker-affil">Senior SailPoint Engineer, Optiv Security, USA</div>
 						</div>
 					</div>
 				</div>
@@ -765,9 +682,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=26" alt="G. Mohan Kumar"></div>
 						<div>
-							<span class="speaker-tag">National Speaker</span>
+							<span class="speaker-tag">National</span>
 							<div class="speaker-name">Dr. G. Mohan Kumar</div>
-							<div class="speaker-affil">Principal, RVS College of Engg &amp; Director, RVS Group, Coimbatore, Tamil Nadu</div>
+							<div class="speaker-affil">Principal, RVS College of Engg, Coimbatore</div>
 						</div>
 					</div>
 				</div>
@@ -777,9 +694,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=27" alt="Mitali Srivastava"></div>
 						<div>
-							<span class="speaker-tag">National Speaker</span>
+							<span class="speaker-tag">National</span>
 							<div class="speaker-name">Ms. Mitali Srivastava</div>
-							<div class="speaker-affil">Senior Product Manager, Microsoft, Hyderabad, India</div>
+							<div class="speaker-affil">Senior Product Manager, Microsoft, Hyderabad</div>
 						</div>
 					</div>
 				</div>
@@ -789,9 +706,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=28" alt="Pardeep Kumar"></div>
 						<div>
-							<span class="speaker-tag">National Speaker</span>
+							<span class="speaker-tag">National</span>
 							<div class="speaker-name">Dr. Pardeep Kumar</div>
-							<div class="speaker-affil">Pro-Vice Chancellor, Manav Rachna, Faridabad, India</div>
+							<div class="speaker-affil">Pro-Vice Chancellor, Manav Rachna, Faridabad</div>
 						</div>
 					</div>
 				</div>
@@ -801,9 +718,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=29" alt="Jeet Garg"></div>
 						<div>
-							<span class="speaker-tag">National Speaker</span>
+							<span class="speaker-tag">National</span>
 							<div class="speaker-name">Mr. Jeet Garg</div>
-							<div class="speaker-affil">Team Leader, Cloud Solutions Architect, Microsoft, Bangalore, India</div>
+							<div class="speaker-affil">Cloud Solutions Architect, Microsoft, Bangalore</div>
 						</div>
 					</div>
 				</div>
@@ -813,9 +730,9 @@
 					<div class="speaker-card-horizontal">
 						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=30" alt="Arun Pratap Srivastava"></div>
 						<div>
-							<span class="speaker-tag">National Speaker</span>
+							<span class="speaker-tag">National</span>
 							<div class="speaker-name">Dr. Arun Pratap Srivastava</div>
-							<div class="speaker-affil">Director (R&D), MIMT, Greater Noida, India</div>
+							<div class="speaker-affil">Director (R&D), MIMT, Greater Noida</div>
 						</div>
 					</div>
 				</div>
@@ -824,25 +741,22 @@
 		</div>
 	</section>
 
-	<!-- Footer Primary -->
+	<!-- Footer -->
 	<footer class="footer-primary">
 		<div class="container">
 			<div class="footer-brand">
-				<i class="fa-solid fa-globe"></i>
+				<i class="fa-solid fa-leaf"></i>
 				<span>ICSSET – 26</span>
 			</div>
 			<div class="footer-desc">
 				International Conference on Sustainable<br>
-				Solutions in Engineering Technologies<br>
-				
+				Solutions in Engineering Technologies & Earth Science
 			</div>
 		</div>
 	</footer>
-
-	<!-- Footer Bottom Strip -->
 	<div class="footer-bottom">
-		<div class="container d-flex justify-content-between align-items-center">
-			
+		<div class="container d-flex justify-content-between align-items-center flex-wrap">
+			<span>&copy; 2026 ICSSET · All rights reserved</span>
 			<div>
 				<a href="#"><i class="fa-brands fa-twitter"></i></a>
 				<a href="#"><i class="fa-solid fa-phone"></i></a>
@@ -852,17 +766,7 @@
 		</div>
 	</div>
 
-	<!-- Bootstrap 5 JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-	<!-- Bootstrap 5 JS Bundle -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
-
-
-	<!-- Bootstrap 5.3.3 Bundle JS -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-	<!-- Your Custom JS - optional -->
-	<script src="js/script.js"></script>
-
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
