@@ -195,6 +195,23 @@
 					background: var(--accent-gold);
 				}
 
+			/* Keynote speaker card - special styling */
+			.speaker-card-horizontal.keynote {
+				background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(255, 255, 255, 0.7));
+				border-color: var(--accent-gold);
+			}
+
+				.speaker-card-horizontal.keynote::before {
+					opacity: 1;
+					background: var(--accent-gold);
+					width: 6px;
+				}
+
+				.speaker-card-horizontal.keynote .speaker-tag {
+					background: var(--accent-gold);
+					color: var(--primary);
+				}
+
 		.speaker-img-square {
 			width: 80px;
 			height: 90px;
@@ -249,6 +266,35 @@
 			font-size: 0.7rem;
 			color: var(--text-muted);
 			line-height: 1.35;
+		}
+
+		/* ----- section divider ----- */
+		.section-divider {
+			width: 70px;
+			height: 4px;
+			background: linear-gradient(90deg, var(--accent-gold), var(--primary));
+			border-radius: 6px;
+			margin: 0 auto 16px;
+		}
+
+		.section-heading {
+			font-weight: 800;
+			font-size: 1.6rem;
+			letter-spacing: -0.5px;
+			color: var(--primary);
+			text-align: center;
+			margin-bottom: 5px;
+		}
+
+			.section-heading .highlight {
+				color: var(--accent-gold);
+			}
+
+		.section-subtitle {
+			color: var(--text-muted);
+			font-size: 0.95rem;
+			text-align: center;
+			margin-bottom: 30px;
 		}
 
 		/* ----- footer (refined) ----- */
@@ -355,10 +401,10 @@
 				<ul class="navbar-nav me-auto flex-wrap">
 					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
+					<li class="nav-item"><a class="nav-link active" href="speakers.html">Speakers</a></li>
 					<li class="nav-item"><a class="nav-link" href="Sessionchair.html">Session Chairs</a></li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle active" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown" style="color: var(--accent-gold) !important;">Committee</a>
+						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">Committee</a>
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
 							<li><a class="dropdown-item" href="advisory-board.html">International Advisory Committee</a></li>
 						</ul>
@@ -389,6 +435,61 @@
 	<!-- Speakers Grid -->
 	<section style="padding: 40px 0 70px 0; background: var(--soft-bg);">
 		<div class="container">
+
+			<!-- Keynote Speakers Section -->
+			<div class="text-center mb-4">
+				<div class="section-divider"></div>
+				<h2 class="section-heading">Keynote <span class="highlight">Speakers</span></h2>
+				<p class="section-subtitle">Esteemed industry leaders delivering the keynote addresses</p>
+			</div>
+
+			<div class="row g-3 mb-5">
+
+				<!-- 1 - Selvam (Keynote) -->
+				<div class="col-lg-4 col-md-6">
+					<div class="speaker-card-horizontal keynote">
+						<div class="speaker-img-square"><img src="img/imgs/1-Selvam.jpg" alt="Selvam" onerror="this.onerror=null;this.parentElement.style.background='#0b1c2f';this.parentElement.innerHTML='S';"></div>
+						<div>
+							<span class="speaker-tag">Keynote</span>
+							<div class="speaker-name">Selvam</div>
+							<div class="speaker-affil">Founder and CEO - Shortfundly</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 - Rajarajan Kottieswaran (Keynote) -->
+				<div class="col-lg-4 col-md-6">
+					<div class="speaker-card-horizontal keynote">
+						<div class="speaker-img-square"><img src="img/imgs/2-Rajarajan-Kottieswaran.jpg" alt="Rajarajan Kottieswaran" onerror="this.onerror=null;this.parentElement.style.background='#0b1c2f';this.parentElement.innerHTML='RK';"></div>
+						<div>
+							<span class="speaker-tag">Keynote</span>
+							<div class="speaker-name">Rajarajan Kottieswaran</div>
+							<div class="speaker-affil">CEO and Board Director - Industrial Design and Animations</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3 - Sutheesh (Keynote) -->
+				<div class="col-lg-4 col-md-6">
+					<div class="speaker-card-horizontal keynote">
+						<div class="speaker-img-square"><img src="img/imgs/3-Sutheesh.jpg" alt="Sutheesh" onerror="this.onerror=null;this.parentElement.style.background='#0b1c2f';this.parentElement.innerHTML='S';"></div>
+						<div>
+							<span class="speaker-tag">Keynote</span>
+							<div class="speaker-name">Sutheesh</div>
+							<div class="speaker-affil">Co-Founder & CTO - Vulture Lines Tech Management Pvt Ltd</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Speakers Section -->
+			<div class="text-center mb-4">
+				<div class="section-divider"></div>
+				<h2 class="section-heading">Session <span class="highlight">Speakers</span></h2>
+				<p class="section-subtitle">Industry experts sharing their insights across various sessions</p>
+			</div>
+
 			<div class="row g-3">
 
 				<!-- 1 - Harshavardhan -->
