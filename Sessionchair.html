@@ -145,7 +145,7 @@
 		.breadcrumb-text {
 			font-size: 0.95rem;
 			color: var(--text-muted);
-			background: rgba(255,255,255,0.6);
+			background: rgba(255, 255, 255, 0.6);
 			backdrop-filter: blur(4px);
 			padding: 10px 22px;
 			border-radius: 60px;
@@ -228,7 +228,7 @@
 			display: block;
 			border: 2px solid rgba(212, 175, 55, 0.15);
 			transition: var(--transition);
-			background: #f0f0f0;
+			background: linear-gradient(135deg, var(--primary), var(--primary-light));
 		}
 
 		.chair-card:hover .chair-img {
@@ -236,44 +236,18 @@
 			box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
 		}
 
-		.chair-tag {
-			display: inline-block;
-			background: rgba(212, 175, 55, 0.12);
-			color: var(--accent-gold);
-			font-size: 0.55rem;
-			font-weight: 700;
-			text-transform: uppercase;
-			padding: 2px 14px;
-			border-radius: 40px;
-			letter-spacing: 0.5px;
-			margin-bottom: 6px;
-		}
-
 		.chair-name {
 			font-weight: 800;
-			font-size: 0.9rem;
+			font-size: 0.95rem;
 			color: var(--primary);
 			margin-bottom: 2px;
 		}
 
 		.chair-affiliation {
-			font-size: 0.7rem;
+			font-size: 0.75rem;
 			color: var(--text-muted);
-			line-height: 1.3;
+			line-height: 1.4;
 		}
-
-		.chair-session {
-			margin-top: 10px;
-			padding-top: 10px;
-			border-top: 1px solid rgba(212, 175, 55, 0.1);
-			font-size: 0.7rem;
-			color: var(--primary);
-			font-weight: 600;
-		}
-
-			.chair-session i {
-				color: var(--accent-gold);
-			}
 
 		/* ----- info box ----- */
 		.info-box {
@@ -360,15 +334,11 @@
 			}
 
 			.chair-name {
-				font-size: 0.8rem;
+				font-size: 0.85rem;
 			}
 
 			.chair-affiliation {
-				font-size: 0.65rem;
-			}
-
-			.chair-session {
-				font-size: 0.65rem;
+				font-size: 0.7rem;
 			}
 
 			.info-box {
@@ -401,7 +371,7 @@
 			</div>
 			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
 				<ul class="navbar-nav me-auto flex-wrap">
-					<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 					<li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
 					<li class="nav-item"><a class="nav-link active" href="Sessionchair.html">Session Chairs</a></li>
@@ -409,12 +379,10 @@
 						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">Committee</a>
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
 							<li><a class="dropdown-item" href="advisory-board.html">Advisory Board</a></li>
-
 						</ul>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 				</ul>
-
 			</div>
 		</div>
 	</nav>
@@ -425,9 +393,9 @@
 			<div class="row align-items-center">
 				<div class="col-lg-8">
 					<h1>Session <span>Chairs</span></h1>
-					<!--<div class="breadcrumb-text">
-						<i class="fa-regular fa-user me-2"></i> Distinguished academicians chairing ICSSET – 26 sessions
-					</div>-->
+					<div class="breadcrumb-text">
+						<i class="fa-regular fa-user me-2"></i> Industry experts leading ICSSET – 26 sessions
+					</div>
 				</div>
 				<div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
 					<span class="badge" style="background: var(--accent-gold); color: var(--primary); padding: 8px 20px; border-radius: 40px; font-weight: 700;"><i class="fa-regular fa-calendar me-2"></i>24–26 Aug 2026</span>
@@ -442,96 +410,152 @@
 			<div class="text-center mb-5">
 				<div class="section-divider"></div>
 				<h2 class="section-heading">Our <span class="highlight">Session Chairs</span></h2>
-				<p class="section-subtitle">Eminent experts leading the technical sessions at ICSSET – 26</p>
+				<p class="section-subtitle">Eminent industry experts leading the technical sessions at ICSSET – 26</p>
 			</div>
 
 			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 justify-content-center">
 
-				<!-- Chair 1 -->
+				<!-- 1 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Dr. R. Sivakumar" class="chair-img" loading="lazy">
-						<span class="chair-tag">Chair</span>
-						<div class="chair-name">Dr. R. Sivakumar</div>
-						<div class="chair-affiliation">Professor, Dept of ECE<br>Anna University, Chennai</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 1: AI & ML Applications</div>
+						<img src="https://ui-avatars.com/api/?name=Harshavardhan+Peddireddy&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Harshavardhan Peddireddy" class="chair-img" loading="lazy">
+						<div class="chair-name">Harshavardhan Peddireddy</div>
+						<div class="chair-affiliation">Platform Architect, Meijer Inc</div>
 					</div>
 				</div>
 
-				<!-- Chair 2 -->
+				<!-- 2 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. P. Karthikeyan" class="chair-img" loading="lazy">
-						<span class="chair-tag">Chair</span>
-						<div class="chair-name">Dr. P. Karthikeyan</div>
-						<div class="chair-affiliation">Professor & Head, Dept of CSE<br>IIT Madras</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 2: Sustainable Technologies</div>
+						<img src="https://ui-avatars.com/api/?name=koundanya+Rajan+kesani&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="koundanya Rajan kesani" class="chair-img" loading="lazy">
+						<div class="chair-name">koundanya Rajan kesani</div>
+						<div class="chair-affiliation">Sr. AI/ML Engineer, JPMorganChase</div>
 					</div>
 				</div>
 
-				<!-- Chair 3 -->
+				<!-- 3 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Prof. S. Meenakshi" class="chair-img" loading="lazy">
-						<span class="chair-tag">Chair</span>
-						<div class="chair-name">Prof. S. Meenakshi</div>
-						<div class="chair-affiliation">Professor, Dept of EEE<br>NIT Trichy</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 3: Renewable Energy Systems</div>
+						<img src="https://ui-avatars.com/api/?name=Devyendar+Maganti&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Devyendar Maganti" class="chair-img" loading="lazy">
+						<div class="chair-name">Devyendar Maganti</div>
+						<div class="chair-affiliation">Lead Platform Engineer, Prudential Financial</div>
 					</div>
 				</div>
 
-				<!-- Chair 4 -->
+				<!-- 4 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/men/52.jpg" alt="Dr. V. Rajendran" class="chair-img" loading="lazy">
-						<span class="chair-tag">Chair</span>
-						<div class="chair-name">Dr. V. Rajendran</div>
-						<div class="chair-affiliation">Professor, Dept of Mechanical<br>PSG College of Technology</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 4: Earth Science & Environment</div>
+						<img src="https://ui-avatars.com/api/?name=Deepu+Komati&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Deepu Komati" class="chair-img" loading="lazy">
+						<div class="chair-name">Deepu Komati</div>
+						<div class="chair-affiliation">Lead Engineer, HCL America Inc</div>
 					</div>
 				</div>
 
-				<!-- Chair 5 -->
+				<!-- 5 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Dr. S. Ganesh" class="chair-img" loading="lazy">
-						<span class="chair-tag">Co-Chair</span>
-						<div class="chair-name">Dr. S. Ganesh</div>
-						<div class="chair-affiliation">Associate Professor, Dept of CSE<br>DCE, Chennai</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 5: Data Science & Analytics</div>
+						<img src="https://ui-avatars.com/api/?name=bharathalaxmi+kaki&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="bharathalaxmi kaki" class="chair-img" loading="lazy">
+						<div class="chair-name">bharathalaxmi kaki</div>
+						<div class="chair-affiliation">Senior Data Engineer, General Motors</div>
 					</div>
 				</div>
 
-				<!-- Chair 6 -->
+				<!-- 6 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Dr. M. Kavitha" class="chair-img" loading="lazy">
-						<span class="chair-tag">Co-Chair</span>
-						<div class="chair-name">Dr. M. Kavitha</div>
-						<div class="chair-affiliation">Associate Professor, Dept of ECE<br>SRM Institute of Technology</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 6: IoT & Smart Systems</div>
+						<img src="https://ui-avatars.com/api/?name=Nachiket+Joshi&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Nachiket Joshi" class="chair-img" loading="lazy">
+						<div class="chair-name">Nachiket Joshi</div>
+						<div class="chair-affiliation">Sr. Software Development Eng, Randstad</div>
 					</div>
 				</div>
 
-				<!-- Chair 7 -->
+				<!-- 7 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Prof. A. Ramakrishnan" class="chair-img" loading="lazy">
-						<span class="chair-tag">Chair</span>
-						<div class="chair-name">Prof. A. Ramakrishnan</div>
-						<div class="chair-affiliation">Professor, Dept of Civil<br>IIT Delhi</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 7: Sustainable Infrastructure</div>
+						<img src="https://ui-avatars.com/api/?name=Sriharsha+Makineni&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Sriharsha Makineni" class="chair-img" loading="lazy">
+						<div class="chair-name">Sriharsha Makineni</div>
+						<div class="chair-affiliation">Sr. Business Engineer, Meta</div>
 					</div>
 				</div>
 
-				<!-- Chair 8 -->
+				<!-- 8 -->
 				<div class="col">
 					<div class="chair-card">
-						<img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Dr. L. Priya" class="chair-img" loading="lazy">
-						<span class="chair-tag">Co-Chair</span>
-						<div class="chair-name">Dr. L. Priya</div>
-						<div class="chair-affiliation">Associate Professor, Dept of EEE<br>DCE, Chennai</div>
-						<div class="chair-session"><i class="fa-regular fa-clock me-1"></i> Session 8: Power Electronics & Drives</div>
+						<img src="https://ui-avatars.com/api/?name=Prasad+Bheemavarapu&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Prasad Bheemavarapu" class="chair-img" loading="lazy">
+						<div class="chair-name">Prasad Bheemavarapu</div>
+						<div class="chair-affiliation">Principal Enterprise App Architect, Oracle America Inc</div>
+					</div>
+				</div>
+
+				<!-- 9 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Ranjit+Kumar+Reddy+Ponugoti&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Ranjit Kumar Reddy Ponugoti" class="chair-img" loading="lazy">
+						<div class="chair-name">Ranjit Kumar Reddy Ponugoti</div>
+						<div class="chair-affiliation">Enterprise Applications Architect, Expedia</div>
+					</div>
+				</div>
+
+				<!-- 10 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Shireesha+Mangannagari&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Shireesha Mangannagari" class="chair-img" loading="lazy">
+						<div class="chair-name">Shireesha Mangannagari</div>
+						<div class="chair-affiliation">Senior Data Integration Consultant, Choctaw Nation</div>
+					</div>
+				</div>
+
+				<!-- 11 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Yadi+Reddy+Mangannagari&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Yadi Reddy Mangannagari" class="chair-img" loading="lazy">
+						<div class="chair-name">Yadi Reddy Mangannagari</div>
+						<div class="chair-affiliation">Senior Solution Architect, Strategic Systems INC</div>
+					</div>
+				</div>
+
+				<!-- 12 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Naveen+Kumar+Puppala&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Naveen Kumar Puppala" class="chair-img" loading="lazy">
+						<div class="chair-name">Naveen Kumar Puppala</div>
+						<div class="chair-affiliation">Lead Software Engineer, Optum</div>
+					</div>
+				</div>
+
+				<!-- 13 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Venkata+Phanindra+Gollapalli&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Venkata Phanindra Gollapalli" class="chair-img" loading="lazy">
+						<div class="chair-name">Venkata Phanindra Gollapalli</div>
+						<div class="chair-affiliation">Sr Principal Technical Engineer, Oracle America Inc</div>
+					</div>
+				</div>
+
+				<!-- 14 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Bhargav+Krishna+Korrapati&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Bhargav Krishna Korrapati" class="chair-img" loading="lazy">
+						<div class="chair-name">Bhargav Krishna Korrapati</div>
+						<div class="chair-affiliation">Sr. Software Engineer - Platform, Gateway solutions, Inc.</div>
+					</div>
+				</div>
+
+				<!-- 15 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Anusha+Mukka&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Anusha Mukka" class="chair-img" loading="lazy">
+						<div class="chair-name">Anusha Mukka</div>
+						<div class="chair-affiliation">Senior Software Engineer, Meta Platforms Inc</div>
+					</div>
+				</div>
+
+				<!-- 16 -->
+				<div class="col">
+					<div class="chair-card">
+						<img src="https://ui-avatars.com/api/?name=Manikarthik+Konakalla&background=0b1c2f&color=d4af37&size=90&font-size=0.35" alt="Manikarthik Konakalla" class="chair-img" loading="lazy">
+						<div class="chair-name">Manikarthik Konakalla</div>
+						<div class="chair-affiliation">Engineering Manager, Oracle America Inc</div>
 					</div>
 				</div>
 

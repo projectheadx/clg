@@ -101,6 +101,10 @@
 					border-radius: 30px;
 				}
 
+				.navbar-custom .nav-link.active {
+					color: var(--accent-gold) !important;
+				}
+
 		.btn-submit-paper {
 			background: var(--accent-gold);
 			color: var(--primary) !important;
@@ -141,7 +145,7 @@
 		.breadcrumb-text {
 			font-size: 0.95rem;
 			color: var(--text-muted);
-			background: rgba(255,255,255,0.6);
+			background: rgba(255, 255, 255, 0.6);
 			backdrop-filter: blur(4px);
 			padding: 10px 22px;
 			border-radius: 60px;
@@ -197,13 +201,20 @@
 			flex-shrink: 0;
 			border-radius: 14px;
 			overflow: hidden;
-			background: #e9ecef;
+			background: linear-gradient(135deg, var(--primary), var(--primary-light));
 			border: 2px solid rgba(212, 175, 55, 0.15);
 			transition: var(--transition);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #fff;
 		}
 
 		.speaker-card-horizontal:hover .speaker-img-square {
 			border-color: var(--accent-gold);
+			transform: scale(1.02);
 		}
 
 		.speaker-img-square img {
@@ -216,9 +227,9 @@
 		.speaker-card-horizontal .speaker-tag {
 			background: rgba(212, 175, 55, 0.12);
 			color: var(--accent-gold);
-			font-size: 0.6rem;
+			font-size: 0.55rem;
 			font-weight: 700;
-			padding: 3px 14px;
+			padding: 2px 12px;
 			border-radius: 40px;
 			text-transform: uppercase;
 			letter-spacing: 0.5px;
@@ -228,7 +239,7 @@
 
 		.speaker-card-horizontal .speaker-name {
 			font-weight: 800;
-			font-size: 0.95rem;
+			font-size: 0.9rem;
 			color: var(--primary);
 			line-height: 1.25;
 			margin-bottom: 2px;
@@ -294,21 +305,26 @@
 			}
 
 			.speaker-img-square {
-				width: 70px;
-				height: 80px;
+				width: 60px;
+				height: 70px;
+				font-size: 1.4rem;
 			}
 
 			.speaker-card-horizontal {
-				padding: 12px;
-				gap: 12px;
+				padding: 10px 12px;
+				gap: 10px;
 			}
 
 				.speaker-card-horizontal .speaker-name {
-					font-size: 0.85rem;
+					font-size: 0.8rem;
 				}
 
 				.speaker-card-horizontal .speaker-affil {
-					font-size: 0.65rem;
+					font-size: 0.6rem;
+				}
+
+				.speaker-card-horizontal .speaker-tag {
+					font-size: 0.5rem;
 				}
 		}
 	</style>
@@ -333,26 +349,22 @@
 				<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon" style="filter: invert(1);"></span>
 				</button>
-				<div class="d-none d-xl-block">
-					<a href="#" class="btn-submit-paper"><i class="fa-regular fa-paper-plane me-2"></i>Submit Paper</a>
-				</div>
+				
 			</div>
 			<div class="collapse navbar-collapse w-100 menu-row" id="navbarNav">
 				<ul class="navbar-nav me-auto flex-wrap">
-					<li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-					<li class="nav-item"><a class="nav-link" href="speakers.html">Speakers</a></li>
-					<li class="nav-item"><a class="nav-link active" href="Sessionchair.html">Session Chairs</a></li>
+					<li class="nav-item"><a class="nav-link active" href="speakers.html">Speakers</a></li>
+					<li class="nav-item"><a class="nav-link" href="Sessionchair.html">Session Chairs</a></li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="committeeDrop" role="button" data-bs-toggle="dropdown">Committee</a>
 						<ul class="dropdown-menu" aria-labelledby="committeeDrop">
 							<li><a class="dropdown-item" href="advisory-board.html">Advisory Board</a></li>
-
 						</ul>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+					<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
 				</ul>
-
 			</div>
 		</div>
 	</nav>
@@ -363,7 +375,9 @@
 			<div class="row align-items-center">
 				<div class="col-lg-8">
 					<h1>Speakers for <span>ICSSETES-2026</span></h1>
-					
+					<div class="breadcrumb-text">
+						<i class="fa-regular fa-microphone me-2"></i> Industry experts & thought leaders
+					</div>
 				</div>
 				<div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
 					<span class="badge" style="background: var(--accent-gold); color: var(--primary); padding: 8px 20px; border-radius: 40px; font-weight: 700;"><i class="fa-regular fa-calendar me-2"></i>24–26 Aug 2026</span>
@@ -377,362 +391,182 @@
 		<div class="container">
 			<div class="row g-3">
 
-				<!-- 1. Prof. (Dr.) S. N. Singh -->
+				<!-- 1 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=1" alt="S. N. Singh"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Harshavardhan+Peddireddy&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Harshavardhan Peddireddy"></div>
 						<div>
-							<span class="speaker-tag">Keynote</span>
-							<div class="speaker-name">Prof. (Dr.) S. N. Singh</div>
-							<div class="speaker-affil">Director, ABV-IIITM Gwalior</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Harshavardhan Peddireddy</div>
+							<div class="speaker-affil">Platform Architect, Meijer Inc</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 2. Prof. (Dr.) Selvaraj Oyyan -->
+				<!-- 2 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=4" alt="Selvaraj Oyyan"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=koundanya+Rajan+kesani&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="koundanya Rajan kesani"></div>
 						<div>
-							<span class="speaker-tag">Keynote</span>
-							<div class="speaker-name">Prof. (Dr.) Selvaraj Oyyan</div>
-							<div class="speaker-affil">Vice President, Twintech International Univ., Malaysia</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">koundanya Rajan kesani</div>
+							<div class="speaker-affil">Sr. AI/ML Engineer, JPMorganChase</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 3. Prof. (Dr.) J. Ramkumar -->
+				<!-- 3 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=6" alt="J. Ramkumar"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Devyendar+Maganti&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Devyendar Maganti"></div>
 						<div>
-							<span class="speaker-tag">Keynote</span>
-							<div class="speaker-name">Prof. (Dr.) J. Ramkumar</div>
-							<div class="speaker-affil">Professor, IIT Kanpur, India</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Devyendar Maganti</div>
+							<div class="speaker-affil">Lead Platform Engineer, Prudential Financial</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 4. Prof. (Dr.) Asheesh K. Singh -->
+				<!-- 4 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=2" alt="Asheesh K. Singh"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Deepu+Komati&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Deepu Komati"></div>
 						<div>
-							<span class="speaker-tag">Keynote</span>
-							<div class="speaker-name">Prof. (Dr.) Asheesh K. Singh</div>
-							<div class="speaker-affil">EE Dept, MNNIT Allahabad</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Deepu Komati</div>
+							<div class="speaker-affil">Lead Engineer, HCL America Inc</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 5. Dr. Satish Kumar Singh -->
+				<!-- 5 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=3" alt="Satish Kumar Singh"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=bharathalaxmi+kaki&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="bharathalaxmi kaki"></div>
 						<div>
-							<span class="speaker-tag">Keynote</span>
-							<div class="speaker-name">Dr. Satish Kumar Singh</div>
-							<div class="speaker-affil">Professor, IIIT Allahabad, India</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">bharathalaxmi kaki</div>
+							<div class="speaker-affil">Senior Data Engineer, General Motors</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 6. Dr. Prabhakar Tiwari -->
+				<!-- 6 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=5" alt="Prabhakar Tiwari"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Nachiket+Joshi&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Nachiket Joshi"></div>
 						<div>
-							<span class="speaker-tag">Keynote</span>
-							<div class="speaker-name">Dr. Prabhakar Tiwari</div>
-							<div class="speaker-affil">Assoc. Professor, MMMUT Gorakhpur</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Nachiket Joshi</div>
+							<div class="speaker-affil">Sr. Software Development Eng, Randstad</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 7. Dr. Varun Kakar -->
+				<!-- 7 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=7" alt="Varun Kakar"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Sriharsha+Makineni&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Sriharsha Makineni"></div>
 						<div>
-							<span class="speaker-tag">Keynote</span>
-							<div class="speaker-name">Dr. Varun Kakar</div>
-							<div class="speaker-affil">B. T. Kumaon Institute, Uttarakhand</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Sriharsha Makineni</div>
+							<div class="speaker-affil">Sr. Business Engineer, Meta</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 8. Mr. Bdereddin Abdul Samad -->
+				<!-- 8 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=8" alt="Bdereddin Abdul Samad"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Prasad+Bheemavarapu&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Prasad Bheemavarapu"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Bdereddin Abdul Samad</div>
-							<div class="speaker-affil">Asasria Higher Institution, Libya</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Prasad Bheemavarapu</div>
+							<div class="speaker-affil">Principal Enterprise App Architect, Oracle America Inc</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 9. Dr. Halit Yahya -->
+				<!-- 9 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=9" alt="Halit Yahya"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Ranjit+Kumar+Reddy+Ponugoti&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Ranjit Kumar Reddy Ponugoti"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Dr. Halit Yahya (Khalid)</div>
-							<div class="speaker-affil">Istanbul Gelisim Univ, Turkey</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Ranjit Kumar Reddy Ponugoti</div>
+							<div class="speaker-affil">Enterprise Applications Architect, Expedia</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 10. Mr. Somasundaraprabhu S. -->
+				<!-- 10 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=10" alt="Somasundaraprabhu"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Naveen+Kumar+Puppala&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Naveen Kumar Puppala"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Somasundaraprabhu S.</div>
-							<div class="speaker-affil">CookUnity, San Francisco, USA</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Naveen Kumar Puppala</div>
+							<div class="speaker-affil">Lead Software Engineer, Optum</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 11. Mr. Jayesh Radadiya -->
+				<!-- 11 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=11" alt="Jayesh Radadiya"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Venkata+Phanindra+Gollapalli&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Venkata Phanindra Gollapalli"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Jayesh Radadiya</div>
-							<div class="speaker-affil">Sr. Electrical Engineer, META, USA</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Venkata Phanindra Gollapalli</div>
+							<div class="speaker-affil">Sr Principal Technical Engineer, Oracle America Inc</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 12. Mr. Lalith Chandra Bandaru -->
+				<!-- 12 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=12" alt="Lalith Chandra Bandaru"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Bhargav+Krishna+Korrapati&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Bhargav Krishna Korrapati"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Lalith Chandra Bandaru</div>
-							<div class="speaker-affil">ITDS Architect, Sage Group INC</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Bhargav Krishna Korrapati</div>
+							<div class="speaker-affil">Sr. Software Engineer - Platform, Gateway solutions, Inc.</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 13. Dr. Ing Justice Ohene Akoto -->
+				<!-- 13 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=13" alt="Justice Ohene Akoto"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Anusha+Mukka&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Anusha Mukka"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Dr. Ing Justice Ohene Akoto</div>
-							<div class="speaker-affil">Founder, Africa Sustainable Energy Centre</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Anusha Mukka</div>
+							<div class="speaker-affil">Senior Software Engineer, Meta Platforms Inc</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 14. Mr. Mohammed Shakeer Bandrevu -->
+				<!-- 14 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=14" alt="Mohammed Shakeer"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Adarsh+Mittal&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Adarsh Mittal"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Mohammed Shakeer B.</div>
-							<div class="speaker-affil">Senior Software Developer, TCS</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Adarsh Mittal</div>
+							<div class="speaker-affil">Sr Engineer, Nvidia</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- 15. Mr. Sathish K. Ramareddy -->
+				<!-- 15 -->
 				<div class="col-lg-4 col-md-6">
 					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=15" alt="Sathish Ramareddy"></div>
+						<div class="speaker-img-square"><img src="https://ui-avatars.com/api/?name=Manikarthik+Konakalla&background=0b1c2f&color=d4af37&size=80&font-size=0.4" alt="Manikarthik Konakalla"></div>
 						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Sathish K. Ramareddy</div>
-							<div class="speaker-affil">Vice President, Northern Trust Bank, USA</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 16. Dr. Ankur Goel -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=16" alt="Ankur Goel"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Dr. Ankur Goel</div>
-							<div class="speaker-affil">Program Director, East Kent College, UK</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 17. Prof. Shabana Urooj -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=17" alt="Shabana Urooj"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Prof. Shabana Urooj</div>
-							<div class="speaker-affil">Princess Nourah Univ, Saudi Arabia</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 18. Dr. Chitranjan Mahapatra -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=18" alt="Chitranjan Mahapatra"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Dr. Chitranjan Mahapatra</div>
-							<div class="speaker-affil">Human Brain Project, Nanyang Tech, Singapore</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 19. Mr. Rakesh Kumar Mali -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=19" alt="Rakesh Kumar Mali"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Rakesh Kumar Mali</div>
-							<div class="speaker-affil">Delivery Module Lead, Mphasis, USA</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 20. Mr. Anbarasu Aladiyan -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=20" alt="Anbarasu Aladiyan"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Anbarasu Aladiyan</div>
-							<div class="speaker-affil">Software Developer, Computers Inc., USA</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 21. Dr. Ling Mee Hong -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=21" alt="Ling Mee Hong"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Dr. Ling Mee Hong</div>
-							<div class="speaker-affil">Senior Lecturer, Sunway Univ, Malaysia</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 22. Dr Nor Hafizah Binti Mohamed Halip -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=22" alt="Nor Hafizah"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Dr Nor Hafizah Bt M. Halip</div>
-							<div class="speaker-affil">Lecturer, Sunway Univ, Malaysia</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 23. Dr. Zahiraniza binti Mustaffa -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=23" alt="Zahiraniza Mustaffa"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Dr. Zahiraniza binti Mustaffa</div>
-							<div class="speaker-affil">Assoc. Professor, UTP, Malaysia</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 24. Mr. Manuj Arora -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=24" alt="Manuj Arora"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Mr. Manuj Arora</div>
-							<div class="speaker-affil">Sr Solutions Architect, AWS, USA</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 25. Ms. Bhanu Sri Katta -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=25" alt="Bhanu Sri Katta"></div>
-						<div>
-							<span class="speaker-tag">International</span>
-							<div class="speaker-name">Ms. Bhanu Sri Katta</div>
-							<div class="speaker-affil">Senior SailPoint Engineer, Optiv Security, USA</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 26. Dr. G. Mohan Kumar -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=26" alt="G. Mohan Kumar"></div>
-						<div>
-							<span class="speaker-tag">National</span>
-							<div class="speaker-name">Dr. G. Mohan Kumar</div>
-							<div class="speaker-affil">Principal, RVS College of Engg, Coimbatore</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 27. Ms. Mitali Srivastava -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=27" alt="Mitali Srivastava"></div>
-						<div>
-							<span class="speaker-tag">National</span>
-							<div class="speaker-name">Ms. Mitali Srivastava</div>
-							<div class="speaker-affil">Senior Product Manager, Microsoft, Hyderabad</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 28. Dr. Pardeep Kumar -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=28" alt="Pardeep Kumar"></div>
-						<div>
-							<span class="speaker-tag">National</span>
-							<div class="speaker-name">Dr. Pardeep Kumar</div>
-							<div class="speaker-affil">Pro-Vice Chancellor, Manav Rachna, Faridabad</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 29. Mr. Jeet Garg -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=29" alt="Jeet Garg"></div>
-						<div>
-							<span class="speaker-tag">National</span>
-							<div class="speaker-name">Mr. Jeet Garg</div>
-							<div class="speaker-affil">Cloud Solutions Architect, Microsoft, Bangalore</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- 30. Dr. Arun Pratap Srivastava -->
-				<div class="col-lg-4 col-md-6">
-					<div class="speaker-card-horizontal">
-						<div class="speaker-img-square"><img src="https://i.pravatar.cc/200?img=30" alt="Arun Pratap Srivastava"></div>
-						<div>
-							<span class="speaker-tag">National</span>
-							<div class="speaker-name">Dr. Arun Pratap Srivastava</div>
-							<div class="speaker-affil">Director (R&D), MIMT, Greater Noida</div>
+							<span class="speaker-tag">Speaker</span>
+							<div class="speaker-name">Manikarthik Konakalla</div>
+							<div class="speaker-affil">Engineering Manager, Oracle America Inc</div>
 						</div>
 					</div>
 				</div>
